@@ -1,0 +1,27 @@
+// Turn debugging on and off. Use a conditional switch for any
+// debugging-oriented // oriented settings in your stylesheets.
+//
+// Example: @if $debug == true { } @else { }
+$debug: false;
+
+@import "fonts";
+
+/* Layout */
+
+/* Colors */
+
+/* Vertical Rhythm */
+$base-font-size: 16px;
+$base-line-height: 24px;
+$relative-font-sizing: false;
+$round-to-nearest-half-line: true;
+
+/* Grid */
+$grid-background-baseline-color: rgba(0, 0, 0, 0.1);
+$grid-background-baseline-height: $base-line-height;
+
+@if $debug == true {
+    $show-grid-backgrounds: true;
+} @else {
+    $show-grid-backgrounds: false;
+}

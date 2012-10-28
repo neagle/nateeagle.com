@@ -1,0 +1,147 @@
+<!--
+                    __,__r========qL,
+                 ,m**`~'            XW;
+          ____Lm/'      _mmmm    jW@+===m___,
+    .m+*f~TX7''|    `Y*X@X7~MMLL          ._JXmL,
+  jf~'    `YM#:~      !*##@ d j@~Y!     `~~~+m_
+ Z            M       `Nd*=+5+      -====L__ !M-
+m!            `Y=;m_,   ~Yf~~               YL`W;
+|        .mmmmmqrL_XXX~*==mL,                 Y#|
+|  ,Z~~~~~'        ~~~~    X#         -==L__,  !#,
+| |tL             ____WY*f~~                `~qd#W
+V,| `~~Y*+mL_,  :f~~ ~                   q_    V#b
+`b|         `Y+-W;                        `\\,  _#
+  V              N,  m                 YL,   `\L#@
+                  N  #                   YL,   `##,
+                 .P  #                     `\   V#|
+               ../   #           ^           YL |W
+              -P     #    :P  ;  ||           `|!W
+              Z'     #   :P  :'   #,           #L#
+          _ _Wb    jWD  jf   /    |b           V@*
+        j+N##8#4rt8#~.,jf    |    |#       b   |W
+     .r*'m8####q#P8###*'    W    :##       V;  d|
+    /K_jWK#X###~#|###mW#   :P  j;##|    #, `#, @
+   !TGW###8#m#K7q=WWmd##mmm#m.Z8###!    #W  |b |
+   /4#@##W#+##P:WZWMZ*W=m##WMN|WZWP:#;m,d#W;Dd |
+  W*~~~M#W!KWjW5!!/WV##N7j#KXPNMX#DW###b###D#Xb|
+ !'    d!JXXXW!`!Ldm@#bd#WW8K)X|X#8#8#K##V#!K5|#
+      d@f~  jf.Z\/Vb*Y+W#j(WMZPrMM#@##K#@##;WWj##,
+      ~    m*~'   '#`\8#W4KW#qX@VW##W#8##8#rNWK###G-
+          `'       #`8*=#YWWK/b+WW#W#*#MWm8*KKd#M#**m,
+                   #Z'  VW#f'~M+NM#####K#8@WLMZKX#W#+M;
+                            ~` *YM#######@*)P/+DK####m#
+                                 `'*##fXVPX|Vr~##Z#W@N@
+                                    `WL_d**DfWX#8#WK##*b
+                                              `W###@#N#/b
+                                               .#mj#X~YM#
+                                               ~`#WdD~  Y!
+                                               `'_|#f--
+                                                   *
+-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Jekyll not parsing includes?</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/global.css">
+
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Posts">
+    <link rel="alternate" type="application/atom+xml" href="bits.xml" title="Bits">
+</head>
+
+<body>
+
+    <menu id="social-media">
+        <ul>
+            <li><a href="//twitter.com/neagle">L</a></li>
+            <li><a href="//www.facebook.com/neagle">F</a></li>
+            <li><a href="//www.linkedin.com/in/nateeagle">I</a></li>
+        </ul>
+    </menu>
+
+        <header>
+            <h1>
+                
+                
+                    <a href="/"><b>Nate</b> <b>Eagle</b></a>
+                
+            </h1>
+        </header>
+
+        <article>
+
+    <time>August 31, 2011</time>
+
+    <h2>Jekyll not parsing includes?</h2>
+
+<p>This blog is hosted on GitHub and powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>, a &#8220;blog-aware, static site generator in Ruby&#8221; that GitHub uses. Think of it as a way to build a blog that allows for some dynamic templating but is entirely driven by files. Quick tangent: if you build sites for a living but find yourself kind of exhausted with big, feature-rich CMSs by the time you come home, Jekyll just might be what it takes to make blogging for yourself fun again.</p>
+<p>To the main point: Jekyll&#8217;s <a href="https://github.com/mojombo/jekyll/wiki/liquid-extensions">documentation boldly proclaims this</a> about its includes:</p>
+<blockquote>
+<p>If you have small page fragments that you wish to include in multiple places on your site, you can use the <code>include</code> tag.</p>
+<p><code>% include sig.textile %</code></p>
+<p>Jekyll expects all include files to be placed in an <code>_includes</code> directory at the root of your source dir. So this will embed the contents of <code>/path/to/proto/site/_includes/sig.textile</code> into the calling file.</p>
+</blockquote>
+<p>This might lead you to believe that Jekyll will parse Textile formatting in your included file (or Markdown formatting, for you infidels). <strong>But you would be mistaken</strong>. Jekyll will do no such thing: it will blithely output anything you toss into that optimistically named <code>.textile</code> or <code>.markdown</code> file as unparsed text.</p>
+<p>It looks like I&#8217;m not the only one with this problem: <a href="http://groups.google.com/group/jekyll-rb/browse_thread/thread/216db15546e79073">one</a>, <a href="https://github.com/mojombo/jekyll/issues/164">two</a>.</p>
+<p>For the moment, the only solution is to abandon our futile dreams of parsed includes and use straight html. But let&#8217;s see if we can at least get the documentation changed.</p>
+
+
+</article>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'nateeagle';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+        <footer>
+    <ul>
+        <li><a href="http://nateeagle.com">Portfolio</a></li>
+        <li><a href="http://twitter.com/#!/neagle">Twitter</a></li>
+        <li><a href="http://www.linkedin.com/in/nathanaeleagle">Linked In</a></li>
+        <li><a href="http://github.com/neagle">Github</a></li>
+        <li><a href="http://profiles.google.com/neagle">Google+</a></li>
+    </ul>
+</footer>
+
+
+    </div><!-- end #container -->
+
+    <script src="/js/jquery-1.6.2.min.js"></script>
+    <script src="/js/site.js"></script>
+    
+
+    <script>
+        // Google Analytics
+        var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-25457330-1']);
+            _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+
+            ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+            var s = document.getElementsByTagName('script')[0];
+
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>

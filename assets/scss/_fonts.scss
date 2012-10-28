@@ -1,0 +1,26 @@
+$font-headline: 'RatioDisplay', Helvetica, Arial, sans-serif;
+
+$font-normal: Arial, sans-serif;
+
+// Hide elements that use web fonts till they are loaded
+
+$web-font-elements: 'h3', 'h4', '.connect a', '.company-logo', '.ribbon a';
+$test-elements: 'li', 'a';
+
+.wf-loading {
+    @each $element in $web-font-elements {
+        #{$element} {
+            /*border: 20px solid red;*/
+            visibility: hidden;
+        }
+    }
+}
+
+.wf-active, .wf-inactive, .no-js {
+    @each $element in $web-font-elements {
+        #{$element} {
+            /*border: 10px solid orange;*/
+            visibility: visible;
+        }
+    }
+}

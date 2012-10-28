@@ -1,0 +1,158 @@
+<!--
+                    __,__r========qL,
+                 ,m**`~'            XW;
+          ____Lm/'      _mmmm    jW@+===m___,
+    .m+*f~TX7''|    `Y*X@X7~MMLL          ._JXmL,
+  jf~'    `YM#:~      !*##@ d j@~Y!     `~~~+m_
+ Z            M       `Nd*=+5+      -====L__ !M-
+m!            `Y=;m_,   ~Yf~~               YL`W;
+|        .mmmmmqrL_XXX~*==mL,                 Y#|
+|  ,Z~~~~~'        ~~~~    X#         -==L__,  !#,
+| |tL             ____WY*f~~                `~qd#W
+V,| `~~Y*+mL_,  :f~~ ~                   q_    V#b
+`b|         `Y+-W;                        `\\,  _#
+  V              N,  m                 YL,   `\L#@
+                  N  #                   YL,   `##,
+                 .P  #                     `\   V#|
+               ../   #           ^           YL |W
+              -P     #    :P  ;  ||           `|!W
+              Z'     #   :P  :'   #,           #L#
+          _ _Wb    jWD  jf   /    |b           V@*
+        j+N##8#4rt8#~.,jf    |    |#       b   |W
+     .r*'m8####q#P8###*'    W    :##       V;  d|
+    /K_jWK#X###~#|###mW#   :P  j;##|    #, `#, @
+   !TGW###8#m#K7q=WWmd##mmm#m.Z8###!    #W  |b |
+   /4#@##W#+##P:WZWMZ*W=m##WMN|WZWP:#;m,d#W;Dd |
+  W*~~~M#W!KWjW5!!/WV##N7j#KXPNMX#DW###b###D#Xb|
+ !'    d!JXXXW!`!Ldm@#bd#WW8K)X|X#8#8#K##V#!K5|#
+      d@f~  jf.Z\/Vb*Y+W#j(WMZPrMM#@##K#@##;WWj##,
+      ~    m*~'   '#`\8#W4KW#qX@VW##W#8##8#rNWK###G-
+          `'       #`8*=#YWWK/b+WW#W#*#MWm8*KKd#M#**m,
+                   #Z'  VW#f'~M+NM#####K#8@WLMZKX#W#+M;
+                            ~` *YM#######@*)P/+DK####m#
+                                 `'*##fXVPX|Vr~##Z#W@N@
+                                    `WL_d**DfWX#8#WK##*b
+                                              `W###@#N#/b
+                                               .#mj#X~YM#
+                                               ~`#WdD~  Y!
+                                               `'_|#f--
+                                                   *
+-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Color Ripples: a Canvas Toy</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/site.css">
+
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Posts">
+    <link rel="alternate" type="application/atom+xml" href="bits.xml" title="Bits">
+</head>
+
+<body>
+
+    <menu id="social-media">
+        <ul>
+            <li><a href="//twitter.com/neagle">L</a></li>
+            <li><a href="//www.facebook.com/neagle">F</a></li>
+            <li><a href="//www.linkedin.com/in/nateeagle">I</a></li>
+        </ul>
+    </menu>
+
+        <header>
+            <h1>
+                
+                
+                    <a href="/"><b>Nate</b> <b>Eagle</b></a>
+                
+            </h1>
+        </header>
+
+        <article>
+
+    <time>September 11, 2011</time>
+
+    <h2>Color Ripples: a Canvas Toy</h2>
+
+<p>Here&#8217;s a little bit of colorful distraction for a rainy afternoon.</p>
+<p><iframe style="width: 100%; height: 500px" src="http://jsfiddle.net/nate/dyVPR/embedded/result,js,html"></iframe></p>
+<p>Playing with <code>canvas</code> is fun. However, you may notice, if you glance through the code, that there are really only five lines of code that are canvas-specific. (A few more if you count the setup.)</p>
+<div>
+<pre><code class='js'>var $canvas = $( 'canvas' ),
+canvas = $canvas<sup class="footnote" id="fnr0"><a href="#fn0">0</a></sup>,
+ctx = canvas.getContext( &#8216;2d&#8217; ),
+drawPoint = function( x, y, radius, color ) {
+ctx.fillStyle = color;
+ctx.beginPath();
+ctx.arc( x, y, radius, 0, Math.PI * 2, false );
+ctx.closePath();
+ctx.fill();
+}</code></pre>
+</div>
+<p>This is the code for, well, drawing a circle. <em>All</em> of the rest of it is just various math and adjustments on where and how to draw those circles.</p>
+<p>I spent basically all of my highschool math courses messing around with <a href="http://education.ti.com/educationportal/sites/US/productDetail/us_ti83p.html">my graphing calculator</a> and <a href="http://en.wikipedia.org/wiki/TI-BASIC">TI Basic</a>. I made a little magic eight ball program that gave different responses based on a random number; I made programs to take care of the quadratic equation for me. (Note: I spent more time fussing with the formatting and look of the UI for entering numbers than I did with the calculations &#8211; I was a front-end developer in the making!) I finally dropped out of AP Calculus when being clever about my calculator could no longer make up for the fact that I wasn&#8217;t learning a lick of math.</p>
+<p>I&#8217;m grateful for what exposure I had to code &#8211; ultimately, even that time messing with TI Basic helped me find my way to a great career. But I can&#8217;t help but wish that somebody &#8211; <em>any</em> adult in my life &#8211; had noticed that I spent all my time trying vainly to do stuff with computers and said, &#8220;You know, that might not be so wholly irrelevant to his future&#8230;&#8221;</p>
+<p>As far as I can tell, every developer I know fends off multiple unsolicited recruitment emails a month: America needs people to write code and it wants to pay them for it. My school acted like the most important thing about computers was making sure we didn&#8217;t check our email on the <em>for-research</em> computers in the library. (I got Saturday school for this once.) Couldn&#8217;t the public schools have noticed that education in computers &amp; code might be a good investment back in the &#8217;90s?</p>
+<p>Couldn&#8217;t there be a whole Math track for kids who&#8217;re interested in applying it to code? Can you imagine how much fun it would have been to immediately try out the formula for slope on a visual toy you wrote as homework?</p>
+<p>For that matter: are public schools aware of this <em>now</em>?</p>
+<p>Anyway: I actually had a great highschool Math teacher. Hell, I&#8217;d pay a lot of money at this point in my life to go back, sit in that musty portable classroom in Spanaway, Washington and have him teach me all about linear equations to help me draw pretty, moving pictures.</p>
+
+
+</article>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'nateeagle';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+        <footer>
+    <ul>
+        <li><a href="http://nateeagle.com">Portfolio</a></li>
+        <li><a href="http://twitter.com/#!/neagle">Twitter</a></li>
+        <li><a href="http://www.linkedin.com/in/nathanaeleagle">Linked In</a></li>
+        <li><a href="http://github.com/neagle">Github</a></li>
+        <li><a href="http://profiles.google.com/neagle">Google+</a></li>
+    </ul>
+</footer>
+
+
+    </div><!-- end #container -->
+
+    <script src="/js/nateeagle.com.js"></script>
+    
+
+    <script>
+        // Google Analytics
+        var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-25457330-1']);
+            _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+
+            ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+            var s = document.getElementsByTagName('script')[0];
+
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>

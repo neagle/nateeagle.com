@@ -1,0 +1,101 @@
+/* Compass imports */
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+/*@import "compass/typography/vertical_rhythm";*/
+/*@import "compass/layout/grid-background";*/
+
+/* Local Imports */
+@import "base";
+
+/* Variables */
+
+/* Base Rules */
+/* A Base rule is applied to an element using an element selector, a descendent
+ * selector, or a child selector, along with any pseudo-classes. It doesn’t
+ * include any class or ID selectors. It is defining the default styling for
+ * how that element should look in all occurrences on the page.
+ *
+ * Jonathan Snook
+ * http://smacss.com/book/type-base
+ */
+
+/* Establish a vertical rhythm */
+/*@include establish-baseline();*/
+
+html {
+}
+
+body {
+  font: {
+    family: $font-normal;
+  }
+}
+
+#{headings()} {
+}
+
+::selection {
+  background: red;
+}
+
+::-moz-selection {
+  background: red;
+}
+
+/* Layout Rules */
+
+/* CSS, by its very nature, is used to lay elements out on the page. However,
+ * there is a distinction between layouts dictating the major and minor
+ * components of a page. The minor components—such as a callout, or login form,
+ * or a navigation item sit within the scope of major components such as a
+ * header or footer. I refer to the minor components as Modules and will dive
+ * into those in the next section. The major components are referred to as
+ * Layout styles.
+ *
+ * Jonathan Snook
+ * http://smacss.com/book/type-layout
+ */
+
+.l-left {
+    float: left;
+}
+
+.l-right {
+    float: right;
+}
+
+/* Module Rules */
+/* As briefly mentioned in the previous section, a Module is a more discrete
+ * component of the page. It is your navigation bars and your carousels and
+ * your dialogs and your widgets and so on. This is the meat of the page.
+ * Modules sit inside Layout components. Modules can sometimes sit within other
+ * Modules, too. Each Module should be designed to exist as a standalone
+ * component. In doing so, the page will be more flexible. If done right,
+ * Modules can easily be moved to different parts of the layout without
+ * breaking.
+ *
+ * Jonathan Snook
+ * http://smacss.com/book/type-module
+ */
+
+/* Module imports */
+/*@import "modules/content-module-tabs";*/
+
+
+/* State Rules */
+/* A state is something that augments and overrides all other styles. For
+ * example, an accordion section may be in a collapsed or expanded state. A
+ * message may be in a success or error state.  States are generally applied to
+ * the same element as a layout rule or applied to the same element as a base
+ * module class.
+ *
+ * Jonathan Snook
+ * http://smacss.com/book/type-state
+ */
+
+
+
+
+/* Themes
+ */

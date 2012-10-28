@@ -1,0 +1,38 @@
+//
+// This file pulls in ratio-display using the compass font-face helper. Its
+// primary advantage is that it can handle base64 inlining of the font content
+//
+
+@import "compass/css3";
+@include font-face('RatioDisplay', font-files(
+    'RatioDisplay/ratio_display_regular-webfont.woff', woff,
+    'RatioDisplay/ratio_display_regular-webfont.ttf', truetype,
+    'RatioDisplay/ratio_display_regular-webfont.svg', svg),
+    'RatioDisplay/ratio_display_regular-webfont.eot',
+    // weight
+    400,
+    // style
+    normal
+);
+
+@include font-face('RatioDisplay', font-files(
+    'RatioDisplay/ratio_display_medium-webfont.woff', woff,
+    'RatioDisplay/ratio_display_medium-webfont.ttf', truetype,
+    'RatioDisplay/ratio_display_medium-webfont.svg', svg),
+    'RatioDisplay/ratio_display_medium-webfont.eot',
+    // weight
+    bold,
+    // style
+    normal
+);
+
+/*@include font-face('RatioDisplay', inline-font-files(*/
+    /*'RatioDisplay/ratio_display_bold-webfont.woff', woff,*/
+    /*'RatioDisplay/ratio_display_bold-webfont.ttf', truetype,*/
+    /*'RatioDisplay/ratio_display_bold-webfont.svg', svg),*/
+    /*'RatioDisplay/ratio_display_bold-webfont.eot',*/
+    /*// weight*/
+    /*700,*/
+    /*// style*/
+    /*normal*/
+/*);*/

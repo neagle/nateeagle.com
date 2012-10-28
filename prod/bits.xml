@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>Bits from Nate Eagle's Front-End Development Memoranda</title>
+  <link href="http://neagle.github.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://neagle.github.com/atom.xml"/>
+  <updated>2012-10-26T17:44:34-04:00</updated>
+  <id>http://neagle.github.com/</id>
+  <author>
+    <name>Nate Eagle</name>
+    <email>nate@nateeagle.com</email>
+  </author>
+
+  
+    
+  
+    
+          <entry>
+            <id>http://neagle.github.com/2011/10/02/invert-the-screen-colors-on-your-mac</id>
+            <link type="text/html" rel="alternate" href="http://neagle.github.com/2011/10/02/invert-the-screen-colors-on-your-mac.html"/>
+            <title>Invert the Screen Colors on Your Mac</title>
+            <updated>2011-10-02T00:00:00-04:00</updated>
+            <author>
+              <name>Nate Eagle</name>
+              <uri>http://neagle.github.com/</uri>
+            </author>
+            <content type="html">&lt;p&gt;This weekend at the jQuery conference in Boston, an attendee informed Adam Sontag during his presentation with Rick Waldron that he could invert the screen colors on his mac to make the text more visible by pressing&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Control + Option + Command + 8&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A handy thing to know for making photographs look hilarious.&lt;/p&gt;</content>
+          </entry>
+    
+  
+    
+  
+    
+          <entry>
+            <id>http://neagle.github.com/2011/09/21/open-a-directory-in-finder-from-terminal</id>
+            <link type="text/html" rel="alternate" href="http://neagle.github.com/2011/09/21/open-a-directory-in-finder-from-terminal.html"/>
+            <title>Open a Directory in Finder from Terminal</title>
+            <updated>2011-09-21T00:00:00-04:00</updated>
+            <author>
+              <name>Nate Eagle</name>
+              <uri>http://neagle.github.com/</uri>
+            </author>
+            <content type="html">&lt;p&gt;Finder may not be the worst part of OS X, but it&amp;#8217;s a contender. Regardless: you may sometimes wish to open your working directory in the command line in Finder.&lt;/p&gt;
+&lt;div&gt;
+&lt;pre&gt;&lt;code class='bash'&gt;open .&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content>
+          </entry>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+ 
+</feed>

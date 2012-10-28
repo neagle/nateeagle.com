@@ -1,0 +1,19 @@
+{
+  "name": "nateeagle.com",
+  "description": "Nate Eagle's personal site.",
+  "version": "0.0.1",
+  "author": "Nate Eagle",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "devDependencies": {
+    "connect": "~2.6.1",
+    "grunt": "~0.3.15",
+    "grunt-jekyll": "~0.2.1",
+    "grunt-compass": "~0.3.2"
+  }
+}

@@ -1,0 +1,81 @@
+.issue-slug{
+  display: none;
+}
+
+.ac_results {
+	border: 1px solid WindowFrame;
+	background-color: #fff;
+	padding: 2px;
+	text-align:left;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+.ac_results ul {
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.ac_results iframe {
+	display:none;/*sorry for IE5*/
+	display/**/:block;/*sorry for IE5*/
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	filter:mask();
+	width:3000px;
+	height:3000px;
+}
+
+.ac_results li {
+	cursor: pointer;
+	display: block;
+	font: menu;
+	font-size: 13px;
+	margin: 0;
+	overflow: hidden;
+	padding: 3px 0;
+	position: relative;
+	width: 100%;
+}
+
+.ac_results li a {
+	color:#333;
+	display:block;
+	padding:0 3px;
+}
+
+.ac_results li a:hover {
+	text-decoration:none;
+}
+
+body.home .ac_results li {
+	font-size: 16px;
+}
+
+.ac_results li .searchall {
+	color: #e28444;
+	font-style: italic;
+}
+
+.ac_results li .csyn {
+	color: #999;
+	font: italic 11px Georgia, serif;
+}
+
+body.home .ac_results li .csyn {
+	font: italic 13px Georgia, serif;
+}
+
+.ac_loading {
+	background : Window url('./indicator.gif') right center no-repeat;
+}
+
+.ac_over {
+	background-color: #e6e7e8;
+	color: #333;
+}

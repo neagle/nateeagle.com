@@ -1,0 +1,239 @@
+---
+layout: presentation 
+title: A Five-Minute Introduction to Compass 
+---
+<section>
+h1. A Five-Minute Introduction to Compass
+
+h3. by Nate Eagle
+</section>
+
+<section>
+h2. We have a problem.
+
+h3(step). CSS is complicated.
+</section>
+
+<section>
+<ul>
+    <li>Want to change one of the major colors your site uses?</li>
+    <li class="step">Want an element to be sized relative to another element?</li>
+    <li class="step">Want to serve a single stylesheet for performance reasons, but keep your styles organized in different files?</li>
+    <li class="step">Want to establish a consistent vertical rhythm?</li>
+</ul>
+</section>
+
+<section>
+h2. It's all possible.
+
+h3(step). It's just a _pain_.
+</section>
+
+<section>
+h2.  We have a problem.
+
+h3(step). CSS is getting <em>more</em> complicated.
+
+<div class="step">
+{% highlight css %}
+body {
+  background-image: url(/images/noise.png), -webkit-gradient(radial, circle farthest-corner, 0, circle farthest-corner, 100, color-stop(0%, rgba(36, 56, 66, 0.8)), color-stop(100%, rgba(18, 28, 33, 0.9)));
+  background-image: url(/images/noise.png), -webkit-radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+  background-image: url(/images/noise.png), -moz-radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+  background-image: url(/images/noise.png), -o-radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+  background-image: url(/images/noise.png), -ms-radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+  background-image: url(/images/noise.png), radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+}
+{% endhighlight %}
+</div>
+</section>
+
+<section>
+
+h2. Compass, with SASS, is a framework for removing the *pain* from CSS.
+
+</section>
+
+<section>
+
+h2. "Want to change one of the major colors your site uses?"
+
+h3(step). SASS gives us *variables*.
+</section>
+
+<section>
+{% highlight sass %}
+$backgroundColor: hsl( 200, 20%, 20% );
+$color: hsl( 200, 90%, 50% );
+
+body {
+    background-color: $backgroundColor;
+    color: $color;
+}
+
+h1 {
+    color: complement( $color );
+}
+
+h2 {
+    color: lighten( $color, 10% );
+}
+
+p {
+    color: $color;
+}
+
+strong {
+    color: adjust-hue( $color, 100deg );
+}
+{% endhighlight %}
+</section>
+
+<section>
+
+h2. "Want an element to be sized relative to another element?"
+
+h3(step). SASS gives us *operations*.
+
+</section>
+
+<section>
+{% highlight sass %}
+$container: 600px;
+$spacing: 20px;
+$rightRail: ( $container / 3 ) - $spacing;
+$river: ( 2 * ( $container / 3 ) ) - $spacing;
+
+.container {
+    width: $container;
+}
+
+.river,
+.right-rail {
+    margin: $spacing / 2;
+}
+
+.river {
+    width: $river;
+}
+
+.right-rail {
+    width: $rightRail;
+}
+{% endhighlight %}
+</section>
+
+<section>
+
+h2. "Want to serve a single stylesheet for performance reasons, but keep your styles organized in different files?"
+
+h3(step). Compass gives us *imports*.
+</section>
+
+<section>
+{% highlight sass %}
+@import "compass/reset";
+@import "compass/css3";
+@import "syntax-friendly.scss";
+@import "fonts.scss";
+{% endhighlight %}
+</section>
+
+<section>
+h2. "Want to establish a consistent vertical rhythm?"
+
+h3(step). Compass gives us *mixins*.
+</section>
+
+
+<section>
+{% highlight sass %}
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$default-rhythm-border-style: solid;
+$relative-font-sizing: false;
+
+h1 {
+    @include adjust-font-size-to( 72px );
+    @include adjust-leading-to( 8 );
+    @include margin-trailer( 1 );
+}
+{% endhighlight %}
+</section>
+
+<section>
+h2. CSS is getting more complicated.
+
+h3(step). Compass's mixins make complex,<br> multi-vendor output&nbsp;simple.
+</section>
+
+<section>
+h2. Remember this?
+
+{% highlight sass %}
+body {
+  background-image: url(/images/noise.png), -webkit-gradient(radial, circle farthest-corner, 0, circle farthest-corner, 100, color-stop(0%, rgba(36, 56, 66, 0.8)), color-stop(100%, rgba(18, 28, 33, 0.9)));
+  background-image: url(/images/noise.png), -webkit-radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+  background-image: url(/images/noise.png), -moz-radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+  background-image: url(/images/noise.png), -o-radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+  background-image: url(/images/noise.png), -ms-radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+  background-image: url(/images/noise.png), radial-gradient(circle farthest-corner, rgba(36, 56, 66, 0.8), rgba(18, 28, 33, 0.9));
+}
+{% endhighlight %}
+</section>
+
+
+<section>
+h2. With Compass: 
+
+{% highlight sass %}
+body {
+    @include background-image(
+        url( /images/noise.png ),
+        radial-gradient(
+            circle farthest-corner,
+            transparentize( lighten( $backgroundColor, 10% ), 0.2 ),
+            transparentize( $backgroundColor, 0.1 )
+        )   
+    );
+}
+{% endhighlight %}
+</section>
+
+<section>
+h2. Is Compass worth it for you? 
+</section>
+
+<section>
+h2. Do you...
+
+<ul>
+    <li class="step">Work on large sites with big stylesheets?</li>
+    <li class="step">Use CSS3?</li>
+    <li class="step">Maintain sites after they're launched?</li>
+    <li class="step">Have compassion for others who do?</li>
+</ul>
+
+h3(step). THEN YES.
+</section>
+
+<section>
+h2. Compass is the future of CSS.
+
+h3(step). Try it today, or play catch-up tomorrow.
+</section>
+
+<section>
+h2. Want to get started?
+
+h3(step). Talk to me!
+</section>
+
+<section>
+h2. Thank you!
+
+h3. Fin
+</section>
+
