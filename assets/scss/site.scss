@@ -21,18 +21,231 @@
  */
 
 /* Establish a vertical rhythm */
-/*@include establish-baseline();*/
+@include establish-baseline();
 
 html {
 }
 
 body {
+  @include adjust-font-size-to($base-font-size);
+  background: {
+    attachment: fixed;
+    image: image-url('backgrounds/photographs/purple-flower-ants.jpg');
+    position: 50% 0%;
+  }
+  color: #333;
+  @include establish-baseline($base-font-size);
   font: {
-    family: $font-normal;
+    family: $font-normal, sans-serif;
   }
 }
 
+#page {
+  @include baseline-grid-background();
+  @include clearfix();
+}
+
 #{headings()} {
+  font: {
+    family: $font-headline;
+  }
+}
+
+header {
+  background: {
+    position: 50% 50;
+    color: #000;
+    image: image-url('backgrounds/office/office.png');
+  }
+  border: 1px solid black;
+  @include border-radius(0 0 3px 3px);
+  @include box-shadow(
+    0 1px 5px hsla(0, 0%, 0%, 0.5)
+  );
+
+  @include box-sizing(border-box);
+  color: #eee;
+  float: left;
+  @include opacity(1);
+  overflow: hidden;
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  position: relative;
+  width: 20%;
+
+  h1 {
+    @include adjust-font-size-to(36px);
+    font-family: $font-headline-special;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: #aaa;
+    @include adjust-font-size-to(18px);
+    font-family: $font-headline;
+    text-align: center;
+  }
+
+  &:before {
+    @include border-radius(0 0 3px 3px);
+    @include box-shadow(
+      inset 0 0 2px hsla(0, 0%, 100%, 0.3)
+    );
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -5px;
+  }
+
+  &:after {
+    @include adjust-font-size-to(72px);
+    color: #ccc;
+    content: 'e';
+    display: block;
+    font-family: 'davys';
+    text-align: center;
+  }
+}
+
+#page > section {
+  background: {
+    color: hsla(0, 0%, 100%, 1);
+    image: image-url('backgrounds/furley_bg/furley_bg.png');
+  }
+  @include border-radius(0 0 3px 3px);
+  @include box-shadow(
+    0 1px 5px hsla(0, 0%, 0%, 0.5)
+  );
+  @include box-sizing(border-box);
+  float: left;
+  @include margin-trailer(1);
+  padding: {
+    left: 25px;
+    right: 25px;
+  }
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  width: 20%;
+  &.posts {
+    width: 30%;
+  }
+}
+
+/* spacing */
+$space: 2%;
+
+header {
+  margin-left: $space;
+}
+
+#page > section {
+  margin-left: $space;
+}
+
+
+
+.posts {
+  li {
+    @include margin-trailer(1);
+  }
+}
+
+#portrait {
+  @include backface-visibility(hidden);
+  border: 10px solid white;
+  @include border-radius(10px);
+  @include box-shadow(
+    0 0 3px hsla(0, 0%, 0%, 0.5)
+  );
+  @include box-sizing(border-box);
+  @include margin-trailer(1);
+  @include transform(
+    rotate(-3deg)
+  );
+  /*@include transition-property(all);*/
+  /*@include transition-duration(0.5s);*/
+  position: relative;
+
+  img {
+    @include border-radius(5px);
+    display: block;
+    width: 100%;
+  }
+
+  &:before {
+    background: {
+      color: hsla(0, 0%, 100%, 0.5);
+    }
+    content: '';
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: -20px;
+    top: -15px;
+    @include transform(
+      rotate(8deg)
+    );
+    width: 100px;
+  }
+
+  &:after {
+    background: {
+      color: hsla(0, 0%, 100%, 0.5);
+    }
+    bottom: -20px;
+    content: '';
+    display: block;
+    height: 30px;
+    left: -15px;
+    position: absolute;
+    @include transform(
+      rotate(3deg)
+    );
+    width: 70px;
+  }
+}
+
+#about {
+  &:hover img:first-of-type {
+    /*@include border-radius(5%);*/
+  }
+}
+
+h1 {
+  @include adjust-font-size-to(48px);
+}
+
+h2 {
+  @include adjust-font-size-to(36px);
+}
+
+h3 {
+  font: {
+    size: 24px;
+  }
+}
+
+h4 {
+  font: {
+    size: 18px;
+  }
+}
+
+h5 {
+  font: {
+    size: 16px;
+  }
+}
+
+h6 {
+  font: {
+    size: 48px;
+  }
 }
 
 ::selection {
@@ -41,6 +254,10 @@ body {
 
 ::-moz-selection {
   background: red;
+}
+
+p {
+  @include margin-trailer(1);
 }
 
 /* Layout Rules */

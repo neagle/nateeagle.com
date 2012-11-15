@@ -1,24 +1,39 @@
+/* Compass imports */
+@import "compass/typography/vertical_rhythm";
+@import "compass/layout/grid-background";
+
+/* Site imports */
+@import "fonts";
+
 // Turn debugging on and off. Use a conditional switch for any
 // debugging-oriented // oriented settings in your stylesheets.
 //
 // Example: @if $debug == true { } @else { }
 $debug: false;
 
-@import "fonts";
+$font-normal: ubuntu-regular;
+$font-headline: titillium-regular;
+$font-headline-special: titillium-bold;
 
 /* Layout */
 
 /* Colors */
 
+$color-text-primary: #fff;
+
 /* Vertical Rhythm */
 $base-font-size: 16px;
 $base-line-height: 24px;
-$relative-font-sizing: false;
-$round-to-nearest-half-line: true;
+$default-rhythm-border-style: solid;
+$relative-font-sizing: true;
+$round-to-nearest-half-line: false;
+$min-line-padding: 2px;
 
 /* Grid */
-$grid-background-baseline-color: rgba(0, 0, 0, 0.1);
 $grid-background-baseline-height: $base-line-height;
+$grid-background-baseline-color: blue;
+/*$grid-background-column-color: blue;*/
+/*$grid-background-gutter-color: green;*/
 
 @if $debug == true {
     $show-grid-backgrounds: true;

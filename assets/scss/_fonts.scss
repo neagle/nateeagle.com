@@ -1,26 +1,53 @@
-$font-headline: 'RatioDisplay', Helvetica, Arial, sans-serif;
+// Create a custom mixin that makes using fonts easy
+// We simplify it by naming the font files we get from Font Squirrel the same
+// as what we'll use in our CSS
 
-$font-normal: Arial, sans-serif;
-
-// Hide elements that use web fonts till they are loaded
-
-$web-font-elements: 'h3', 'h4', '.connect a', '.company-logo', '.ribbon a';
-$test-elements: 'li', 'a';
-
-.wf-loading {
-    @each $element in $web-font-elements {
-        #{$element} {
-            /*border: 20px solid red;*/
-            visibility: hidden;
-        }
-    }
+@mixin font($family, $version: $family, $name: $family) {
+    @include font-face(
+        $name,
+        font-files(
+            $family + '/' + $version + '.woff', woff,
+            $family + '/' + $version + '.ttf', truetype,
+            $family + '/' + $version + '.svg', svg
+        ),
+        $family + '/' + $version + '.eot'
+    );
 }
 
-.wf-active, .wf-inactive, .no-js {
-    @each $element in $web-font-elements {
-        #{$element} {
-            /*border: 10px solid orange;*/
-            visibility: visible;
-        }
-    }
-}
+@include font($family: 'armorpiercing', $version: 'ap-webfont');
+@include font($family: 'bpdots', $version: 'bpdots');
+@include font($family: 'buccaneer');
+@include font($family: 'cabin', $version: 'cabin-bold', $name: 'cabin-bold');
+@include font($family: 'cabin', $version: 'cabin-regular');
+@include font($family: 'davys', $version: 'DavysDingbats-webfont', $name: 'davys');
+@include font($family: 'existence-light', $version: 'Existence-Light-webfont', $name: 'existence-light');
+@include font($family: 'existence-light', $version: 'Existence-StencilLight-webfont', $name: 'existence-light');
+@include font($family: 'existence-light', $version: 'Existence-UnicaseLight-webfont', $name: 'existence-unicase-light');
+@include font($family: 'helsinki');
+@include font($family: 'neoretro', $version: 'NEORD___-webfont', $name: 'neoretrodraw');
+@include font($family: 'neoretro', $version: 'NEORF___-webfont', $name: 'neoretro');
+@include font($family: 'quicksand', $version: 'quicksand_bold', $name: 'quicksand-bold');
+@include font($family: 'quicksand', $version: 'quicksand_book', $name: 'quicksand-book');
+@include font($family: 'quicksand', $version: 'quicksand_light', $name: 'quicksand-light');
+@include font($family: 'social-icons');
+@include font($family: 'titillium', $version: 'titillium-thin', $name: 'titillium-thin');
+@include font($family: 'titillium', $version: 'titillium-light', $name: 'titillium-light');
+@include font($family: 'titillium', $version: 'titillium-regular', $name: 'titillium-regular');
+@include font($family: 'titillium', $version: 'titillium-medium', $name: 'titillium-medium');
+@include font($family: 'titillium', $version: 'titillium-bold', $name: 'titillium-bold');
+@include font($family: 'titillium', $version: 'titillium-xbold', $name: 'titillium-xbold');
+/*@include font($family: 'titillium', $version: 'titillium-light', $name: 'titillium-light');*/
+/*@include font($family: 'titillium', $version: 'titillium-regular');*/
+/*@include font($family: 'titillium', $version: 'titillium-thin', $name: 'titillium-thin');*/
+/*@include font($family: 'titillium', $version: 'titillium-medium', $name: 'titillium-medium');*/
+/*@include font($family: 'titillium', $version: 'titillium-bold', $name: 'titillium-bold');*/
+/*@include font($family: 'titillium', $version: 'titillium-xbold', $name: 'titillium-xbold');*/
+@include font($family: 'ubuntu', $version: 'Ubuntu-B', $name: 'ubuntu-bold');
+@include font($family: 'ubuntu', $version: 'Ubuntu-R', $name: 'ubuntu-regular');
+@include font($family: 'bebas-neue', $version: 'BebasNeue-webfont');
+@include font($family: 'bonveno', $version: 'BonvenoCF-Light-webfont');
+@include font($family: 'pincoyablack', $version: 'pincoyablack-webfont');
+@include font($family: 'itsadzoke', $version: 'itsadzokeS01-046-webfont');
+@include font($family: 'hominis', $version: 'HOMINIS-webfont');
+@include font($family: 'znikomitno24', $version: 'ZnikomitNo24-webfont');
+@include font($family: 'geotica', $version: 'Geotica_2012');
