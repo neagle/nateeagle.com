@@ -1,0 +1,188 @@
+<section>
+<h1>A Five-Minute Introduction to Compass</h1>
+<h3>by Nate Eagle</h3>
+</section>
+<section>
+<h2>We have a problem.</h2>
+<h3 class="step"><span class="caps">CSS</span> is complicated.</h3>
+</section>
+<section>
+<ul>
+    <li>Want to change one of the major colors your site uses?</li>
+    <li class="step">Want an element to be sized relative to another element?</li>
+    <li class="step">Want to serve a single stylesheet for performance reasons, but keep your styles organized in different files?</li>
+    <li class="step">Want to establish a consistent vertical rhythm?</li>
+</ul>
+</section>
+<section>
+<h2>It&#8217;s all possible.</h2>
+<h3 class="step">It&#8217;s just a <em>pain</em>.</h3>
+</section>
+<section>
+<h2>We have a problem.</h2>
+<h3 class="step"><span class="caps">CSS</span> is getting <em>more</em> complicated.</h3>
+<div class="step">
+<div class="highlight"><pre><code class="css"><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">radial</span><span class="o">,</span> <span class="k">circle</span> <span class="n">farthest</span><span class="o">-</span><span class="n">corner</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="k">circle</span> <span class="n">farthest</span><span class="o">-</span><span class="n">corner</span><span class="o">,</span> <span class="m">100</span><span class="o">,</span> <span class="k">color</span><span class="o">-</span><span class="n">stop</span><span class="p">(</span><span class="m">0</span><span class="o">%,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">36</span><span class="o">,</span> <span class="m">56</span><span class="o">,</span> <span class="m">66</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">))</span><span class="o">,</span> <span class="k">color</span><span class="o">-</span><span class="n">stop</span><span class="p">(</span><span class="m">100</span><span class="o">%,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">18</span><span class="o">,</span> <span class="m">28</span><span class="o">,</span> <span class="m">33</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">)));</span>
+  <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">farthest</span><span class="o">-</span><span class="n">corner</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">36</span><span class="o">,</span> <span class="m">56</span><span class="o">,</span> <span class="m">66</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">18</span><span class="o">,</span> <span class="m">28</span><span class="o">,</span> <span class="m">33</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">));</span>
+  <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">farthest</span><span class="o">-</span><span class="n">corner</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">36</span><span class="o">,</span> <span class="m">56</span><span class="o">,</span> <span class="m">66</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">18</span><span class="o">,</span> <span class="m">28</span><span class="o">,</span> <span class="m">33</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">));</span>
+  <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="o">-</span><span class="err">o</span><span class="o">-</span><span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">farthest</span><span class="o">-</span><span class="n">corner</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">36</span><span class="o">,</span> <span class="m">56</span><span class="o">,</span> <span class="m">66</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">18</span><span class="o">,</span> <span class="m">28</span><span class="o">,</span> <span class="m">33</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">));</span>
+  <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">farthest</span><span class="o">-</span><span class="n">corner</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">36</span><span class="o">,</span> <span class="m">56</span><span class="o">,</span> <span class="m">66</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">18</span><span class="o">,</span> <span class="m">28</span><span class="o">,</span> <span class="m">33</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">));</span>
+  <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">farthest</span><span class="o">-</span><span class="n">corner</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">36</span><span class="o">,</span> <span class="m">56</span><span class="o">,</span> <span class="m">66</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">18</span><span class="o">,</span> <span class="m">28</span><span class="o">,</span> <span class="m">33</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">9</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+</div>
+</section>
+<section>
+<h2>Compass, with <span class="caps">SASS</span>, is a framework for removing the <strong>pain</strong> from <span class="caps">CSS</span>.</h2>
+</section>
+<section>
+<h2>&#8220;Want to change one of the major colors your site uses?&#8221;</h2>
+<h3 class="step"><span class="caps">SASS</span> gives us <strong>variables</strong>.</h3>
+</section>
+<section>
+<div class="highlight"><pre><code class="sass"><span class="nv">$backgroundColor</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">20</span><span class="kt">%</span><span class="o">,</span> <span class="mi">20</span><span class="kt">%</span> <span class="p">)</span><span class="err">;</span>
+<span class="nv">$color</span><span class="o">:</span> <span class="nf">hsl</span><span class="p">(</span> <span class="mi">200</span><span class="o">,</span> <span class="mi">90</span><span class="kt">%</span><span class="o">,</span> <span class="mi">50</span><span class="kt">%</span> <span class="p">)</span><span class="err">;</span>
+
+<span class="nt">body</span> <span class="err">{</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$backgroundColor</span><span class="err">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nt">h1</span> <span class="err">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">complement</span><span class="p">(</span> <span class="nv">$color</span> <span class="p">)</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nt">h2</span> <span class="err">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">lighten</span><span class="p">(</span> <span class="nv">$color</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span> <span class="p">)</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nt">p</span> <span class="err">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nt">strong</span> <span class="err">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">adjust-hue</span><span class="p">(</span> <span class="nv">$color</span><span class="o">,</span> <span class="mi">100</span><span class="kt">deg</span> <span class="p">)</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre>
+</div>
+</section>
+<section>
+<h2>&#8220;Want an element to be sized relative to another element?&#8221;</h2>
+<h3 class="step"><span class="caps">SASS</span> gives us <strong>operations</strong>.</h3>
+</section>
+<section>
+<div class="highlight"><pre><code class="sass"><span class="nv">$container</span><span class="o">:</span> <span class="mi">600</span><span class="kt">px</span><span class="err">;</span>
+<span class="nv">$spacing</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="err">;</span>
+<span class="nv">$rightRail</span><span class="o">:</span> <span class="p">(</span> <span class="nv">$container</span> <span class="o">/</span> <span class="mi">3</span> <span class="p">)</span> <span class="o">-</span> <span class="nv">$spacing</span><span class="err">;</span>
+<span class="nv">$river</span><span class="o">:</span> <span class="p">(</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span> <span class="nv">$container</span> <span class="o">/</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">)</span> <span class="o">-</span> <span class="nv">$spacing</span><span class="err">;</span>
+
+<span class="nc">.container</span> <span class="err">{</span>
+    <span class="na">width</span><span class="o">:</span> <span class="nv">$container</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.river</span><span class="o">,</span>
+<span class="nc">.right-rail</span> <span class="err">{</span>
+    <span class="na">margin</span><span class="o">:</span> <span class="nv">$spacing</span> <span class="o">/</span> <span class="mi">2</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.river</span> <span class="err">{</span>
+    <span class="na">width</span><span class="o">:</span> <span class="nv">$river</span><span class="err">;</span>
+<span class="err">}</span>
+
+<span class="nc">.right-rail</span> <span class="err">{</span>
+    <span class="na">width</span><span class="o">:</span> <span class="nv">$rightRail</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre>
+</div>
+</section>
+<section>
+<h2>&#8220;Want to serve a single stylesheet for performance reasons, but keep your styles organized in different files?&#8221;</h2>
+<h3 class="step">Compass gives us <strong>imports</strong>.</h3>
+</section>
+<section>
+<div class="highlight"><pre><code class="sass"><span class="k">@import</span> <span class="s">&quot;compass/reset&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;compass/css3&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;syntax-friendly.scss&quot;;</span>
+<span class="k">@import</span> <span class="s">&quot;fonts.scss&quot;;</span>
+</code></pre>
+</div>
+</section>
+<section>
+<h2>&#8220;Want to establish a consistent vertical rhythm?&#8221;</h2>
+<h3 class="step">Compass gives us <strong>mixins</strong>.</h3>
+</section>
+<section>
+<div class="highlight"><pre><code class="sass"><span class="k">@import</span> <span class="s">&quot;compass/typography/vertical_rhythm&quot;;</span>
+
+<span class="na">$base-font-size</span><span class="o">:</span> <span class="mi">16</span><span class="kt">px</span><span class="err">;</span>
+<span class="na">$base-line-height</span><span class="o">:</span> <span class="mi">24</span><span class="kt">px</span><span class="err">;</span>
+<span class="na">$default-rhythm-border-style</span><span class="o">:</span> <span class="no">solid</span><span class="err">;</span>
+<span class="na">$relative-font-sizing</span><span class="o">:</span> <span class="n-Pseudo">false</span><span class="err">;</span>
+
+<span class="nt">h1</span> <span class="err">{</span>
+    <span class="k">@include</span><span class="nd"> adjust-font-size-to</span><span class="p">(</span> <span class="mi">72</span><span class="kt">px</span> <span class="p">)</span><span class="err">;</span>
+    <span class="k">@include</span><span class="nd"> adjust-leading-to</span><span class="p">(</span> <span class="mi">8</span> <span class="p">)</span><span class="err">;</span>
+    <span class="k">@include</span><span class="nd"> margin-trailer</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre>
+</div>
+</section>
+<section>
+<h2><span class="caps">CSS</span> is getting more complicated.</h2>
+<h3 class="step">Compass&#8217;s mixins make complex,<br> multi-vendor output&nbsp;simple.</h3>
+</section>
+<section>
+<h2>Remember this?</h2>
+<div class="highlight"><pre><code class="sass"><span class="nt">body</span> <span class="err">{</span>
+  <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="nf">-webkit-gradient</span><span class="p">(</span><span class="n">radial</span><span class="o">,</span> <span class="no">circle</span> <span class="n">farthest-corner</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="no">circle</span> <span class="n">farthest-corner</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="nf">color-stop</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">36</span><span class="o">,</span> <span class="mi">56</span><span class="o">,</span> <span class="mi">66</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.8</span><span class="p">))</span><span class="o">,</span> <span class="nf">color-stop</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">18</span><span class="o">,</span> <span class="mi">28</span><span class="o">,</span> <span class="mi">33</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.9</span><span class="p">)))</span><span class="err">;</span>
+  <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="nf">-webkit-radial-gradient</span><span class="p">(</span><span class="no">circle</span> <span class="n">farthest-corner</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">36</span><span class="o">,</span> <span class="mi">56</span><span class="o">,</span> <span class="mi">66</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.8</span><span class="p">)</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">18</span><span class="o">,</span> <span class="mi">28</span><span class="o">,</span> <span class="mi">33</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.9</span><span class="p">))</span><span class="err">;</span>
+  <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="nf">-moz-radial-gradient</span><span class="p">(</span><span class="no">circle</span> <span class="n">farthest-corner</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">36</span><span class="o">,</span> <span class="mi">56</span><span class="o">,</span> <span class="mi">66</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.8</span><span class="p">)</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">18</span><span class="o">,</span> <span class="mi">28</span><span class="o">,</span> <span class="mi">33</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.9</span><span class="p">))</span><span class="err">;</span>
+  <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="nf">-o-radial-gradient</span><span class="p">(</span><span class="no">circle</span> <span class="n">farthest-corner</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">36</span><span class="o">,</span> <span class="mi">56</span><span class="o">,</span> <span class="mi">66</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.8</span><span class="p">)</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">18</span><span class="o">,</span> <span class="mi">28</span><span class="o">,</span> <span class="mi">33</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.9</span><span class="p">))</span><span class="err">;</span>
+  <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="nf">-ms-radial-gradient</span><span class="p">(</span><span class="no">circle</span> <span class="n">farthest-corner</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">36</span><span class="o">,</span> <span class="mi">56</span><span class="o">,</span> <span class="mi">66</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.8</span><span class="p">)</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">18</span><span class="o">,</span> <span class="mi">28</span><span class="o">,</span> <span class="mi">33</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.9</span><span class="p">))</span><span class="err">;</span>
+  <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(/images/noise.png)</span><span class="o">,</span> <span class="nf">radial-gradient</span><span class="p">(</span><span class="no">circle</span> <span class="n">farthest-corner</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">36</span><span class="o">,</span> <span class="mi">56</span><span class="o">,</span> <span class="mi">66</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.8</span><span class="p">)</span><span class="o">,</span> <span class="nf">rgba</span><span class="p">(</span><span class="mi">18</span><span class="o">,</span> <span class="mi">28</span><span class="o">,</span> <span class="mi">33</span><span class="o">,</span> <span class="mi">0</span><span class="mf">.9</span><span class="p">))</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre>
+</div>
+</section>
+<section>
+<h2>With Compass:</h2>
+<div class="highlight"><pre><code class="sass"><span class="nt">body</span> <span class="err">{</span>
+    <span class="k">@include</span><span class="nd"> background-image</span><span class="p">(</span>
+        <span class="nt">url</span><span class="o">(</span> <span class="o">/</span><span class="nt">images</span><span class="o">/</span><span class="nt">noise</span><span class="nc">.png</span> <span class="o">),</span>
+        <span class="nt">radial-gradient</span><span class="o">(</span>
+            <span class="nt">circle</span> <span class="nt">farthest-corner</span><span class="o">,</span>
+            <span class="nt">transparentize</span><span class="o">(</span> <span class="nt">lighten</span><span class="o">(</span> <span class="err">$</span><span class="nt">backgroundColor</span><span class="o">,</span> <span class="nt">10</span><span class="err">%</span> <span class="o">),</span> <span class="nt">0</span><span class="nc">.2</span> <span class="o">),</span>
+            <span class="nt">transparentize</span><span class="o">(</span> <span class="err">$</span><span class="nt">backgroundColor</span><span class="o">,</span> <span class="nt">0</span><span class="nc">.1</span> <span class="o">)</span>
+        <span class="o">)</span>   
+    <span class="o">);</span>
+<span class="err">}</span>
+</code></pre>
+</div>
+</section>
+<section>
+<h2>Is Compass worth it for you?</h2>
+</section>
+<section>
+<h2>Do you&#8230;</h2>
+<ul>
+    <li class="step">Work on large sites with big stylesheets?</li>
+    <li class="step">Use CSS3?</li>
+    <li class="step">Maintain sites after they&#8217;re launched?</li>
+    <li class="step">Have compassion for others who do?</li>
+</ul>
+<h3 class="step"><span class="caps">THEN</span> <span class="caps">YES</span>.</h3>
+</section>
+<section>
+<h2>Compass is the future of <span class="caps">CSS</span>.</h2>
+<h3 class="step">Try it today, or play catch-up tomorrow.</h3>
+</section>
+<section>
+<h2>Want to get started?</h2>
+<h3 class="step">Talk to me!</h3>
+</section>
+<section>
+<h2>Thank you!</h2>
+<h3>Fin</h3>
+</section>

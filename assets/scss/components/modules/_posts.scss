@@ -1,0 +1,30 @@
+/* Posts on the homepage */
+.posts {
+  @include padding-leader(1);
+  @include padding-trailer(1);
+
+  .post {
+    list-style: none;
+    position: relative;
+
+    time {
+      @include adjust-font-size-to($base-font-size);
+      display: block;
+      font: {
+        /*family: $font-headline;*/
+      }
+      @include margin-trailer(1);
+      text: {
+        align: right;
+      }
+
+    }
+
+    h2 {
+    }
+
+    .excerpt {
+      margin: 0;
+    }
+  }
+}

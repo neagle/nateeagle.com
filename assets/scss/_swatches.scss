@@ -1,0 +1,64 @@
+@function swatch ($name) {
+  @if ($name == "halloween-tree") {
+    @return (
+      hsl(0, 0%, 60%), // text
+      hsl(0, 60%, 50%),
+      hsl(50, 70%, 50%), // headlines
+      hsl(15, 70%, 50%), // links
+      hsl(0, 0%, 20%) // background
+    );
+  }
+
+  @if ($name == "japanese-garden") {
+    @return (
+      // text
+      #BAB293,
+      #A39770,
+      // headline
+      #EFE4BD,
+      // link
+      #A32500,
+      // background
+      #2B2922
+    );
+  }
+
+  @if ($name == "red-cap-goldfish") {
+    // #F2C6A0, #F2B705, #F28705, #F22613, #A60303
+    @return (
+      // text
+      #F2C6A0,
+      #F2B705,
+      // headline
+      #F28705,
+      // link
+      #F22613,
+      // background
+      #333
+      // #A60303
+    );
+  }
+
+  @if ($name == "view-over-the-town") {
+    @return (
+      #B29C85,
+      #3B424C,
+      // headline
+      #306E73,
+      // link
+      #FF5335,
+      // background
+      #1D181F
+    );
+  }
+
+  @if ($name == "times-changing") {
+    @return (
+      #A49A87,
+      #644D52,
+      #FF974F,
+      #F77A52,
+      #332532
+    );
+  }
+};

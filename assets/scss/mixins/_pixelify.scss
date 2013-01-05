@@ -1,0 +1,11 @@
+@function pixelify($var) {
+  @if ($var == null) {
+    @return null;
+  } @else {
+    @if (unitless($var)) {
+      @warn 'Assuming #{$var} to be in pixels';
+      $var: 1px * $var;
+    }
+    @return $var;
+  }
+}

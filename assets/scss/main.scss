@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// This is largely an implementation of David Rapson's SCSS Toolkit.
+// https://github.com/davidrapson/scss-toolkit
+
+// Compass Plugins
+// ===============
+@import "compass/css3";
+@import "compass/layout/grid-background";
+@import "compass/typography/vertical_rhythm";
+@import "compass/utilities";
+
+// Third-Party Plugins
+@import "animation";
+@import "stitch/reset";
+@import "stitch/patterns";
+
+// Sass Features
+// =============
+@import "variables", "functions/all", "mixins/all";
+
+// The Styles
+// ==========
+// Styles are defined in the following order & groupings:
+// Base, Layout, Module, State
+
+// Base styles
+@import "components/base";
+
+// Layout
+// ======
+// - Layout = major components, e.g., header, footer etc.
+// - Modules = minor components, e.g., navigation bar, callout, widgets etc.
+// - State  = a state is something that augments + overrides all other styles,
+//            e.g., success or error state
+//
+@import "components/layout", "components/modules", "components/state";
+
+// Helpers should come last out of screen styles
+@import "common/helpers";
+
+// Print styles
+@import "print";

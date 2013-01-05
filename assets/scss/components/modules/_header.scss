@@ -1,0 +1,128 @@
+header {
+  background: {
+    position: 50% 50;
+    color: #000;
+    image: image-url('backgrounds/office/office.png');
+  }
+  border: 1px solid black;
+  @include border-radius(0 0 3px 3px);
+  @include box-shadow(
+    0 1px 5px hsla(0, 0%, 0%, 0.5)
+  );
+  @include box-sizing(border-box);
+  color: #eee;
+  /*@include margin-trailer(0.5);*/
+  @include opacity(1);
+  overflow: hidden;
+  @include padding-leader(1);
+  @include padding-trailer(0.5);
+  position: relative;
+
+  .title {
+    display: block;
+  }
+
+  h1 {
+    /*@include adjust-font-size-to(36px);*/
+    @include adjust-leading-to(0.5);
+    color: #999;
+    font-family: $font-headline-special;
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    a {
+      border: 0;
+      color: #ccc;
+      position: relative;
+      &:after {
+        content: '';
+      }
+    }
+  }
+
+  h2 {
+    color: #aaa;
+    @include adjust-font-size-to(18px);
+    font-family: $font-headline-alt;
+  }
+
+  &:before {
+    @include border-radius(0 0 3px 3px);
+    @include box-shadow(
+      inset 0 0 2px hsla(0, 0%, 100%, 0.3)
+    );
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -5px;
+  }
+
+  &:after {
+    color: #444;
+    /*content: 'e'; // branch*/
+    /*content: '"'; // leaf*/
+    /*content: '1'; // vertical flame*/
+    display: block;
+    font: {
+      family: 'davys';
+    }
+    text-align: center;
+  }
+}
+
+// Narrow
+@include respond-to('handhelds') {
+  header {
+    padding: {
+      left: 5%;
+      right: 5%;
+    }
+    /*width: auto;*/
+    &:after {
+      @include adjust-leading-to(0.5);
+      @include adjust-font-size-to(48px);
+      color: #333;
+      content: 'e';
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+  }
+}
+
+// Everything else
+@include respond-to('not-handhelds') {
+  header {
+    height: 430px;
+    .title {
+      left: 27px;
+      position: absolute;
+      top: 10px;
+      @include transform(
+        rotate(-90deg) translate(-100%, 0)
+      );
+      @include transform-origin(0, 0);
+      width: 250px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    &:after {
+      @include adjust-font-size-to(144px);
+      bottom: 0;
+      content: '/';
+      left: 32px;
+      position: absolute;
+    }
+  }
+}

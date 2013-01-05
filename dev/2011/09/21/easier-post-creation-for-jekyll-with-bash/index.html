@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Easier Post Creation for Jekyll with Bash</title>
+    <script data-main="js/main" src="/js/require.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/lib/modernizr.js"></script>
+
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Posts">
+    <link rel="alternate" type="application/atom+xml" href="bits.xml" title="Bits">
+  </head>
+  <body>
+
+    <div id="page">
+
+      <section class="column col-1">
+        
+        <a href="/">
+        <header>
+          <b class="title">
+            <h1>
+                Nate Eagle
+            </h1>
+            <h2>Front-End Developer</h2>
+          </b>
+
+        </header>
+          </a>
+
+      </section><!-- end .col-1 -->
+
+      <section class="column post">
+  <article>
+
+      <time>September 21, 2011</time>
+
+      <h2>Easier Post Creation for Jekyll with Bash</h2>
+
+  <p>The biggest reason to use <a href="https://github.com/mojombo/jekyll">Jekyll</a> is, in my opinion, its simplicity and convenience for people who work with files for a living. If changing directories and making files is what you do all day, then writing posts by creating files will just feel like The Way It Should Be. You&#8217;ll love that you don&#8217;t have to log into a web interface to add posts. If you&#8217;d <em>rather</em> log into a web app, I&#8217;m not sure why on earth you&#8217;d use Jekyll: it&#8217;s too minimalistic to offer any huge advantages over the many great CMSs out there today.</p>
+<p>After a few weeks of using Jekyll, I found that it was a bit of a chore to think of today&#8217;s date and type it out whenever I wanted to create a post. Since I was adding a second post type called bits to my blog for frequent, short posts it became even more of an issue.</p>
+<p>So I created a bash script to make this easier.</p>
+<p>I&#8217;ve written about three or four bash scripts in my entire life, so it takes me a bit of time and work to look everything up. In case you&#8217;re in the same boat, I&#8217;m including the script below along with URLs for the references I used along with a few notes.</p>
+<p>Here&#8217;s the complete script:</p>
+<div class="highlight"><pre><code class="bash"><span class="c">#!/bin/bash</span>
+<span class="c"># Create a new post with today&#39;s date and prompt for the title.</span>
+
+<span class="c"># Config</span>
+<span class="nv">editor</span><span class="o">=</span><span class="s2">&quot;vim&quot;</span>
+<span class="nv">format</span><span class="o">=</span><span class="s2">&quot;textile&quot;</span>
+
+<span class="c"># Get layout via getopts (-l)</span>
+<span class="c"># --</span>
+<span class="c"># http://wiki.bash-hackers.org/howto/getopts_tutorial</span>
+
+<span class="k">while </span><span class="nb">getopts</span> <span class="s2">&quot;:l:&quot;</span> opt; <span class="k">do</span>
+<span class="k">    case</span> <span class="nv">$opt</span> in
+        l<span class="o">)</span>
+            <span class="nv">layout</span><span class="o">=</span><span class="nv">$OPTARG</span>
+            ;;
+        :<span class="o">)</span> <span class="nb">echo</span> <span class="s2">&quot;$opt requires an argument&quot;</span> &gt;&amp;2
+            <span class="nb">exit </span>1
+            ;;
+    <span class="k">esac</span>
+<span class="k">done</span>
+
+<span class="c"># Set default config values</span>
+<span class="c"># --</span>
+<span class="c"># http://www.cyberciti.biz/tips/howto-setting-default-values-for-shell-variables.html</span>
+
+: <span class="k">${</span><span class="nv">layout</span><span class="p">:=</span><span class="s2">&quot;post&quot;</span><span class="k">}</span>
+
+
+<span class="c"># I like giving myself a polite greeting.</span>
+<span class="c"># --</span>
+<span class="c"># Date codes: http://linux.about.com/od/commands/l/blcmdl1_date.htm</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;---&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;Creating a new ${layout} for&quot;</span> <span class="sb">`</span>date +%A<span class="s2">&quot;, &quot;</span>%B<span class="s2">&quot; &quot;</span>%e<span class="s2">&quot;, &quot;</span>%Y<span class="sb">`</span><span class="s2">&quot;.&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">read</span> -p <span class="s2">&quot;Enter the title: &quot;</span> title 
+
+<span class="c"># Turn spaces into dashes</span>
+<span class="c"># --</span>
+<span class="c"># http://stackoverflow.com/questions/1469849/how-to-split-one-string-into-multiple-strings-in-bash-shell</span>
+
+<span class="k">for </span>word in <span class="nv">$title</span>
+<span class="k">do</span>
+<span class="k">    </span><span class="nv">dashedTitle</span><span class="o">=</span><span class="k">${</span><span class="nv">dashedTitle</span><span class="k">}</span>-<span class="k">${</span><span class="nv">word</span><span class="k">}</span>
+<span class="k">done</span>
+
+<span class="c"># Convert title to lowercase</span>
+<span class="c"># --</span>
+<span class="c"># http://stackoverflow.com/questions/2264428/converting-string-to-lower-case-in-bash-shell-scripting</span>
+<span class="c"># http://www.kclug.org/pipermail/kclug/2003-April/015084.html</span>
+
+<span class="nv">dashedTitle</span><span class="o">=</span><span class="s2">&quot;`echo ${dashedTitle} | tr &#39;[A-Z]&#39; &#39;[a-z]&#39;`&quot;</span>
+
+<span class="c"># Create a filename with the date, dashed title, and format </span>
+<span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;`date +%Y-%m-%d`${dashedTitle}.${format}&quot;</span>
+
+<span class="nb">echo</span> <span class="nv">$filename</span>
+
+touch <span class="nv">$filename</span>
+
+<span class="c"># Add initial YAML to the top of the new bit</span>
+<span class="nb">echo</span> <span class="s2">&quot;---&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+<span class="nb">echo</span> <span class="s2">&quot;layout: ${layout}&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+<span class="nb">echo</span> <span class="s2">&quot;title: \&quot;${title}\&quot;&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+<span class="nb">echo</span> <span class="s2">&quot;summary:&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+<span class="nb">echo</span> <span class="s2">&quot;---&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+<span class="nb">echo</span> <span class="s2">&quot;&quot;</span> &gt;&gt; <span class="nv">$filename</span>
+
+<span class="c"># Open in vim and go to the end of the file ( + )</span>
+<span class="c"># --</span>
+<span class="c"># http://stackoverflow.com/questions/268123/vim-how-to-start-inserting-at-the-end-of-the-file-in-one-step</span>
+
+<span class="k">${</span><span class="nv">editor</span><span class="k">}</span> + <span class="nv">$filename</span>
+</code></pre>
+</div>
+<p>You&#8217;ll notice I created a layout option that can be passed in using <code>-l</code>. I use multiple post layouts on the blog, the most important of which are <strong>post</strong> and <strong>bit</strong>. Bits are very small posts that aren&#8217;t included in the main list on the homepage or in my Atom feed.</p>
+<p>I created two aliases (these should go in your <code>.bashrc</code> file) to simplify creation of posts and bits:</p>
+<div class="highlight"><pre><code class="bash"><span class="nb">alias </span><span class="nv">post</span><span class="o">=</span><span class="s2">&quot;./post.sh&quot;</span>
+<span class="nb">alias </span><span class="nv">bit</span><span class="o">=</span><span class="s2">&quot;./post.sh -l bit&quot;</span>
+</code></pre>
+</div>
+<p>The script uses post as the default type. On running, the script</p>
+<ul>
+	<li>prompts me for a title</li>
+	<li>uses today&#8217;s date plus a lowercase and dash-separated version of the title for the new post&#8217;s filename</li>
+	<li>prepopulates the post with the <span class="caps">YAML</span> I use for posts</li>
+	<li>opens the new post in vim</li>
+</ul>
+<p>So to create this post, I typed:</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>post
+<span class="nv">$ </span>---
+<span class="nv">$ </span>Creating a new post <span class="k">for </span>Wednesday, September 21, 2011.
+<span class="nv">$ </span>
+<span class="nv">$ </span>Enter the title: Easier Post Creation <span class="k">for </span>Jekyll with Bash
+</code></pre>
+</div>
+<p>This created <code>2011-09-21-easier-post-creation-for-jekyll-with-bash.textile</code>, added my <span class="caps">YAML</span>, and popped it up in vim. Nice.</p>
+<h3>One last item on my wish list</h3>
+<p>I&#8217;d really like to find a solution for tab completion when I have a directory full of similarly prefixed files.</p>
+<div class="highlight"><pre><code class="bash">2011-08-30-upholstery-a-css3-pattern.textile                 2011-09-09-my-first-compass-mixin-text-3d.textile            2011-09-21-easier-post-creation-for-jekyll-with-bash.textile
+2011-08-31-how-to-output-curly-brackets-in-jekyll.textile    2011-09-11-color-ripples-canvas-toy.textile                  2011-09-21-open-a-directory-in-finder-from-terminal.textile
+2011-08-31-jekyll-not-parsing-includes.textile               2011-09-13-compass.textile 
+</code></pre>
+</div>
+<p>If I have a directory like the one above, I&#8217;d love to be able to type <code>col&lt;TAB&gt;</code> and have it expand to <code>2011-09-11-color-ripples-canvas-toy.textile</code>. In other words, the completion regex would match for a date string and disregard that prefix when matching filenames.</p>
+<p>This may well be possible &#8211; even trivial &#8211; for someone smarter than I. I did find a great example of <a href="http://stackoverflow.com/questions/3238983/writing-a-custom-bash-completion-rule">something similar</a> for vim that&#8217;ll let you add a <code>.completion</code> file to any directory with a static prefix that will allow you to type, say, <code>vim &lt;TAB&gt;</code> and have it expand to <code>vim _myprefix</code>.</p>
+<p>Let me know if you have any suggestions for my bash script &#8211; as I said, I&#8217;m a bash n00b, and feedback is welcome.</p>
+
+
+  </article>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'nateeagle',
+      disqus_developer = 1;
+
+
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+    </div>
+
+  </body>
+</html>

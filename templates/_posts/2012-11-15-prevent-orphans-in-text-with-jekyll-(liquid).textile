@@ -1,0 +1,7 @@
+---
+layout: bit
+title: "Prevent Orphans in Text with Jekyll (Liquid)"
+---
+Having orphaned words in titles is irritating and lame. I was pleased to find that it was relatively easy to insert an &amp;nbsp; entity in front of the final word in a string in Jekyll.
+
+<script src="https://gist.github.com/4081163.js?file=prevent-orphans"></script>

@@ -1,0 +1,5 @@
+// grab stuff from https://github.com/davidrapson/scss-toolkit/blob/master/style/scss/common/_elements.scss
+
+time {
+  color: mix($color-headline, $color-background, 40%);
+}

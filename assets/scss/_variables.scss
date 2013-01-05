@@ -1,0 +1,127 @@
+// Turn debugging on and off. Use a conditional switch for any
+// debugging-oriented // oriented settings in your stylesheets.
+//
+// Example: @if $debug == true { } @else { }
+/*$debug: true;*/
+$debug: false;
+
+@import "fonts";
+
+$font-normal: ubuntu-light;
+$font-headline: titillium-light;
+$font-headline-alt: titillium-bold;
+/*$font-headline-special: titillium-bold;*/
+$font-headline-special: existence-light;
+
+/* Layout */
+$perspective: 800px;
+
+/* Colors */
+@import "swatches";
+$swatch: swatch("halloween-tree");
+/*$swatch: swatch("japanese-garden");*/
+/*$swatch: swatch("red-cap-goldfish");*/
+/*$swatch: swatch("view-over-the-town");*/
+/*$swatch: swatch("times-changing");*/
+
+#swatch {
+  @for $i from 1 through length($swatch) {
+    b:nth-child(#{$i}) {
+      background-color: nth($swatch, $i);
+    }
+  }
+}
+
+// Variables
+
+// Colour Scheme
+// =============
+// To avoid confusion with CSS properties,
+// colour scheme variable names use american english _color_
+
+
+// These are just suggestions
+
+// Main color palette
+$color-primary                : #2b306a;
+$color-secondary              : #06c0db;
+$color-highlight              : #ff9600;
+$color-muted                  : #eef;
+$color-note                   : #666;
+
+$color-background: nth($swatch, 5);
+$color-headline: nth($swatch, 3);
+$color-selection: transparentize($color-headline, 0.9);
+
+// Common colors
+$color-text: hsl(0, 0%, 60%);
+$color-background: hsl(0, 0%, 20%);
+
+// Links
+$color-link-default: hsl(15, 70%, 50%);
+$color-link-visited: hsl(15, 50%, 50%);
+$color-link-hover: hsl(50, 70%, 50%);
+$color-link-active: magenta;
+
+/* Vertical Rhythm */
+$base-font-size: 16px !default;
+$base-line-height: 24px;
+$default-rhythm-border-style: solid;
+$relative-font-sizing: true;
+$round-to-nearest-half-line: false;
+$min-line-padding: 2px;
+
+/* Break Points */
+$break-small: 640px;
+$break-medium: 1100px;
+$break-large: 1400px;
+
+/* Grid */
+$grid-background-baseline-height: $base-line-height;
+$grid-background-baseline-color: blue;
+/*$grid-background-column-color: blue;*/
+/*$grid-background-gutter-color: green;*/
+
+@if $debug == true {
+    $show-grid-backgrounds: true;
+} @else {
+    $show-grid-backgrounds: false;
+}
+
+
+
+// Code
+$color-code                   : #333;
+$color-code-background        : #f3f3f3;
+$color-pre                    : #d4d4d4;
+$color-pre-background         : #333;
+
+// Selections
+$color-selection              : #b3d4fc;
+
+// Messages
+$color-message                : #f4ecbb;
+$color-success                : #2cde2c;
+$color-warning                : #cf8600;
+$color-important              : #d00;
+$color-notice                 : #66b;
+
+// Font Stacks
+// ===========
+
+$font-family-sans             : "PT Sans", sans-serif;
+$font-family-serif            : "PT Serif", Georgia, serif;
+$font-family-display          : "PT Sans Narrow", sans-serif;
+$font-family-caption          : "PT Sans Caption", Verdana, sans-serif;
+$font-family-monospace        : "Menlo", "Bitstream Vera Sans", Monaco, "Andale Mono", "Lucida Console", "Droid Mono", monospace;
+
+$font-family-default          : $font-family-serif;
+
+
+// Font Weights
+// ============
+
+$font-weight-light             : 300;
+$font-weight-normal            : 400;
+$font-weight-semibold          : 700;
+$font-weight-bold              : 900;

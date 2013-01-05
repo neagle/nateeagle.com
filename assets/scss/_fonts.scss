@@ -21,7 +21,7 @@
 @include font($family: 'cabin', $version: 'cabin-regular');
 @include font($family: 'davys', $version: 'DavysDingbats-webfont', $name: 'davys');
 @include font($family: 'existence-light', $version: 'Existence-Light-webfont', $name: 'existence-light');
-@include font($family: 'existence-light', $version: 'Existence-StencilLight-webfont', $name: 'existence-light');
+@include font($family: 'existence-light', $version: 'Existence-StencilLight-webfont', $name: 'existence-stencil');
 @include font($family: 'existence-light', $version: 'Existence-UnicaseLight-webfont', $name: 'existence-unicase-light');
 @include font($family: 'helsinki');
 @include font($family: 'neoretro', $version: 'NEORD___-webfont', $name: 'neoretrodraw');
@@ -44,6 +44,7 @@
 /*@include font($family: 'titillium', $version: 'titillium-xbold', $name: 'titillium-xbold');*/
 @include font($family: 'ubuntu', $version: 'Ubuntu-B', $name: 'ubuntu-bold');
 @include font($family: 'ubuntu', $version: 'Ubuntu-R', $name: 'ubuntu-regular');
+@include font($family: 'ubuntu', $version: 'Ubuntu-L', $name: 'ubuntu-light');
 @include font($family: 'bebas-neue', $version: 'BebasNeue-webfont');
 @include font($family: 'bonveno', $version: 'BonvenoCF-Light-webfont');
 @include font($family: 'pincoyablack', $version: 'pincoyablack-webfont');

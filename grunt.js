@@ -41,6 +41,31 @@ module.exports = function (grunt) {
 
     },
 
+    copy: {
+
+      dev: {
+        files: {
+          'dev/images/': 'assets/images/**',
+          'dev/fonts/': 'assets/fonts/**',
+          'dev/js/': 'assets/js/**/*.js'
+        }
+      },
+
+      prod: {
+        files: {
+          'prod/images/': 'assets/images/**',
+          'prod/fonts/': 'assets/fonts/**'
+        }
+      }
+
+      //modernizr: {
+        //files: {
+          //'dev/js/modernizr.js': 'lib/modernizr.js'
+        //}
+      //}
+
+    },
+
     compass: {
 
       dev: {
@@ -50,8 +75,12 @@ module.exports = function (grunt) {
         forcecompile: true,
         debugsass: true,
         relativeassets: true,
-        images: 'assets/images',
-        require: 'susy'
+        images: 'images',
+        fonts: 'fonts',
+        require: [
+          'animation',
+          'stitch'
+        ]
       },
 
       prod: {
@@ -62,30 +91,50 @@ module.exports = function (grunt) {
         forcecompile: true,
         debugsass: false,
         relativeassets: true,
-        images: 'assets/images',
-        require: 'susy'
+        images: 'images',
+        fonts: 'fonts',
+        require: [
+          'animation',
+          'stitch'
+        ]
       }
 
     },
 
     // Combine JS files for dev
-    concat: {
-      dev: {
-        src: [ 'lib/jquery/jquery-1.8.2.js', 'assets/js/**/*.js' ],
-        dest: 'dev/js/<%= pkg.name %>.js'
-      }
-    },
+    //concat: {
+      //dev: {
+        //src: [
+          //// All lib files
+          //// TODO: How to make sure jQuery's first?
+          ////'lib/jquery/jquery-1.8.2.js',
+          //'lib/**/*.js',
+          //'!lib/modernizr.js',
+          //// All JS files in assets/js
+          //'assets/js/**/*.js'
+        //],
+        //dest: 'dev/js/<%= pkg.name %>.js'
+      //}
+    //},
 
     // Minify JS files for prod
-    min: {
-      prod: {
-        src: ['<banner:meta.banner>', '<config:concat.dev.dest>'],
-        dest: 'prod/js/<%= pkg.name %>.min.js'
-      }
-    },
+    //min: {
+      //prod: {
+        //src: ['<banner:meta.banner>', '<config:concat.dev.dest>'],
+        //dest: 'prod/js/<%= pkg.name %>.min.js'
+      //},
+      //modernizr: {
+        //src: ['lib/modernizr.js'],
+        //dest: 'prod/js/modernizr.js'
+      //}
+    //},
 
     lint: {
-      files: ['grunt.js', 'assets/js/**/*.js']
+      files: [
+        'grunt.js',
+        'assets/js/main.js',
+        'assets/js/nae/**/*.js'
+      ]
     },
 
     jshint: {
@@ -108,11 +157,20 @@ module.exports = function (grunt) {
         "jquery": true
       },
       globals: {
-        jQuery: true
+        jQuery: true,
+        Modernizr: true,
+        requirejs: true,
+        define: true,
+        require: true
       }
     },
 
     watch: {
+
+      lint: {
+        files: ['<config:lint.files>'],
+        tasks: 'lint'
+      },
 
       // Separating files and tasks into separate objects means not everything
       // has to build when certain sets of files are touched
@@ -121,13 +179,23 @@ module.exports = function (grunt) {
         files: ['templates/**/*'],
         // When jekyll builds, EVERYTHING has to rebuild
         // TODO: Is there a more elegant way of specifying that?
-        tasks: ['jekyll:dev', 'concat', 'compass:dev']
+        //tasks: ['jekyll:dev', 'copy:dev', 'concat', 'compass:dev']
+        tasks: ['jekyll:dev', 'copy:dev', 'compass:dev']
       },
 
-      js: {
-        files: ['<config:lint.files>'],
-        tasks: ['concat']
+      copy: {
+        files: [
+          'assets/images/**',
+          'assets/fonts/**',
+          'assets/js/**/*.js'
+        ],
+        tasks: ['copy:dev']
       },
+
+      //js: {
+        //files: ['<config:lint.files>'],
+        //tasks: ['concat']
+      //},
 
       compass: {
         files: ['assets/scss/**/*.scss'],
@@ -138,6 +206,7 @@ module.exports = function (grunt) {
 
   // Load NPM Tasks
   grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib');
   grunt.loadNpmTasks('grunt-compass');
 
   // Create a custom server
@@ -152,9 +221,10 @@ module.exports = function (grunt) {
     connect(connect['static']('dev')).listen(8000);
   });
 
-  grunt.registerTask("watch-serve", "server watch");
+  grunt.registerTask('watch-serve', 'Run a local server and watch for file changes.', 'server watch');
 
   // Default task.
   // NB: Jekyll must come before other file generation tasks.
-  grunt.registerTask('default', 'lint jekyll compass concat min');
+  //grunt.registerTask('default', 'lint jekyll copy compass concat min');
+  grunt.registerTask('default', 'lint jekyll copy compass');
 };

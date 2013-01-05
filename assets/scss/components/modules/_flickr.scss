@@ -1,0 +1,41 @@
+#flickr {
+  position: relative;
+
+  @include respond-to(handhelds) {
+    content: '5';
+  }
+
+  @include respond-to(medium-screens) {
+    content: '6';
+  }
+
+  @include respond-to(wide-screens) {
+    content: '10';
+  }
+
+  h2 {
+  }
+
+  img {
+    display: block;
+  }
+
+  .image {
+    @extend .shadow;
+    @include backface-visibility(hidden);
+    border: 5px solid white;
+    @include border-radius(20px);
+    @include inline-block();
+    position: absolute;
+
+    a {
+      border: 0;
+      display: block;
+    }
+
+    img {
+      @include border-radius(15px);
+    }
+
+  }
+}

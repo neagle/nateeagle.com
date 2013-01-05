@@ -1,5 +1,5 @@
 ---
-layout: post 
+layout: post
 title: "Sharpening the Vim"
 summary: A collection of helpful things I've recently learned about the world's vimmiest text editor.
 ---
@@ -64,7 +64,8 @@ Too lengthy to quote, here's "the page":http://vim.wikia.com/wiki/Commenting_out
 
 h3. Wrap visual selection in an HTML tag.
 
-bc.. vmap <Leader>w <Esc>:call VisualHTMLTagWrap()<CR>
+{% highlight vim %}
+vmap <Leader>w <Esc>:call VisualHTMLTagWrap()<CR>
 function! VisualHTMLTagWrap()
   let tag = input("Tag to wrap block: ")
   if len(tag) > 0
@@ -79,6 +80,7 @@ function! VisualHTMLTagWrap()
     normal `<
   endif
 endfunction
+{% endhighlight %}
 
 p. Put it in ~/.vim/scripts/wrapwithtag.vim and enable in <code>~/.vimrc</code>
 
@@ -88,7 +90,7 @@ p. When editing HTML file, visually highlight text and press {Leader} w, enter t
 
 h3. Scrolling Quickly
 
-p. I tend to move quickly around a file either by typing a linenumber + G (which is awesome but too precisely to be useful, many times) or holding down @j@ or @k@. (LIKE A CHUMP.)
+p. I tend to move quickly around a file either by typing a linenumber + G (which is awesome but too precise to be useful, many times) or holding down @j@ or @k@. (LIKE A CHUMP.)
 
 Scrolling is easy. The most useful, IMHO, is:
 
@@ -98,7 +100,7 @@ But there are "others":http://tnerual.eriogerg.free.fr/vimqrc.html.
 
 h3. Adjust Window Size
 
-@vsplit@ is basically the killer feature of Vim. When I showed Dave that he could @split@, @vsplit@, and re<code>split</code> any number of windows he chose on to infinity he basically flipped. I always keep my windows equally sized with @C-W + =@, but he wanted to adjust the sizes.
+@vsplit@ is basically the killer feature of Vim. When I showed "Dave":http://artzstudio.com that he could @split@, @vsplit@, and re<code>split</code> any number of windows he chose on to infinity he basically flipped. I always keep my windows equally sized with @C-W + =@, but he wanted to adjust the sizes.
 
 For vertically split windows, use @C-W + <@ to decrease the current window's size and @C-W + >@ to increase it.
 

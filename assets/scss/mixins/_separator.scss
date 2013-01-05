@@ -1,0 +1,17 @@
+// TODO: Figure out whether @extend can't be used for pseudoclasses or whether
+// I just couldn't figure out how right away.
+@mixin separator() {
+  @include adjust-font-size-to(144px);
+  bottom: 0;
+  color: #555;
+  content: '6';
+  display: block;
+  font: {
+    family: 'davys';
+  }
+  left: 0;
+  line-height: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}

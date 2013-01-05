@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Animate Anything With jQuery's .animate()</title>
+    <script data-main="js/main" src="/js/require.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/lib/modernizr.js"></script>
+
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Posts">
+    <link rel="alternate" type="application/atom+xml" href="bits.xml" title="Bits">
+  </head>
+  <body>
+
+    <div id="page">
+
+      <section class="column col-1">
+        
+        <a href="/">
+        <header>
+          <b class="title">
+            <h1>
+                Nate Eagle
+            </h1>
+            <h2>Front-End Developer</h2>
+          </b>
+
+        </header>
+          </a>
+
+      </section><!-- end .col-1 -->
+
+      <section class="column post">
+  <article>
+
+      <time>October 02, 2011</time>
+
+      <h2>Animate Anything With jQuery's .animate()</h2>
+
+  <p>jQuery&#8217;s .animate() function is lovely: it&#8217;s got great queueing built in and makes animating in JS totally painless. But it&#8217;s limited to <span class="caps">CSS</span> properties. You can animate opacity, position, and more, but if you want to animate something in a very customized way, it&#8217;s not as obvious how .animate() can help you.</p>
+<p>I&#8217;d been meaning to try working around this a while ago, but I never got around to it. This weekend at the jQuery conference in Boston, I saw <a href="http://gnarf.net/">Corey Frang</a> give a nice talk about how animation works in jQuery. He pointed out that it&#8217;d be awfully nice to be able to be able to use .animate() without needing a <span class="caps">CSS</span> property and that he&#8217;s hoping it can get worked into the 1.7 release for jQuery. He pointed out that it&#8217;s possible to work around the requirement right now, though, by using a fake <span class="caps">CSS</span> property, and he showed an example by <a href="http://benalman.com/">Cowboy</a> (Ben Alman) that animated a string of text in a really cool way: it began with all of the text hidden, then it progressively revealed the text as it if it were unrolling, or being typed in. It even used a bounce effect (via easing). This was a perfect example of a great effect that makes sense to use .animate() for, but sure as hell isn&#8217;t a <span class="caps">CSS</span> property.</p>
+<p>So I decided to try to recreate Cowboy&#8217;s example on my own.</p>
+<style>
+p.animate {
+background-color: #222;
+border: 10px solid #555;
+border-radius: 10px;
+box-shadow: 0 0 1em #000;
+margin: 1em 0;
+padding: 20px;
+position: relative;
+width: 400px;
+}
+p.animate:before {
+border: 2px solid #222;
+border-radius: 5px;
+bottom: -2px;
+content: &#8217;&#8217;;
+display: block;
+left: -2px;
+position: absolute;
+right: -2px;
+top: -2px;
+}
+.invisible {
+opacity: 0;
+}
+</style>
+<select class="easing"></select> <button class="animate">Animate</button>
+<p class="animate">Look, just because I don&#8217;t be givin&#8217; no man a foot massage don&#8217;t make it right for Marsellus to throw Antwone into a glass motherfuckin&#8217; house, fuckin&#8217; up the way the n&#8212;&#8212;- talks. Motherfucker do that shit to me, he better paralyze my ass, &#8216;cause I&#8217;ll kill the motherfucker, know what I&#8217;m sayin&#8217;?  Your bones don&#8217;t break, mine do. That&#8217;s clear. Your cells react to bacteria and viruses differently than mine. You don&#8217;t get sick, I do. That&#8217;s also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We&#8217;re on the same curve, just on opposite ends.</p>
+<p>Speed: <input type="number" value="10" min="1" max="1000" class="speed" /> (lower is faster)</p>
+<p>(Placeholder text courtesy of <a href="http://slipsum.com">Samuel L. Ipsum</a>)</p>
+<p>The code&#8217;s dead simple.</p>
+<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">$select</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;select.easing&#39;</span> <span class="p">);</span>
+
+<span class="c1">// Generate a select list of available easing functions</span>
+<span class="c1">// ...because easing is fun!</span>
+<span class="k">for</span> <span class="p">(</span> <span class="nx">func</span> <span class="k">in</span> <span class="nx">$</span><span class="p">.</span><span class="nx">easing</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nx">func</span> <span class="o">!==</span> <span class="s1">&#39;def&#39;</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;&lt;option /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="nx">func</span><span class="p">,</span>
+            <span class="nx">val</span><span class="o">:</span> <span class="nx">func</span>
+        <span class="p">}).</span><span class="nx">appendTo</span><span class="p">(</span> <span class="nx">$select</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;button.animate&#39;</span> <span class="p">).</span><span class="nx">bind</span><span class="p">(</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">$p</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;p.animate&#39;</span> <span class="p">),</span>
+        <span class="nx">text</span> <span class="o">=</span> <span class="nx">$p</span><span class="p">.</span><span class="nx">text</span><span class="p">(),</span>
+        <span class="nx">length</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+        <span class="nx">$speed</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;input[type=&quot;number&quot;].speed&#39;</span> <span class="p">);</span>
+
+    <span class="nx">$p</span>
+        <span class="c1">// Stop any in-progress animation on our paragraph</span>
+        <span class="p">.</span><span class="nx">stop</span><span class="p">()</span>
+        <span class="c1">// Set fake-property to 0</span>
+        <span class="p">.</span><span class="nx">css</span><span class="p">({</span> <span class="s1">&#39;fake-property&#39;</span><span class="o">:</span> <span class="mi">0</span> <span class="p">})</span>
+        <span class="p">.</span><span class="nx">animate</span><span class="p">({</span>
+            <span class="c1">// Animate the fake property from 0 to</span>
+            <span class="c1">// the length of the text</span>
+            <span class="s1">&#39;fake-property&#39;</span><span class="o">:</span> <span class="nx">length</span>
+        <span class="p">},</span> <span class="p">{</span>
+            <span class="c1">// Make the speed directly proportional</span>
+            <span class="c1">// to the length of the text</span>
+            <span class="nx">duration</span><span class="o">:</span> <span class="nx">$speed</span><span class="p">.</span><span class="nx">val</span><span class="p">()</span> <span class="o">*</span> <span class="nx">length</span><span class="p">,</span>
+            <span class="nx">easing</span><span class="o">:</span> <span class="nx">$select</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span>
+            <span class="nx">step</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">i</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// Since we&#39;re using subsring, round i (which can be</span>
+                <span class="c1">// a floating point value) to an integer</span>
+                <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span> <span class="nx">i</span> <span class="p">);</span>
+
+                <span class="c1">// Output the beginning of the string up to i, then</span>
+                <span class="c1">// output the rest wrapped in span.invisible</span>
+                <span class="c1">// We&#39;ll set its opacity to 0 in our CSS</span>
+                <span class="nx">$p</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="nx">text</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">i</span> <span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;span class=&quot;invisible&quot;&gt;&#39;</span>
+                    <span class="o">+</span> <span class="nx">text</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span> <span class="nx">i</span> <span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span> <span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+</code></pre>
+</div>
+<p>(Here&#8217;s <a href="http://jsfiddle.net/nate/Grt5e/">the same code in a fiddle</a> if you&#8217;d like to play.)</p>
+<p>The animation itself is surprisingly smooth. I have it output the latter segment of the text string so that the element containing the text doesn&#8217;t change shape and size as it appears. It also prevents having the first few letters of words at the ends of lines appear before dropping the word to the line below as it gets long enough to wrap. Sometimes this might be a desireable effect: if you want it to look like the words are being typed live, for instance. In that case, just omit the span and the second substring.</p>
+<p>Anyway: I guess it&#8217;s time to hunt down Cowboy&#8217;s example and see how I could have made mine better. I&#8217;m also eager to try other inventive ways to animate page elements &#8211; now it&#8217;s just a matter of getting the idea.</p>
+
+
+  </article>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'nateeagle',
+      disqus_developer = 1;
+
+
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+    </div>
+
+  </body>
+</html>

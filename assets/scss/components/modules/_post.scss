@@ -1,0 +1,5 @@
+/* Individual posts */
+.column.post {
+  margin-right: $space;
+  @include padding-leader(1);
+}

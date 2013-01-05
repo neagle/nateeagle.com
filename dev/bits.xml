@@ -4,7 +4,7 @@
   <title>Bits from Nate Eagle's Front-End Development Memoranda</title>
   <link href="http://neagle.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://neagle.github.com/atom.xml"/>
-  <updated>2012-10-26T18:50:44-04:00</updated>
+  <updated>2013-01-05T15:40:17-05:00</updated>
   <id>http://neagle.github.com/</id>
   <author>
     <name>Nate Eagle</name>
@@ -13,11 +13,77 @@
 
   
     
+          <entry>
+            <id>http://neagle.github.com/2012/11/15/prevent-orphans-in-text-with-jekyll-(liquid)</id>
+            <link type="text/html" rel="alternate" href="http://neagle.github.com/2012/11/15/prevent-orphans-in-text-with-jekyll-%28liquid%29/"/>
+            <title>Prevent Orphans in Text with Jekyll (Liquid)</title>
+            <updated>2012-11-15T00:00:00-05:00</updated>
+            <author>
+              <name>Nate Eagle</name>
+              <uri>http://neagle.github.com/</uri>
+            </author>
+            <content type="html">&lt;p&gt;Having orphaned words in titles is irritating and lame. I was pleased to find that it was relatively easy to insert an &amp;amp;nbsp; entity in front of the final word in a string in Jekyll.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/4081163.js?file=prevent-orphans&quot;&gt;&lt;/script&gt;</content>
+          </entry>
+    
+  
+    
+          <entry>
+            <id>http://neagle.github.com/2012/11/01/what-is-the-difference-between-font-&-typeface?</id>
+            <link type="text/html" rel="alternate" href="http://neagle.github.com/2012/11/01/what-is-the-difference-between-font-%26-typeface%3F/"/>
+            <title>What is the difference between font &amp; typeface?</title>
+            <updated>2012-11-01T00:00:00-04:00</updated>
+            <author>
+              <name>Nate Eagle</name>
+              <uri>http://neagle.github.com/</uri>
+            </author>
+            <content type="html">&lt;p&gt;Every so often I&amp;#8217;ll be out taking a walk and it occurs to me that I still haven&amp;#8217;t figured out exactly what the difference is between the term &lt;em&gt;font&lt;/em&gt; and the term &lt;em&gt;typeface&lt;/em&gt;. I know they&amp;#8217;re not the same. I know designers&amp;#8217; eyes roll back into their heads when the terms are used interchangeably. Inevitably, I forget about the question in a minute or two and never resolve it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Typeface#Terminology&quot;&gt;&lt;span class=&quot;caps&quot;&gt;WONDER&lt;/span&gt; NO &lt;span class=&quot;caps&quot;&gt;MORE&lt;/span&gt;, Nate&lt;/a&gt;. A font is the &amp;#8220;specific member of a type family such as roman, boldface, or itatlic type&amp;#8221;. Typeface, on the other hand, is what we usually talk about: a family of related fonts.&lt;/p&gt;
+&lt;p&gt;&amp;#8220;Yo, dude, what font is that?&amp;#8221;&lt;br /&gt;
+&amp;#8220;I believe that&amp;#8217;s roman, actually.&amp;#8221;&lt;br /&gt;
+&amp;#8220;Roman, huh? Looked kinda like Futura or something to me.&amp;#8221;&lt;br /&gt;
+&amp;#8220;Ah, you meant to inquire about the typeface.&amp;#8221;&lt;/p&gt;
+&lt;p&gt;I look forward to winning friends and influencing people in this manner for years to come.&lt;/p&gt;</content>
+          </entry>
+    
+  
+    
+          <entry>
+            <id>http://neagle.github.com/2012/11/01/preview-textile-files-from-vim</id>
+            <link type="text/html" rel="alternate" href="http://neagle.github.com/2012/11/01/preview-textile-files-from-vim/"/>
+            <title>Preview Textile files from Vim</title>
+            <updated>2012-11-01T00:00:00-04:00</updated>
+            <author>
+              <name>Nate Eagle</name>
+              <uri>http://neagle.github.com/</uri>
+            </author>
+            <content type="html">&lt;p&gt;Editing that &lt;span class=&quot;caps&quot;&gt;README&lt;/span&gt;.textile for your Github project? Working on a new post in Jekyll? &lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=2305&quot;&gt;Textile for &lt;span class=&quot;caps&quot;&gt;VIM&lt;/span&gt;&lt;/a&gt; lets those of us on OS X view a preview of the rendered file in a new browser tab with &lt;code&gt;&amp;lt;leader&amp;gt;rp&lt;/code&gt;.&lt;/p&gt;</content>
+          </entry>
+    
+  
+    
+          <entry>
+            <id>http://neagle.github.com/2012/11/01/fix-indentation-in-vim-with-=</id>
+            <link type="text/html" rel="alternate" href="http://neagle.github.com/2012/11/01/fix-indentation-in-vim-with-%3D/"/>
+            <title>Fix indentation in Vim with =</title>
+            <updated>2012-11-01T00:00:00-04:00</updated>
+            <author>
+              <name>Nate Eagle</name>
+              <uri>http://neagle.github.com/</uri>
+            </author>
+            <content type="html">&lt;p&gt;Want to correctly indent the line you&amp;#8217;re on? &lt;code&gt;==&lt;/code&gt;&lt;br /&gt;
+Want to do the whole file? &lt;code&gt;gg=G&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This is particularly useful if you&amp;#8217;ve recently been converted to two-space indentation for JavaScript files and all your files use four-space indentation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://vim.wikia.com/wiki/Indenting_source_code&quot;&gt;More info.&lt;/a&gt;&lt;/p&gt;</content>
+          </entry>
+    
+  
+    
   
     
           <entry>
             <id>http://neagle.github.com/2011/10/02/invert-the-screen-colors-on-your-mac</id>
-            <link type="text/html" rel="alternate" href="http://neagle.github.com/2011/10/02/invert-the-screen-colors-on-your-mac.html"/>
+            <link type="text/html" rel="alternate" href="http://neagle.github.com/2011/10/02/invert-the-screen-colors-on-your-mac/"/>
             <title>Invert the Screen Colors on Your Mac</title>
             <updated>2011-10-02T00:00:00-04:00</updated>
             <author>
@@ -35,7 +101,7 @@
     
           <entry>
             <id>http://neagle.github.com/2011/09/21/open-a-directory-in-finder-from-terminal</id>
-            <link type="text/html" rel="alternate" href="http://neagle.github.com/2011/09/21/open-a-directory-in-finder-from-terminal.html"/>
+            <link type="text/html" rel="alternate" href="http://neagle.github.com/2011/09/21/open-a-directory-in-finder-from-terminal/"/>
             <title>Open a Directory in Finder from Terminal</title>
             <updated>2011-09-21T00:00:00-04:00</updated>
             <author>
@@ -43,8 +109,8 @@
               <uri>http://neagle.github.com/</uri>
             </author>
             <content type="html">&lt;p&gt;Finder may not be the worst part of OS X, but it&amp;#8217;s a contender. Regardless: you may sometimes wish to open your working directory in the command line in Finder.&lt;/p&gt;
-&lt;div&gt;
-&lt;pre&gt;&lt;code class='bash'&gt;open .&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;open .
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</content>
           </entry>
     

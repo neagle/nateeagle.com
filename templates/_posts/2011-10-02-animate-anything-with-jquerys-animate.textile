@@ -41,7 +41,7 @@ So I decided to try to recreate Cowboy's example on my own.
 
 <select class="easing"></select> <button class="animate">Animate</button>
 
-<p class="animate">Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?  Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</p>
+<p class="animate">Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the n----- talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?  Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</p>
 
 <p>Speed: <input type="number" value="10" min="1" max="1000" class="speed" /> (lower is faster)</p>
 
@@ -64,7 +64,7 @@ for ( func in $.easing ) {
     }
 }
 
-    
+
 $( 'button.animate' ).bind( 'click', function() {
 
     var $p = $( 'p.animate' ),
@@ -72,15 +72,15 @@ $( 'button.animate' ).bind( 'click', function() {
         length = text.length,
         $speed = $( 'input[type="number"].speed' );
 
-    $p 
+    $p
         // Stop any in-progress animation on our paragraph
         .stop()
-        // Set fake-property to 0 
+        // Set fake-property to 0
         .css({ 'fake-property': 0 })
         .animate({
             // Animate the fake property from 0 to
             // the length of the text
-            'fake-property': length 
+            'fake-property': length
         }, {
             // Make the speed directly proportional
             // to the length of the text
@@ -90,7 +90,7 @@ $( 'button.animate' ).bind( 'click', function() {
                 // Since we're using subsring, round i (which can be
                 // a floating point value) to an integer
                 var i = Math.round( i );
-                
+
                 // Output the beginning of the string up to i, then
                 // output the rest wrapped in span.invisible
                 // We'll set its opacity to 0 in our CSS

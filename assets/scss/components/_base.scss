@@ -1,0 +1,122 @@
+/* Base Rules */
+/* A Base rule is applied to an element using an element selector, a descendent
+ * selector, or a child selector, along with any pseudo-classes. It doesn’t
+ * include any class or ID selectors. It is defining the default styling for
+ * how that element should look in all occurrences on the page.
+ *
+ * Jonathan Snook
+ * http://smacss.com/book/type-base
+ */
+
+@import "../common/reset";
+@import "../common/elements";
+
+/* Establish a vertical rhythm */
+@include establish-baseline();
+
+body {
+  @include adjust-font-size-to($base-font-size);
+  background: {
+    color: $color-background;
+    image: image-url('backgrounds/debut_dark/debut_dark.png');
+    position: 50% 0%;
+  }
+  color: $color-text;
+  @include establish-baseline($base-font-size);
+  font: {
+    family: $font-normal, sans-serif;
+  }
+}
+
+#{headings()} {
+  color: $color-headline;
+  font: {
+    family: $font-headline;
+  }
+
+  a {
+    color: $color-headline;
+    border-bottom: 0;
+    &:after {
+      content: ' →';
+      @include opacity(0.5);
+    }
+    &:hover {
+      background-color: transparentize($color-headline, 0.9);
+      border-bottom: 0;
+      color: saturate($color-headline, 50%);
+      &:after {
+        /*@include opacity(1);*/
+      }
+    }
+  }
+}
+
+h1 {
+  @include adjust-font-size-to(36px);
+}
+
+h2 {
+  @include adjust-font-size-to(20px);
+}
+
+h3 {
+  font: {
+    size: 24px;
+  }
+}
+
+h4 {
+  font: {
+    size: 18px;
+  }
+}
+
+h5 {
+  font: {
+    size: 16px;
+  }
+}
+
+h6 {
+  font: {
+    size: 48px;
+  }
+}
+
+a {
+  border-bottom: 1px dotted transparentize($color-link-default, 0.5);
+  color: $color-link-default;
+  cursor: pointer;
+  text: {
+    decoration: none;
+  }
+  @include transition(
+    background-color 0.1s,
+    border 0.1s,
+    color 0.1s
+  );
+
+  &:hover {
+    border-bottom: 1px dotted $color-link-hover;
+    color: $color-link-hover;
+  }
+}
+
+code {
+  font: {
+    family: Monaco, monospace;
+  }
+}
+
+::selection {
+  background: $color-selection;
+}
+
+::-moz-selection {
+  background: $color-selection;
+}
+
+p {
+  @include margin-trailer(1);
+}

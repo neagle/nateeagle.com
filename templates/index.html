@@ -3,52 +3,81 @@ layout: default
 title: "Nate Eagle's Front-End-Development Memoranda: A little dev blog for you to be looking at."
 excerpt: true
 ---
-<section class="posts">
-    <ul>
-    {% for post in site.posts limit:10 %}
-
+<section class="column col-2">
+  <section class="posts">
+      <ul>
+      {% for post in site.posts %}
         {% if post.layout == "post" %}
 
-            <li>
-                <time>{{ post.date | date: "%B %d, %Y" }}</time>
-                <a class="title" href="{{ post.url }}">{{ post.title }}</a>
-                <p class="excerpt">
-                    {% if post.summary %}
-                        {{ post.summary }}
-                    {% else %}
-                        {{ post.content | strip_html | truncatewords: 50 }}
-                    {% endif %}
-                    <a href="{{ post.url }}" class="more">Read&nbsp;the&nbsp;full&nbsp;post&nbsp;&rarr;</a>
+            <li class="post">
+              <h2><a class="title" href="{{ post.url }}">
+                {% assign titleWords = post.title | split:&nbsp; %}
+                {% for word in titleWords %}{% if forloop.last %}&nbsp;{% else %} {% endif %}{{ word }}{% endfor %}
+              </a></h2>
+              <p class="excerpt">
+                  {% if post.summary %}
+                      {{ post.summary }}
+                  {% else %}
+                      {{ post.content | strip_html | truncatewords: 50 }}
+                  {% endif %}
+                <!--<a href="{{ post.url }}" class="more">Read&nbsp;the&nbsp;full&nbsp;post&nbsp;&rarr;</a>-->
+              </p>
 
-                </p>
+              <time>{{ post.date | date: "%B %Y" }}</time>
+
             </li>
 
-        {% endif %}
+          {% endif %}
 
-    {% endfor %}
-    </ul>
-</section>
+      {% endfor %}
+      </ul>
+  </section>
+</section><!-- end .col-2 -->
 
-<section class="bits">
-    <h2>Bits</h2>
-    <ul>
-    {% for post in site.posts limit:10 %}
+<section class="column col-3">
 
-        {% if post.layout == "bit" %}
+  <section class="bits">
+      <h2>Bits</h2>
+      <p>These are very tiny posts.</p>
+      <ul>
+      {% for post in site.posts limit:10 %}
 
-            <li>
-                <a class="title" href="{{ post.url }}">{{ post.title }}</a>
-            </li>
+          {% if post.layout == "bit" %}
 
-        {% endif %}
+              <li>
+                <a class="title" href="{{ post.url }}">
+                  {% assign titleWords = post.title | split:&nbsp; %}
+                  {% for word in titleWords %}{% if forloop.last %}&nbsp;{% else %} {% endif %}{{ word }}{% endfor %}
+                </a>
+              </li>
 
-    {% endfor %}
-    </ul>
-</section>
+          {% endif %}
 
-<section id="about">
+      {% endfor %}
+      </ul>
+  </section>
+
+  <section class="about-me">
     <h2>About Me</h2>
-    <img src="/images/perplexed-nate.jpg" alt="">
 
-    {% include about.textile %}
-</section>
+    <!--<div id="portrait">-->
+      <!--<img src="/images/perplexed-nate.jpg" alt="">-->
+    <!--</div>-->
+
+    <p>I&rsquo;m a front-end developer living in Washington, DC. I&rsquo;m an <a href="http://www.gokgs.com/gameArchives.jsp?user=cloudbrows">avid go player</a>, father, and a big fan of traditional&nbsp;cappucinos.</p>
+
+    <ul>
+      <li><a href="https://twitter.com/neagle">@neagle</a></li>
+      <li><a href="https://github.com/neagle">github.com/neagle</a></li>
+      <li><a href="http://www.linkedin.com/in/nateeagle">in/nateeagle</a></li>
+    </ul>
+  </section>
+
+  <section id="flickr"></section>
+
+  <section id="jsfiddles"></section>
+
+  <section id="stack-overflow"></section>
+
+</section><!-- end .col-3 -->
+

@@ -1,0 +1,13 @@
+.highlight {
+  pre {
+    padding: {
+      left: 25px;
+      right: 25px;
+    }
+  }
+
+  code {
+    /*@include adjust-font-size-to(12px);*/
+    /*@include establish-baseline(18px);*/
+  }
+}

@@ -1,0 +1,165 @@
+/* Layout Rules */
+
+/* CSS, by its very nature, is used to lay elements out on the page. However,
+ * there is a distinction between layouts dictating the major and minor
+ * components of a page. The minor components—such as a callout, or login form,
+ * or a navigation item sit within the scope of major components such as a
+ * header or footer. I refer to the minor components as Modules and will dive
+ * into those in the next section. The major components are referred to as
+ * Layout styles.
+ *
+ * Jonathan Snook
+ * http://smacss.com/book/type-layout
+ */
+
+#page {
+  @include baseline-grid-background();
+  @include clearfix();
+  /*@include perspective($perspective);*/
+}
+
+.l-left {
+    float: left;
+}
+
+.l-right {
+    float: right;
+}
+
+.absolute-fill {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pseudo-frame {
+  content: '';
+  display: block;
+}
+
+/* Config */
+$space: 5%;
+
+#page {
+  /*padding-left: ($space * 2);*/
+  padding-left: $space;
+  padding-right: $space;
+}
+
+#page > .column {
+  @if ($debug) {
+    outline: 1px solid red;
+  }
+
+  @include box-sizing(border-box);
+  float: left;
+  /*margin-left: $space;*/
+  /*@include margin-trailer(1);*/
+  /*@include padding-leader(1);*/
+  /*@include padding-trailer(1);*/
+  position: relative;
+  @include transition(all 1s);
+
+  &.col-1 {
+    /*margin-left: -1 * ($space / 2);*/
+    position: fixed;
+    width: 100px;
+  }
+
+  @include respond-to('handhelds') {
+    &.col-1 {
+      margin: {
+        left: -2.5%;
+        right: -2.5%;
+      }
+      position: relative;
+      width: 105%;
+    }
+  }
+
+  &.col-2 {
+    padding: {
+      left: 150px;
+    }
+    width: 65%;
+
+    @include respond-to(handhelds) {
+      padding: {
+        left: 0;
+      }
+      width: 100%;
+
+      &:after {
+        @include separator();
+      }
+    }
+
+    @include respond-to(medium-screens) {
+      width: 100%;
+
+      &:after {
+        padding: {
+          left: 150px;
+        }
+        @include separator();
+      }
+    }
+  }
+
+  &.col-3 {
+    padding: {
+      left: 5%;
+    }
+    width: 30%;
+
+    @include respond-to(handhelds) {
+      padding: {
+        left: 0;
+      }
+      width: 100%;
+    }
+
+    @include respond-to(medium-screens) {
+      padding: {
+        left: 150px;
+      }
+      width: 100%;
+    }
+
+
+    > section {
+      @include margin-trailer(1);
+
+      h2 + p {
+        @include adjust-font-size-to(16px);
+        color: darken($color-text, 20%);
+        /*margin: 0;*/
+      }
+
+      ul {
+        color: darken($color-text, 20%);
+        list-style-type: square;
+        padding-left: 20px;
+      }
+
+      li {
+        @include adjust-font-size-to(16px);
+      }
+    }
+  }
+
+  &.post {
+    width: 100%;
+    padding: {
+      left: 150px;
+    }
+
+    @include respond-to('handhelds') {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+}

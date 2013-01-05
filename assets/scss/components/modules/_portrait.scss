@@ -1,0 +1,78 @@
+#portrait {
+  @include backface-visibility(hidden);
+  border: 10px solid white;
+  @include border-radius(10px);
+  @include box-shadow(
+    0 0 3px hsla(0, 0%, 0%, 0.5)
+  );
+  @include box-sizing(border-box);
+  float: left;
+  @include margin-leader(1);
+  margin-left: 25px;
+  margin-right: 25px;
+  @include margin-trailer(1);
+  position: relative;
+  @include transform(
+    rotate(-3deg)
+  );
+  @include transform-style(preserve-3d);
+  /*@include transition-duration(0.5s);*/
+  /*@include transition-property(all);*/
+
+  img {
+    @include backface-visibility(hidden);
+    /*@include border-radius(5px);*/
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .back {
+    @extend .absolute-fill;
+    @include backface-visibility(hidden);
+    background: {
+      color: #fff;
+    }
+    border: 1px solid red;
+    display: block;
+    @include transform(
+      rotateY(180deg)
+    );
+  }
+
+  /* Tape */
+  &:before {
+    background: {
+      color: hsla(0, 0%, 100%, 0.5);
+    }
+    content: '';
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: -20px;
+    top: -15px;
+    @include transform(
+      rotate(8deg)
+    );
+    width: 100px;
+    z-index: 2;
+  }
+
+  &:after {
+    background: {
+      color: hsla(0, 0%, 100%, 0.5);
+    }
+    bottom: -20px;
+    content: '';
+    display: block;
+    height: 30px;
+    left: -15px;
+    position: absolute;
+    @include transform(
+      rotate(3deg)
+    );
+    width: 70px;
+    z-index: 2;
+  }
+}
