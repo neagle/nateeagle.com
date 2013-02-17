@@ -16,6 +16,7 @@
   <body>
 
     <div id="page">
+      <div class="strip"></div>
 
       <section class="column col-1">
         
@@ -43,19 +44,7 @@
   <p>Here&#8217;s a little bit of colorful distraction for a rainy afternoon.</p>
 <p><iframe style="width: 100%; height: 500px" src="http://jsfiddle.net/nate/dyVPR/embedded/result,js,html"></iframe></p>
 <p>Playing with <code>canvas</code> is fun. However, you may notice, if you glance through the code, that there are really only five lines of code that are canvas-specific. (A few more if you count the setup.)</p>
-<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">$canvas</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;canvas&#39;</span> <span class="p">),</span>
-    <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">$canvas</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-    <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span> <span class="s1">&#39;2d&#39;</span> <span class="p">),</span>
-
-    <span class="nx">drawPoint</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">radius</span><span class="p">,</span> <span class="nx">color</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">radius</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">false</span> <span class="p">);</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">closePath</span><span class="p">();</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">fill</span><span class="p">();</span>
-    <span class="p">}</span>
-</code></pre>
-</div>
+<p></notextile></p>
 <p>This is the code for, well, drawing a circle. <em>All</em> of the rest of it is just various math and adjustments on where and how to draw those circles.</p>
 <p>I spent basically all of my highschool math courses messing around with <a href="http://education.ti.com/educationportal/sites/US/productDetail/us_ti83p.html">my graphing calculator</a> and <a href="http://en.wikipedia.org/wiki/TI-BASIC">TI Basic</a>. I made a little magic eight ball program that gave different responses based on a random number; I made programs to take care of the quadratic equation for me. (Note: I spent more time fussing with the formatting and look of the UI for entering numbers than I did with the calculations &#8211; I was a front-end developer in the making!) I finally dropped out of AP Calculus when being clever about my calculator could no longer make up for the fact that I wasn&#8217;t learning a lick of math.</p>
 <p>I&#8217;m grateful for what exposure I had to code &#8211; ultimately, even that time messing with TI Basic helped me find my way to a great career. But I can&#8217;t help but wish that somebody &#8211; <em>any</em> adult in my life &#8211; had noticed that I spent all my time trying vainly to do stuff with computers and said, &#8220;You know, that might not be so wholly irrelevant to his future&#8230;&#8221;</p>

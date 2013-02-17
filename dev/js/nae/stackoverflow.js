@@ -47,18 +47,26 @@ define(['jquery'],
     };
 
     placeAnswers = function (answers, questions) {
+      //console.log(answers, questions);
       var $answers;
 
       $answers = $('<ul>');
 
       $.each(answers, function (i, answer) {
-        var answerHtml, $answer;
+        var answerHtml, $answer, question;
+
+        question = questions.filter(function (question) {
+          return question.question_id === answer.question_id;
+        });
+
+        // Get the first value, since filter returns an array
+        question = question[0];
 
         answerHtml = [
           '<a href="http://stackoverflow.com/a/',
           answer.answer_id,
           '">&ldquo;',
-          questions[i].title,
+          question.title,
           '&rdquo;</a>'
         ];
         //console.log(answerHtml.join(''));

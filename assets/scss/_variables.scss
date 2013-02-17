@@ -2,8 +2,8 @@
 // debugging-oriented // oriented settings in your stylesheets.
 //
 // Example: @if $debug == true { } @else { }
-/*$debug: true;*/
-$debug: false;
+$debug: true;
+/*$debug: false;*/
 
 @import "fonts";
 
@@ -97,7 +97,7 @@ $color-pre                    : #d4d4d4;
 $color-pre-background         : #333;
 
 // Selections
-$color-selection              : #b3d4fc;
+$color-selection              : transparentize($color-link-default, 0.5);
 
 // Messages
 $color-message                : #f4ecbb;

@@ -14,13 +14,14 @@
 
 @import "modules/background-canvas";
 @import "modules/bits";
+@import "modules/flickr";
 @import "modules/header";
+@import "modules/highlight";
+@import "modules/jsfiddles";
 @import "modules/portrait";
 @import "modules/post";
 @import "modules/posts";
-@import "modules/flickr";
-@import "modules/jsfiddles";
-@import "modules/highlight";
+@import "modules/strip";
 
 // Third-Party
 @import "lib/pygments/solarized";

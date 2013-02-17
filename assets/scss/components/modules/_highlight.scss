@@ -1,9 +1,19 @@
 .highlight {
+  @include border-radius(5px);
+  @include box-shadow(
+    inset 0 0 1em hsla(0, 0, 0, 0.2)
+  );
+  @include margin-leader(1);
+  @include margin-trailer(1);
+  @include padding-leader(1);
+  @include padding-trailer(1);
+
   pre {
     padding: {
       left: 25px;
       right: 25px;
     }
+    margin: 0;
   }
 
   code {

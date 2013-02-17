@@ -4,7 +4,7 @@
   <title>Bits from Nate Eagle's Front-End Development Memoranda</title>
   <link href="http://neagle.github.com/"/>
   <link type="application/atom+xml" rel="self" href="http://neagle.github.com/atom.xml"/>
-  <updated>2013-01-05T15:40:17-05:00</updated>
+  <updated>2013-02-17T18:41:07-05:00</updated>
   <id>http://neagle.github.com/</id>
   <author>
     <name>Nate Eagle</name>
@@ -109,9 +109,7 @@ Want to do the whole file? &lt;code&gt;gg=G&lt;/code&gt;&lt;/p&gt;
               <uri>http://neagle.github.com/</uri>
             </author>
             <content type="html">&lt;p&gt;Finder may not be the worst part of OS X, but it&amp;#8217;s a contender. Regardless: you may sometimes wish to open your working directory in the command line in Finder.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;open .
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content>
+&lt;p&gt;&lt;/notextile&gt;&lt;/p&gt;</content>
           </entry>
     
   

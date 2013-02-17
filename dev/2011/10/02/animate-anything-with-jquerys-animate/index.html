@@ -16,6 +16,7 @@
   <body>
 
     <div id="page">
+      <div class="strip"></div>
 
       <section class="column col-1">
         
@@ -74,55 +75,7 @@ opacity: 0;
 <p>Speed: <input type="number" value="10" min="1" max="1000" class="speed" /> (lower is faster)</p>
 <p>(Placeholder text courtesy of <a href="http://slipsum.com">Samuel L. Ipsum</a>)</p>
 <p>The code&#8217;s dead simple.</p>
-<div class="highlight"><pre><code class="js"><span class="kd">var</span> <span class="nx">$select</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;select.easing&#39;</span> <span class="p">);</span>
-
-<span class="c1">// Generate a select list of available easing functions</span>
-<span class="c1">// ...because easing is fun!</span>
-<span class="k">for</span> <span class="p">(</span> <span class="nx">func</span> <span class="k">in</span> <span class="nx">$</span><span class="p">.</span><span class="nx">easing</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span> <span class="nx">func</span> <span class="o">!==</span> <span class="s1">&#39;def&#39;</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;&lt;option /&gt;&#39;</span><span class="p">,</span> <span class="p">{</span>
-            <span class="nx">text</span><span class="o">:</span> <span class="nx">func</span><span class="p">,</span>
-            <span class="nx">val</span><span class="o">:</span> <span class="nx">func</span>
-        <span class="p">}).</span><span class="nx">appendTo</span><span class="p">(</span> <span class="nx">$select</span> <span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-
-<span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;button.animate&#39;</span> <span class="p">).</span><span class="nx">bind</span><span class="p">(</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-
-    <span class="kd">var</span> <span class="nx">$p</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;p.animate&#39;</span> <span class="p">),</span>
-        <span class="nx">text</span> <span class="o">=</span> <span class="nx">$p</span><span class="p">.</span><span class="nx">text</span><span class="p">(),</span>
-        <span class="nx">length</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
-        <span class="nx">$speed</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;input[type=&quot;number&quot;].speed&#39;</span> <span class="p">);</span>
-
-    <span class="nx">$p</span>
-        <span class="c1">// Stop any in-progress animation on our paragraph</span>
-        <span class="p">.</span><span class="nx">stop</span><span class="p">()</span>
-        <span class="c1">// Set fake-property to 0</span>
-        <span class="p">.</span><span class="nx">css</span><span class="p">({</span> <span class="s1">&#39;fake-property&#39;</span><span class="o">:</span> <span class="mi">0</span> <span class="p">})</span>
-        <span class="p">.</span><span class="nx">animate</span><span class="p">({</span>
-            <span class="c1">// Animate the fake property from 0 to</span>
-            <span class="c1">// the length of the text</span>
-            <span class="s1">&#39;fake-property&#39;</span><span class="o">:</span> <span class="nx">length</span>
-        <span class="p">},</span> <span class="p">{</span>
-            <span class="c1">// Make the speed directly proportional</span>
-            <span class="c1">// to the length of the text</span>
-            <span class="nx">duration</span><span class="o">:</span> <span class="nx">$speed</span><span class="p">.</span><span class="nx">val</span><span class="p">()</span> <span class="o">*</span> <span class="nx">length</span><span class="p">,</span>
-            <span class="nx">easing</span><span class="o">:</span> <span class="nx">$select</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span>
-            <span class="nx">step</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">i</span> <span class="p">)</span> <span class="p">{</span>
-                <span class="c1">// Since we&#39;re using subsring, round i (which can be</span>
-                <span class="c1">// a floating point value) to an integer</span>
-                <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span> <span class="nx">i</span> <span class="p">);</span>
-
-                <span class="c1">// Output the beginning of the string up to i, then</span>
-                <span class="c1">// output the rest wrapped in span.invisible</span>
-                <span class="c1">// We&#39;ll set its opacity to 0 in our CSS</span>
-                <span class="nx">$p</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="nx">text</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">i</span> <span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;span class=&quot;invisible&quot;&gt;&#39;</span>
-                    <span class="o">+</span> <span class="nx">text</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span> <span class="nx">i</span> <span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span> <span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">});</span>
-</code></pre>
-</div>
+<p></notextile></p>
 <p>(Here&#8217;s <a href="http://jsfiddle.net/nate/Grt5e/">the same code in a fiddle</a> if you&#8217;d like to play.)</p>
 <p>The animation itself is surprisingly smooth. I have it output the latter segment of the text string so that the element containing the text doesn&#8217;t change shape and size as it appears. It also prevents having the first few letters of words at the ends of lines appear before dropping the word to the line below as it gets long enough to wrap. Sometimes this might be a desireable effect: if you want it to look like the words are being typed live, for instance. In that case, just omit the span and the second substring.</p>
 <p>Anyway: I guess it&#8217;s time to hunt down Cowboy&#8217;s example and see how I could have made mine better. I&#8217;m also eager to try other inventive ways to animate page elements &#8211; now it&#8217;s just a matter of getting the idea.</p>

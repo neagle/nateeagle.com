@@ -1,0 +1,11 @@
+.strip {
+
+  @include adjust-leading-to(1);
+  display: block;
+  height: 1em;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include upholstery(20, 100px);
+}

@@ -16,6 +16,7 @@
   <body>
 
     <div id="page">
+      <div class="strip"></div>
 
       <section class="column col-1">
         
@@ -45,42 +46,18 @@
 <p>While working on the design for this blog, I found myself using (as I often do) a small trick that uses multiple text shadows to create a 3d text effect.</p>
 <p><img src="/images/posts/desandro-made-this.png" title="David DeSandro Made This" alt="David DeSandro Made This" /></p>
 <p>The technique was created, as far as I know, by <a href="http://desandro.com/">Dave DeSandro</a>, one of the classiest folks in interaction design, who uses it prominently on his homepage. Regardless of its ultimate origin, that&rsquo;s where I picked it up. It creates the illusion of blocky three-dimensional letters that have a side in shadows that stretches back in space. The <span class="caps">CSS</span> for it is easy to understand: it just uses the fact that the <code>text-shadow</code> property can have multiple, comma-separated backgrounds.</p>
-<div class="highlight"><pre><code class="css"><span class="nf">#mytext</span> <span class="p">{</span>
-    <span class="k">text-shadow</span><span class="o">:</span>
-        <span class="m">1px</span> <span class="m">1px</span> <span class="m">0</span> <span class="m">#000</span><span class="o">,</span>
-        <span class="m">2px</span> <span class="m">2px</span> <span class="m">0</span> <span class="m">#000</span><span class="o">,</span>
-        <span class="m">3px</span> <span class="m">3px</span> <span class="m">0</span> <span class="m">#000</span><span class="o">,</span>
-        <span class="m">4px</span> <span class="m">4px</span> <span class="m">0</span> <span class="m">#000</span><span class="o">,</span>
-        <span class="m">5px</span> <span class="m">5px</span> <span class="m">0</span> <span class="m">#000</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre>
-</div>
-<p>The shadow is made up of 1px layers, each offset slightly from the one that preceded it. Here&rsquo;s an example that should make that obvious. (Note: example will not work in browsers that do not support <code>text-shadow</code>.)</p>
+</notextile>
+
+p. The shadow is made up of 1px layers, each offset slightly from the one that preceded it. Here&rsquo;s an example that should make that obvious. (Note: example will not work in browsers that do not support @text-shadow@.)
+
 <style>h3.example1 { color: white; font-family: Futura, Arial, sans-serif; font-size: 48px; font-weight: bold; text-shadow: 1px 1px gray, 2px 2px white, 3px 3px gray, 4px 4px white, 5px 5px gray; text-transform: uppercase; }</style>
+
 <h3 class="example1">Nate Eagle Made This</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">h3</span><span class="nc">.example1</span> <span class="p">{</span>
-    <span class="k">text-shadow</span><span class="o">:</span>
-        <span class="m">1px</span> <span class="m">1px</span> <span class="nb">gray</span><span class="o">,</span>
-        <span class="m">2px</span> <span class="m">2px</span> <span class="nb">white</span><span class="o">,</span>
-        <span class="m">3px</span> <span class="m">3px</span> <span class="nb">gray</span><span class="o">,</span>
-        <span class="m">4px</span> <span class="m">4px</span> <span class="nb">white</span><span class="o">,</span>
-        <span class="m">5px</span> <span class="m">5px</span> <span class="nb">gray</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre>
-</div>
-<p>I alternated the shadows between gray and white: you can see clearly how they stack. But if you make them a single color:</p>
+
+<notextile><p>I alternated the shadows between gray and white: you can see clearly how they stack. But if you make them a single color:</p>
 <style>h3.example2 { color: white; font-family: Futura, Arial, sans-serif; font-size: 48px; font-weight: bold; text-shadow: 1px 1px gray, 2px 2px gray, 3px 3px gray, 4px 4px gray, 5px 5px gray; text-transform: uppercase; }</style>
 <h3 class="example2">Nate Eagle Made This</h3>
-<div class="highlight"><pre><code class="css"><span class="nt">h3</span><span class="nc">.example2</span> <span class="p">{</span>
-    <span class="k">text-shadow</span><span class="o">:</span>
-        <span class="m">1px</span> <span class="m">1px</span> <span class="nb">gray</span><span class="o">,</span>
-        <span class="m">2px</span> <span class="m">2px</span> <span class="nb">gray</span><span class="o">,</span>
-        <span class="m">3px</span> <span class="m">3px</span> <span class="nb">gray</span><span class="o">,</span>
-        <span class="m">4px</span> <span class="m">4px</span> <span class="nb">gray</span><span class="o">,</span>
-        <span class="m">5px</span> <span class="m">5px</span> <span class="nb">gray</span><span class="p">;</span>
-    <span class="p">}</span>
-</code></pre>
-</div>
+<p></notextile></p>
 <p>&hellip;it creates the illusion of a solid side, receding in space. Lovely, yeah? Only problem: it&#8217;s kind of a complex declaration. And fiddling around with the color and size of the effect is annoyingly complex: you have to add and remove whole lines, change multiple numbers, change the name of the color multiple times.</p>
 <p>It&rsquo;s the perfect candidate for a mixin. Here&rsquo;s <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin">the documentation for defining a mixin</a>. In this example, I&rsquo;m going to reference another mixin &ndash; Compass&rsquo;s text-shadow plugin &ndash; after generating the string of shadows I want.</p>
 <pre><code> @mixin text-3d($size: 5, $directionX: 1, $directionY: 1, $blur: 1px, $color: black ) {

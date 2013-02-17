@@ -30,6 +30,8 @@ header {
     font-size: 36px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    @include transition(color 1s);
+    @include translateZ(0);
 
     a {
       border: 0;
@@ -45,6 +47,7 @@ header {
     color: #aaa;
     @include adjust-font-size-to(18px);
     font-family: $font-headline-alt;
+    @include translateZ(0);
   }
 
   &:before {

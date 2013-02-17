@@ -16,6 +16,7 @@
   <body>
 
     <div id="page">
+      <div class="strip"></div>
 
       <section class="column col-1">
         
@@ -49,49 +50,47 @@
 <h3>Vim &amp; pbcopy on OS X</h3>
 <p><code>pbcopy</code> and <code>pbpaste</code> are the bees&#8217; knees: they&#8217;re commands that use OS X&#8217;s system clipboard (&#8220;paste board&#8221; is the OS X name, I guess) via terminal.</p>
 <p>Adding this mapping to your <code>.vimrc</code> will let you use <code>ctrl-x</code> and <code>ctrl-c</code> to cut/copy the current visual selection to OS X&#8217;s pasteboard.</p>
-<div class="highlight"><pre><code class="vim">vmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">x</span><span class="p">&gt;</span> :<span class="p">!</span>pbcopy<span class="p">&lt;</span>CR<span class="p">&gt;</span>
-vmap <span class="p">&lt;</span>C<span class="p">-</span><span class="k">c</span><span class="p">&gt;</span> :<span class="k">w</span> <span class="p">!</span>pbcopy<span class="p">&lt;</span>CR<span class="p">&gt;&lt;</span>CR<span class="p">&gt;</span>
-</code></pre>
-</div>
-<p>Via <a href="http://drydevelopment.com/blog/vim-pbcopy-on-os-x">drydevelopment.com</a>.</p>
-<h3>Change the Colorscheme</h3>
-<p>This one&#8217;s super dumb, but when I was trying to find a decent colorscheme for Vim (I&#8217;m using <a href="http://www.vim.org/scripts/script.php?script_id=105">desert</a>), I kept closing Vim, editing my .vimrc, and reopening Vim. <span class="caps">LIKE</span> A <span class="caps">CHUMP</span>.</p>
-<p><code>:colorscheme desert</code></p>
-<h3>Using the Leader</h3>
-<p>I&#8217;ve been pretty resistant to customizing Vim. I don&#8217;t like reassigning default functionality till I&#8217;m really sure I understand it. What if I break a feature I haven&#8217;t discovered yet because of today&#8217;s shortsightedness?</p>
-<p>But Vim has a <a href="http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader">leader key</a>, the entire role of which is to give you a whole bunch of blank namespace to create custom commands. The default is <code>\</code>, but Steve Losh (the dude who wrote the article I just linked to) argues (to me persuasively) that <code>,</code> (the comma) is easier to reach and not used for anything else. Nice: the freedom to make useful custom stuff without worrying about messing things up for myself later on.</p>
-<p>And, actually, <a href="http://stevelosh.com/blog/2010/09/coming-home-to-vim/">that whole article</a> is worth reading. He explains his whole <code>.vimrc</code> file in the most detail I&#8217;ve encountered. Well, maybe I should say that he explains it with the fewest assumptions about existing knowledge on the part of his reader. Which I appreciate.</p>
-<h3>jsBeautify</h3>
-<p><a href="http://www.vim.org/scripts/script.php?script_id=2727">jsBeautify</a> will clean up messy, inconsistently formatted JavaScript file with a single command. Awesome, but I need to figure out how much work would be involved in modifying it to follow <a href="http://docs.jquery.com/JQuery_Core_Style_Guidelines">the jQuery style guidelines</a>.</p>
-<h3>Remove Unwanted Whitespace</h3>
-<p>It&#8217;s simple to <a href="http://vim.wikia.com/wiki/Remove_unwanted_spaces">remove unwanted whitespace</a>:</p>
-<blockquote>
-<p>Delete all trailing whitespace (at the end of each line) with:</p>
-<p><code>:%s/\s\+$//</code></p>
-<p>More rarely, a user might want to delete whitespace at the beginning of each line:</p>
-<p><code>:%s/^\s\+</code></p>
-</blockquote>
-<h3>Comment Out a Range of Lines</h3>
-<p>Too lengthy to quote, here&#8217;s <a href="http://vim.wikia.com/wiki/Commenting_out_a_range_of_lines">the page</a>.</p>
-<h3>Wrap visual selection in an <span class="caps">HTML</span> tag.</h3>
-<div class="highlight"><pre><code class="vim">vmap <span class="p">&lt;</span>Leader<span class="p">&gt;</span><span class="k">w</span> <span class="p">&lt;</span>Esc<span class="p">&gt;</span>:<span class="k">call</span> VisualHTMLTagWrap<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
-<span class="k">function</span><span class="p">!</span> VisualHTMLTagWrap<span class="p">()</span>
-  <span class="k">let</span> <span class="nb">tag</span> <span class="p">=</span> input<span class="p">(</span><span class="s2">&quot;Tag to wrap block: &quot;</span><span class="p">)</span>
-  <span class="k">if</span> len<span class="p">(</span><span class="nb">tag</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">0</span>
-    normal `<span class="p">&gt;</span>
-    <span class="k">if</span> &amp;<span class="nb">selection</span> <span class="p">==</span> <span class="s1">&#39;exclusive&#39;</span>
-      exe <span class="s2">&quot;normal i&lt;/&quot;</span>.<span class="nb">tag</span>.<span class="s2">&quot;&gt;&quot;</span>
-    <span class="k">else</span>
-      exe <span class="s2">&quot;normal a&lt;/&quot;</span>.<span class="nb">tag</span>.<span class="s2">&quot;&gt;&quot;</span>
-    <span class="k">endif</span>
-    normal `<span class="p">&lt;</span>
-    exe <span class="s2">&quot;normal i&lt;&quot;</span>.<span class="nb">tag</span>.<span class="s2">&quot;&gt;&quot;</span>
-    normal `<span class="p">&lt;</span>
-  <span class="k">endif</span>
-<span class="k">endfunction</span>
-</code></pre>
-</div>
-<p>Put it in <sub>/.vim/scripts/wrapwithtag.vim and enable in <code></sub>/.vimrc</code></p>
+</notextile>
+
+Via "drydevelopment.com":http://drydevelopment.com/blog/vim-pbcopy-on-os-x.
+
+h3. Change the Colorscheme
+
+This one's super dumb, but when I was trying to find a decent colorscheme for Vim (I'm using "desert":http://www.vim.org/scripts/script.php?script_id=105), I kept closing Vim, editing my .vimrc, and reopening Vim. LIKE A CHUMP.
+
+@:colorscheme desert@
+
+h3. Using the Leader
+
+I've been pretty resistant to customizing Vim. I don't like reassigning default functionality till I'm really sure I understand it. What if I break a feature I haven't discovered yet because of today's shortsightedness?
+
+But Vim has a "leader key":http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader, the entire role of which is to give you a whole bunch of blank namespace to create custom commands. The default is @\@, but Steve Losh (the dude who wrote the article I just linked to) argues (to me persuasively) that @,@ (the comma) is easier to reach and not used for anything else. Nice: the freedom to make useful custom stuff without worrying about messing things up for myself later on.
+
+And, actually, "that whole article":http://stevelosh.com/blog/2010/09/coming-home-to-vim/ is worth reading. He explains his whole @.vimrc@ file in the most detail I've encountered. Well, maybe I should say that he explains it with the fewest assumptions about existing knowledge on the part of his reader. Which I appreciate.
+
+h3. jsBeautify
+
+"jsBeautify":http://www.vim.org/scripts/script.php?script_id=2727 will clean up messy, inconsistently formatted JavaScript file with a single command. Awesome, but I need to figure out how much work would be involved in modifying it to follow "the jQuery style guidelines":http://docs.jquery.com/JQuery_Core_Style_Guidelines.
+
+h3. Remove Unwanted Whitespace
+
+It's simple to "remove unwanted whitespace":http://vim.wikia.com/wiki/Remove_unwanted_spaces:
+
+bq.. Delete all trailing whitespace (at the end of each line) with:
+
+@:%s/\s\+$//@
+
+More rarely, a user might want to delete whitespace at the beginning of each line:
+
+@:%s/^\s\+@
+
+h3. Comment Out a Range of Lines
+
+Too lengthy to quote, here's "the page":http://vim.wikia.com/wiki/Commenting_out_a_range_of_lines.
+
+h3. Wrap visual selection in an HTML tag.
+
+<notextile><p>Put it in <code>~/.vim/scripts/wrapwithtag.vim</code> and enable in <code>~/.vimrc</code></p>
 <pre><code>:au Filetype html,xml source ~/.vim/scripts/wrapwithtag.vim</code></pre>
 <p>When editing <span class="caps">HTML</span> file, visually highlight text and press {Leader} w, enter tag name.</p>
 <h3>Scrolling Quickly</h3>

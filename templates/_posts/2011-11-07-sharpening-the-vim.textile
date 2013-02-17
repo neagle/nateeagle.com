@@ -82,7 +82,7 @@ function! VisualHTMLTagWrap()
 endfunction
 {% endhighlight %}
 
-p. Put it in ~/.vim/scripts/wrapwithtag.vim and enable in <code>~/.vimrc</code>
+p. Put it in @~/.vim/scripts/wrapwithtag.vim@ and enable in <code>~/.vimrc</code>
 
 bc. :au Filetype html,xml source ~/.vim/scripts/wrapwithtag.vim
 

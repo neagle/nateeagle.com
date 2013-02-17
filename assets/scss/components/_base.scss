@@ -61,27 +61,19 @@ h2 {
 }
 
 h3 {
-  font: {
-    size: 24px;
-  }
+  @include adjust-font-size-to(18px);
 }
 
 h4 {
-  font: {
-    size: 18px;
-  }
+  @include adjust-font-size-to(16px);
 }
 
 h5 {
-  font: {
-    size: 16px;
-  }
+  @include adjust-font-size-to(16px);
 }
 
 h6 {
-  font: {
-    size: 48px;
-  }
+  @include adjust-font-size-to(14px);
 }
 
 a {
@@ -118,5 +110,10 @@ code {
 }
 
 p {
+  @include margin-trailer(1);
+}
+
+pre {
+  @include adjust-font-size-to(14px);
   @include margin-trailer(1);
 }
