@@ -2,8 +2,8 @@
 // debugging-oriented // oriented settings in your stylesheets.
 //
 // Example: @if $debug == true { } @else { }
-$debug: true;
-/*$debug: false;*/
+/*$debug: true;*/
+$debug: false;
 
 @import "fonts";
 

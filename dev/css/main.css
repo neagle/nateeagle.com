@@ -282,7 +282,7 @@ th {
   *zoom: 1;
 }
 
-/*$debug: false;*/
+/*$debug: true;*/
 @font-face {
   font-family: "armorpiercing";
   src: url('../../fonts/armorpiercing/ap-webfont.eot');
@@ -736,16 +736,6 @@ pre {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nateeagle5\/Projects\/personal\/nateeagle\.com\/assets\/scss\/components\/_layout\.scss}line{font-family:\0000315}}
 #page {
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #0000ff), color-stop(5%, rgba(0, 0, 255, 0)));
-  background-image: -webkit-linear-gradient(bottom, #0000ff 5%, rgba(0, 0, 255, 0) 5%);
-  background-image: -moz-linear-gradient(bottom, #0000ff 5%, rgba(0, 0, 255, 0) 5%);
-  background-image: -o-linear-gradient(bottom, #0000ff 5%, rgba(0, 0, 255, 0) 5%);
-  background-image: linear-gradient(bottom, #0000ff 5%, rgba(0, 0, 255, 0) 5%);
-  -webkit-background-size: 100% 24px;
-  -moz-background-size: 100% 24px;
-  -o-background-size: 100% 24px;
-  background-size: 100% 24px;
-  background-position: left top;
   overflow: hidden;
   zoom: 1;
   /*@include perspective($perspective);*/
@@ -786,7 +776,6 @@ pre {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/nateeagle5\/Projects\/personal\/nateeagle\.com\/assets\/scss\/components\/_layout\.scss}line{font-family:\0000351}}
 #page > .column {
-  outline: 1px solid red;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
