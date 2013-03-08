@@ -2,3 +2,4 @@
 .DS_store
 prod/
 dev/
+node_modules/
