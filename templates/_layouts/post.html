@@ -4,19 +4,19 @@ layout: default
 <section class="column post">
   <article>
 
-      <time>{{ page.date | date: "%B %d, %Y" }}</time>
+    <time>{{ page.date | date: "%B %d, %Y" }}</time>
 
-      <h2>{{ page.title }}</h2>
+    <h2>{{ page.title }}</h2>
 
-  {{ content }}
+    {{ content }}
 
 
   </article>
 
   <div id="disqus_thread"></div>
   <script type="text/javascript">
-    var disqus_shortname = 'nateeagle',
-      disqus_developer = 1;
+    var disqus_shortname = 'nateeagle';
+      {% comment %}disqus_developer = 1;{% endcomment %}
 
 
       (function() {

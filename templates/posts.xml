@@ -4,9 +4,9 @@ layout: nil
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title>Nate Eagle - Posts and Bits (old feed)</title>
+  <title>Nate Eagle - Posts only</title>
   <link href="http://nateeagle.com/"/>
-  <link type="application/atom+xml" rel="self" href="http://nateeagle.com/atom.xml"/>
+  <link type="application/atom+xml" rel="self" href="http://nateeagle.com/posts.xml"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://nateeagle.com/</id>
   <author>
@@ -15,7 +15,7 @@ layout: nil
   </author>
 
   {% for post in site.posts %}
-    {% if post.layout == "post" or post.layout == "bit" %}
+    {% if post.layout == "post" %}
           <entry>
             <id>http://nateeagle.com{{ post.id }}</id>
             <link type="text/html" rel="alternate" href="http://nateeagle.com{{ post.url }}"/>
