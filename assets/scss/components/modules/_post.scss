@@ -4,6 +4,7 @@
   @include padding-leader(1);
 
   article {
+    @include padding-trailer(1);
     @include respond-to(handhelds) {
       @include padding-leader(1);
     }

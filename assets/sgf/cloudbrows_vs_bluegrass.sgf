@@ -1,0 +1,380 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[Japanese]SZ[19]HA[2]KM[0.50]TM[1500]OT[5x30 byo-yomi]
+PW[cloudbrows]PB[Bluegrass]WR[4k]BR[6k]DT[2013-03-05]PC[The KGS Go Server at http://www.gokgs.com/]AB[pd][dp]C[This is a handicap game I played via automatch on KGS. I've hit 3k twice, recently, but had lost my last three games, plunging me back toward the higher end of 4k status.
+
+I went over this game with my shifu (teacher), Yuan Zhou, who is based out of Germantown, MD. (http://zhouyuan.com/) In an attempt to gain greater benefit from his comments and, perhaps, to entertain you, I've recorded some of his comments on the game here.
+
+All of Yuan Zhou's comments are in quotation marks and have, of course, been filtered through me, so some alteration of voice is inevitable. Yuan Zhou will be referred to as "shifu" for the remainder of this record.]RE[W+Resign]
+;W[dd]WL[1492.471]
+;B[pp]BL[1498.6]C["In handicap games, of course, white is behind. White must be patient, wait for mistakes, and create complications."]
+;W[nq]WL[1485.65]
+;B[pn]BL[1496.978]
+;W[fq]WL[1481.021]
+;B[dn]BL[1491.878]
+;W[jp]WL[1478.197]LB[gp:G][hp:E][ip:C][kp:D][lp:F][mp:H][hq:A][lq:B]TR[jp][fq][nq]C[I read somewhere that this shape is sometimes called "Mt. Fuji" and is "common in handicap games." I asked shifu to talk a bit about it.
+
+"It's not a shape to be proud of. It's not a good shape. Sometimes it comes up in even games, too. There are severe invasions at A and B. C and D are severe attacks, depending on the direction black wants. E, F, G, and H are all possibilities, too, depending on the situation."
+
+But is this good handicap strategy?
+
+"It does leave the area open, with a lot of variations. It's not easy to see the best thing to do or the best way to do it. You can play this way against kyu players. I've played this way up to... 3 dan. But after that, they'll deal with it too well."]
+(;B[qj]BL[1489.502]LB[fc:A]C["A would be better. But from handicap perspective, you could say this is a good move. A little slow, but very solid."]
+;W[nc]WL[1463.74]
+;B[pf]BL[1487.36]
+(;W[jd]WL[1452.309]C["In handicap games, any normal, even, peaceful variations are good for black. White needs to work more than in normal games in the opening to make the game complicated, not easy for black to identify what to do next."]
+;B[cj]BL[1485.396]C[Again: a little slow, but very solid. I commented that I had a hard time finding a good move for white at this point.
+
+"From white's perspective, this is a very dry game. No juicy targets."
+
+Black has not made any mistakes and white hasn't done enough work to create complications.]
+(;W[ch]WL[1431.357]C[Due to the lack of better alternatives, this move is okay.]
+;B[ej]BL[1474.464]LB[cl:A]C["This is a solid move that removes the weakness at A."]
+(;W[eh]WL[1420.76]C["White should fix the corner first." (See variation.)]
+;B[cc]BL[1470.701]C["Correct."]
+;W[dc]WL[1412.614]
+;B[cd]BL[1468.662]
+;W[ce]WL[1409.219]
+;B[db]BL[1466.475]LB[be:A]C["So - this is a very common shape, but we see both black and white making mistakes. This is wrong. Black should have played at A. Did you know this? Good. But how do you think about this? How to you figure out how to play?"]
+;W[eb]WL[1397.387]
+;B[cb]BL[1464.855]C["NOW is the moment to play the move that black missed."]
+(;W[fc]WL[1394.637]
+;B[de]BL[1463.513]C[This is overplay.]
+;W[be]WL[1380.292]C[Thanks to black, white was able to get the correct move in the end.]
+;B[bd]BL[1457.712]
+;W[da]WL[1350.919]
+;B[ca]BL[1453.195]
+;W[ad]WL[1322.384]C["This is the correct way to kill black. Good. As soon as this corner is dead, black's handicap stones are gone."]
+;B[ea]BL[1422.565]
+(;W[fa]WL[1302.961]LB[gb:A][lc:B]C["This is a big mistake. Giving black a forcing move at A creates problems for this group and also adds to the weakness at B."]
+;B[fd]BL[1416.332]
+;W[gc]WL[1266.795]
+;B[gd]BL[1412.648]
+;W[hc]WL[1237.786]C["So there is a black tesuji here. Can you find it? When trying to solve a problem like this, first, mentally put down all of the sentes."]
+(;B[dg]BL[1411.681]
+;W[dh]WL[1225.16]
+;B[lc]BL[1340.53]
+(;W[kc]WL[1207.94]LB[qc:A][md:B]C["What was your thinking here?"
+
+I wanted to make territory on the top, then dive into the corner for an exchange.
+
+"So you didn't think about attacking?"
+
+Well, no.
+
+This earned the most disappointed sound of the evening.
+
+"Noooo."
+
+Shifu has an elongated "no" that descends as it trails off. It communicates an impressive amount of contempt.
+
+"Black's move is overplay. Just attack with the kosumi at B! For strong players, their first instinct is to attack. ALWAYS to attack. And only if the attack is not working do you think about defense or exchange.
+
+"White's kick is already a loss - it makes white overconcentrated."]
+;B[kd]BL[1334.283]
+;W[jc]WL[1184.644]
+;B[ld]BL[1331.442]C["Again, this is a loss for white. White's two moves are inside. Black's two moves are outside."]
+;W[qc]WL[1181.996]
+;B[pc]BL[1329.182]
+;W[pb]WL[1180.291]
+;B[ob]BL[1328.163]
+;W[qb]WL[1179.675]
+;B[oc]BL[1327.459]
+;W[re]WL[1179.098]
+;B[rf]BL[1326.432]
+;W[qe]WL[1172.55]
+;B[qf]BL[1324.397]
+;W[pe]WL[1171.887]
+;B[oe]BL[1323.763]
+(;W[of]WL[1171.214]LB[ld:A][qj:B]C["This cut is not worth it since black has stones at A and B."]
+;B[se]BL[1304.066]
+;W[sc]WL[1126.803]
+;B[sb]BL[1265.303]C[This is a mistake.]
+;W[qd]WL[1089.918]
+;B[rc]BL[1261.033]C[This is another mistake - white's move was sente.]
+;W[ne]WL[1084.247]
+;B[od]BL[1259.633]
+(;W[nb]WL[1076.054]C[Even I was able to catch this mistake immediately after the game. My own diagnosis was that I was too quick to be afraid that black had killed white in the corner because of the unexpected threats black created and, as a result, I was too happy to find a way out to read more carefully. There are only a few moves here, and one of them captures black in an easy sequence.
+
+"It is true: you get excited too easily. That's a weakness. That's one of the reasons Lee Changho - the Stone Buddha - is number one in the world. In eastern philosophy, the ideal is to be able to see a mountain collapse in front of you and not be moved."]
+;B[nf]BL[1254.567]
+;W[oa]WL[1071.584]
+;B[og]BL[1250.793]
+;W[nd]WL[1070.452]
+;B[of]BL[1248.822]
+;W[lb]WL[1069.262]C[That said, this is still an okay result for white.]
+;B[cf]BL[1232.642]
+;W[bf]WL[1065.315]
+;B[cg]BL[1201.643]
+;W[bg]WL[1059.918]
+;B[ee]BL[1185.245]
+;W[ec]WL[1025.867]C["By playing like this, black is making his group heavy and, at minimum, wasting a lot of ko threats."]
+(;B[lp]BL[1139.686]LB[mo:A]C["This is a vulgar move."
+
+But isn't it a legitimate way of creating a moyo on the right?
+
+"If black wants to make a moyo on the right, black should play the horse face at A. No helping white!"]
+;W[lq]WL[1006.847]
+;B[mp]BL[1132.193]
+;W[mq]WL[1001.773]
+;B[kp]BL[1127.127]
+;W[kq]WL[998.803]
+;B[eq]BL[1120.288]
+;W[jf]WL[993.448]LB[fp:A]TR[fd][gd][de][ee][cf][cg][dg]C["Why didn't you take the move at A?"
+
+I wanted to attack the marked group rather than just respond to black.
+
+"At the top, white is strong. If you kill black more, that's just more points. If black can attack on the bottom, black can help his corner and threaten white's safety. So there's more value there than just points.
+
+"Also, black's marked group is in a very awkward position. It's kind of a headache what to do with it. If black wants to save it, it has to run, right? There's no room for eye space. So while black is running, white will destroy black's potential on the center and the right. That's why black chose not to run.
+
+"If white offers to exchange something for that group, that's good for black. It's a way for black to throw away the burden.
+
+"Moreover: let's say the point values of this exchange are the same." (Which is not actually the case - the value at bottom is bigger, as shifu demonstrated.) "If you have even possibilities, you pick the one where you're weak. That is always the case."]
+;B[lf]BL[1118.29]C[A strange move.]
+(;W[eg]WL[982.788]LB[gg:A]C["What are you thinking here? You're thinking black will connect? No. You're not a low-level player anymore. Atari, connect, peep, connect. No! If the value behind the atari's not that big, there's no atari at all.
+
+"At minimum, you should kill the whole group by playing at A.
+
+"This happens to you a lot these days. A lot of times you're ahead in the opening, but then you make the wrong judgment and make things difficult for yourself. The real chance for black is on the bottom.
+
+"As the game progresses, sometimes you start to slack off. You start to do this wishful thinking. You need to continue to find the best moves, the meaning of the moves."]
+;B[kh]BL[1113.307]
+;W[np]WL[972.262]C[Correct. This takes advantage of black's earlier vulgar move.]
+;B[ln]BL[1110.608]
+(;W[mn]WL[923.648]TR[kp]C["This is a confusion with a different shape. If the marked stone weren't there, this would be a key point. But here it's not."]
+(;B[kn]BL[1103.55]
+;W[nm]WL[899.923]C["This is wrong. Black can cut white off. You played too quickly. When you become stronger, you become a little more cocky. I know this. But it can mean you make mistakes like this because you're not careful enough. In your games, you make this kind of mistake often. You need to be more careful.
+
+"You're kind of an optimistic player. Well, in a way, as your teacher, it's good. Due to your teachings, you feel the game is not very difficult, it's enjoyable. But you've gone too far on that.
+
+"Cho Chikun is a very pessimistic player.  When he was young, he'd make this kind of mistake and he would cry. 'Why am I doing this? Now I have no future!'"
+
+"You need to remember: the cut-off/connection is a gold move! If you let black cut you off, it's a huge deal. The consequences are so big!"]
+(;B[pl]BL[1084.746]C[Black missed the problem.]
+;W[qq]WL[897.249]
+;B[pq]BL[1082.714]
+;W[pr]WL[895.771]
+;B[or]BL[1073.919]
+;W[qr]WL[894.543]
+;B[oq]BL[1072.537]
+(;W[qo]WL[886.778]C[This peep was wrong.]
+;B[qp]BL[1070.573]
+;W[rp]WL[869.98]
+(;B[ro]BL[1063.129]
+;W[rn]WL[865.157]
+;B[rq]BL[1061.045]
+;W[so]WL[863.587]
+;B[rr]BL[1059.35]
+;W[po]WL[861.954]
+;B[oo]BL[1053.957]
+;W[op]WL[860.998]
+;B[qn]BL[1047.184]
+;W[ro]WL[859.963]
+;B[ps]BL[1041.561]
+;W[on]WL[854.145]C["Locally, this is good for black, but because white was able to fix the cut, it's good for white."]
+;B[om]BL[1032.339]
+;W[no]WL[850.73]
+;B[fp]BL[1029.4]
+;W[ql]WL[841.006]LB[gq:A]C["This has value, but it's not nearly as big as the value of pulling back at A. You're playing around your own thickness."]
+;B[qk]BL[1026.829]
+;W[rm]WL[825.69]LB[ql:A]C["This is a slow move. A is already connected. There are a lot of details here on the right that white played wrong."]
+;B[nl]BL[1016.318]
+;W[ml]WL[821.23]
+;B[mk]BL[1013.625]
+(;W[lk]WL[808.232]C["In this case, the double hane is wrong. White has to stay connected here: remember, due to the corner, white is winning. Starting a fight by being cut off is wrong."]
+;B[ll]BL[1010.932]
+;W[mm]WL[806.579]
+;B[mj]BL[1003.608]
+;W[kl]WL[793.189]
+;B[jo]BL[1000.164]
+;W[ip]WL[786.865]
+;B[io]BL[995.24]
+;W[ho]WL[781.693]LB[cq:B][gq:A]TR[ll][kn][ln][io][jo][kp][lp][mp]C[White should still just pull back at A. I was too focused on trying to attack black's marked group - this isn't the way to win a game where white's ahead. Also remember that pulling back at A creates corner aji at B.]
+;B[hn]BL[992.368]
+;W[gn]WL[776.491]C[Again - this double hane is wrong. I'm trying to attack, but trying to fight creates chances for black.]
+;B[hp]BL[989.519]
+;W[go]WL[774.422]
+;B[hq]BL[981.453]
+;W[ir]WL[764.697]
+;B[hr]BL[971.039]
+(;W[jr]WL[715.684]LB[iq:A]C[I couldn't figure out the right way to respond to this in the game, and I can't really tell you why I settled on the bamboo connection. The correct move is at B. See the variation for more explanation.]
+;B[hm]BL[967.885]
+;W[gm]WL[658.093]
+;B[hl]BL[963.961]
+;W[gl]WL[641.801]
+;B[hk]BL[962.616]
+;W[fj]WL[634.791]C[Shifu described this move as a tesuji, which I appreciated.]
+;B[fk]BL[960.311]
+;W[gk]WL[629.524]
+;B[gj]BL[959.247]
+;W[fi]WL[609.677]
+(;B[ek]BL[940.926]
+;W[hj]WL[606.663]
+;B[gi]BL[939.69]
+;W[hi]WL[592.142]
+;B[gh]BL[936.179]
+;W[hg]WL[565.621]C[This is the best white has, but it shouldn't work.]
+;B[hh]BL[925.355]
+;W[ih]WL[561.073]
+;B[gg]BL[892.909]
+;W[ik]WL[488.298]
+;B[jm]BL[881.942]
+;W[il]WL[455.974]
+(;B[mo]BL[872.025]
+;W[hf]WL[389.709]
+;B[gf]BL[854.144]
+;W[hd]WL[370.539]
+(;B[fo]BL[787.321]C["This is the losing move. Black got impatient. Remember: when you travel 100 miles, 90 miles is half the journey. The last 10 miles are hard. To remain calm is not easy."]
+;W[ge]WL[355.146]C["Correct. This is the winning move."]
+;B[ff]BL[778.392]
+;W[ef]WL[340.427]
+;B[ij]BL[742.165]
+;W[ii]WL[331.466]
+;B[jj]BL[740.764]
+;W[lm]WL[321.646]
+;B[jl]BL[718.774]
+;W[jk]WL[301.024]
+;B[kj]BL[694.743]
+;W[kk]WL[265.349]
+;B[fn]BL[658.84]
+;W[fh]WL[251.504]
+;B[fe]BL[634.156]
+;W[df]WL[227.216]
+;B[he]BL[630.064]
+;W[fg]WL[211.063]
+;B[ie]BL[600.425]
+;W[ed]WL[208.745]LB[fp:A]C[Black resigns.
+
+I managed to end my losing streak despite - characteristically - offering my opponent chances I shouldn't have. It's worth noting that after the game was over, I didn't really have any inkling that one of the key mistakes was not playing at A. Without the complications on the bottom, white should have had a straightforward time maintaining a lead to the end of the game.
+
+But I hope you'll find some of the principles shifu mentioned as interesting as I did.])
+(;B[ge]C["How many liberties does black have? 6. How many liberties does white have? 5. Game over."]))
+(;B[im]LB[ij:A]C[Black should connect here to threaten at A.]))
+(;B[fl]LB[ek:A]C["Black should fix the cut this way. At this point it's obvious that white's only chance is to capture. This takes away one more liberty than fixing at A does.
+
+"Again, we all say that fighting is complicated. But for strong players, the fighting is simple. Liberties and eyes. It's the ideas that are important to them."]))
+(;W[iq]C["This move takes away one of black's liberties. In the contact fighting, I hope by now you've found out that only two things are important: liberties and eyes. That's basically the principle."]))
+(;W[nk]
+;B[ol]
+;W[lk]
+;B[mj]
+;W[ll]C["This is correct for white."]))
+(;B[rq]C["Black should cut inside."]))
+(;W[ro]C[The correct move is here.]))
+(;B[no]
+;W[oo]
+;B[on]
+;W[nn]
+;B[mo]))
+(;B[jo]
+;W[ip]
+;B[no]C[Black can just cut white off.]))
+(;W[nn]C["White should just jump."]))
+(;W[gg]))
+(;B[mo]C[This is the right way for black to make a moyo on the right.]
+;W[lp]
+;B[kn]))
+(;W[nd]
+;B[nf]
+;W[og]
+;B[nb]
+;W[mb]C[Sigh.]))
+(;W[qd]C["White should just connect here."]
+(;B[of])
+(;B[se]
+;W[sd]
+;B[sf]
+;W[sb])))
+(;W[md]
+;B[ld]
+;W[le]
+;B[ke]
+;W[kd]LB[hc:A]C["Black can't live. It's worth noting that the stones at A make a difference here. For instance, what if black invades at the bottom?"]
+;B[lq]
+;W[mp]
+;B[jq]
+(;W[kp]C["If white blocks on top..."]
+;B[iq]C["...black has no trouble living."])
+(;W[iq]C["If white blocks on the side..."]
+;B[kp]C["...black is out."])))
+(;B[ac]
+;W[bb]
+;B[ee]
+;W[ec]C["With these placed in your mind, it's a little easier to look. Where's white's only weakness?"]
+;B[cf]
+;W[bf]
+;B[bg]C["This is the tesuji."]
+;W[cg]
+;B[ae]
+;W[df]
+;B[af]
+;W[cf]
+;B[bi]
+;W[bh]
+;B[ah]C["Ko."]))
+(;W[gb]LB[gb:A][lc:B]C["The correct move is at A!"
+
+I blinked. That's a possible move that was invisible to me.
+
+"You should notice that the move at A is helping fix the weakness at B. This is why the strong player loves when the weaker player struggles. The more they struggle, the more they make the situation worse. It starts to affect other parts of the board."]
+;B[fa]LB[fd:B][ee:A]C["Now, when black moves here, what's your response?"
+
+Maybe A or B?
+
+Shifu made a disappointed sound. 
+
+"No. You don't see, yet."]
+(;W[hc]LB[gc:A]C["THIS is the real issue. The cut at A!
+
+"That's the point. You've got to see to the root of the problem. What does your opponent really want? Sometimes the true intention is hiding and you need to find it out.
+
+"It's just like life: a lot of people talk about this and that, just chatting. All of a sudden, if someone mentions something they're really interested in, or something related to them, they become really serious. They get involved immediately, no more joking around, 'cause that's the real deal.
+
+"And that's the difference between the strong player and the weaker player. The strong player clearly identifies what the problem is.
+
+"In the book, they don't talk about these things because they assume you know it. But you don't! The book is like: I don't need to teach you how to eat your food. But when you're a child, you need to be taught how to eat correctly. But you quickly learn it, so people forget."])
+(;W[ee]
+;B[fb]
+;W[ec]
+;B[gc])
+(;W[fd]
+;B[fb]
+;W[ec]
+;B[gc])))
+(;W[be]LB[fb:B][ec:A]C["Black's shape in the corner is dead. Yes?"
+
+Yes - but what about the weaknesses at A and B?]
+(;B[ec]
+;W[fb]C["What is black going to do? Did you stop reading here? Black is dead in the corner. Black has to capture something in order to live. That means it's worth reading deeply! This is the key difference between the strong player and the weaker player: the strong player is very sensitive to when something is not alive."])
+(;B[fb]
+;W[ec]
+;B[ea]
+;W[da]
+;B[ca]
+;W[fc]
+;B[gb]
+;W[fa]
+;B[ga]
+;W[hc]
+;B[hb]
+;W[ic]
+;B[ib]
+;W[jb]
+;B[ia]
+;W[ab]C[Death. To be fair to me, this one was a little more complicated.
+
+"It's important to understand: the clamp is useful for destroying territory, but not for making eyes. Black would be playing endgame moves with a dead group."])))
+(;W[dc]LB[gc:B][cf:A]C["White should defend the corner and make a double wing. Living in the corner is too easy for black. If you want to make black jump in so things get complicated, you want black to have to invade around A or B, where they won't have a base. That's how to create chances."]))
+(;W[cf]C["In a normal game, this would be the right move. Even in this game, it might be better. Wait for chances."]))
+(;W[cl]C["If I were white, I would play here. Make the game more complicated."]))
+(;B[hq]C[This is an example of a black invasion at A.]
+;W[hp]
+;B[ip]LB[gp:A]C["Because the ladder at A is good for black, black can wedge."]
+(;W[iq]
+;B[io]LB[gp:A][kp:C][jq:B]C[Now white has three problems.])
+(;W[io]
+;B[iq]
+;W[gp]
+;B[jq]
+;W[kp]
+;B[lq]C["Black has no problem living. This does give white outside thickness, so black needs to be careful about timing."])))

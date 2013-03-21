@@ -4,15 +4,16 @@ requirejs.config({
     'jquery.transit': 'lib/jquery/jquery.transit',
     'jquery.imagesloaded': 'lib/jquery/jquery.imagesloaded',
     'jquery.rhythm': 'lib/jquery/jquery.rhythm',
-    'jquery.throttle-debounce': 'lib/jquery/jquery.ba-throttle-debounce'
+    'jquery.throttle-debounce': 'lib/jquery/jquery.ba-throttle-debounce',
+    'eidogo': 'lib/eidogo/player/js/all.compressed'
   }
 });
 
 requirejs([
     'nae/flickr',
     'nae/jsfiddles',
-    'nae/stackoverflow'
+    'nae/stackoverflow',
+    'eidogo'
   ], function ($) {
-    console.log('js is a go!');
   }
 );

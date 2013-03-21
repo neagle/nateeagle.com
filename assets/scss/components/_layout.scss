@@ -26,6 +26,10 @@
     float: right;
 }
 
+.l-full {
+  width: 100%;
+}
+
 .absolute-fill {
   bottom: 0;
   left: 0;
@@ -149,12 +153,16 @@ $space: 5%;
       ul {
         color: darken($color-text, 20%);
         list-style-type: square;
+        @include margin-trailer(1);
         padding-left: 20px;
       }
 
       li {
         @include adjust-font-size-to(16px);
         list-style-type: square;
+        text: {
+          /*indent: -20px;*/
+        }
       }
     }
   }

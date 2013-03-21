@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <script data-main="js/main" src="/js/require.js"></script>
+    <script data-main="/js/main" src="/js/require.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/lib/modernizr.js"></script>
 
-    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Posts">
+    <link rel="alternate" type="application/atom+xml" href="combined.xml" title="Posts & Bits">
+    <link rel="alternate" type="application/atom+xml" href="posts.xml" title="Posts">
     <link rel="alternate" type="application/atom+xml" href="bits.xml" title="Bits">
   </head>
   <body>
@@ -37,6 +38,14 @@
       {{ content }}
 
     </div>
+
+    <!-- Google Analytics -->
+    <script>
+      var _gaq=[['_setAccount','UA-18045311-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
 
   </body>
 </html>

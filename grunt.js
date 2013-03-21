@@ -47,14 +47,17 @@ module.exports = function (grunt) {
         files: {
           'dev/images/': 'assets/images/**',
           'dev/fonts/': 'assets/fonts/**',
-          'dev/js/': 'assets/js/**/*.js'
+          'dev/js/': 'assets/js/**/*',
+          'dev/sgf/': 'assets/sgf/**/*'
         }
       },
 
       prod: {
         files: {
           'prod/images/': 'assets/images/**',
-          'prod/fonts/': 'assets/fonts/**'
+          'prod/fonts/': 'assets/fonts/**',
+          'prod/js/': 'assets/js/**/*',
+          'prod/sgf/': 'assets/sgf/**/*'
         }
       }
 
@@ -187,7 +190,8 @@ module.exports = function (grunt) {
         files: [
           'assets/images/**',
           'assets/fonts/**',
-          'assets/js/**/*.js'
+          'assets/js/**/*.js',
+          'assets/sgf/**'
         ],
         tasks: ['copy:dev']
       },
@@ -226,5 +230,6 @@ module.exports = function (grunt) {
   // Default task.
   // NB: Jekyll must come before other file generation tasks.
   //grunt.registerTask('default', 'lint jekyll copy compass concat min');
-  grunt.registerTask('default', 'lint jekyll copy compass');
+  grunt.registerTask('default', 'lint jekyll:dev copy:dev compass:dev');
+  grunt.registerTask('prod', 'lint jekyll:prod copy:prod compass:prod');
 };
