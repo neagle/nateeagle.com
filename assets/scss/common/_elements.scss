@@ -3,3 +3,36 @@
 time {
   color: mix($color-headline, $color-background, 40%);
 }
+
+ul, ol {
+  @include margin-trailer(1);
+  padding-left: 2em;
+}
+
+ul {
+  > li {
+    list-style-type: square;
+  }
+}
+
+ol {
+  > li {
+    list-style-type: decimal;
+  }
+}
+
+blockquote {
+  @include adjust-font-size-to(14px);
+  background: {
+  }
+  border: {
+    left: 5px solid $color-headline;
+  }
+  color: lighten($color-text, 10%);
+  margin: {
+    left: 1em;
+  }
+  padding: {
+    left: 0.5em;
+  }
+}

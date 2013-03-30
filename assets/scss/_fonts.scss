@@ -20,6 +20,7 @@
 @include font($family: 'ubuntu', $version: 'Ubuntu-B', $name: 'ubuntu-bold');
 @include font($family: 'ubuntu', $version: 'Ubuntu-R', $name: 'ubuntu-regular');
 @include font($family: 'ubuntu', $version: 'Ubuntu-L', $name: 'ubuntu-light');
+@include font($family: 'ubuntu', $version: 'UbuntuMono-R', $name: 'ubuntu-monospace');
 
 @include font($family: 'existence-light', $version: 'Existence-Light-webfont', $name: 'existence-light');
 

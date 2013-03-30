@@ -96,8 +96,9 @@ a {
 }
 
 code {
+  color: lighten($color-text, 15%);
   font: {
-    family: Monaco, monospace;
+    family: ubuntu-monospace, Monaco, monospace;
   }
 }
 

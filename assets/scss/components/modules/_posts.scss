@@ -3,6 +3,11 @@
   @include padding-leader(1);
   @include padding-trailer(1);
 
+  > ul {
+    margin: 0;
+    padding: 0;
+  }
+
   .post {
     list-style: none;
     position: relative;
