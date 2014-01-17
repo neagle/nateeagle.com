@@ -2,6 +2,9 @@
 layout: post
 title: "Automatic, Grunt-Project-Based GNU Screen Setup"
 summary: "Wish list: the ability to type <code>screen</code> in the root directory of a Grunt project to start up a screen session with screens automatically set up for the key files."
+tags:
+- screen
+- grunt
 ---
 This is a wish list item: I'm writing about it now so that I remember what I wanted. Hopefully, I'll find a chance to come back to this and actually build what I want. If I do, I'll update the post.
 

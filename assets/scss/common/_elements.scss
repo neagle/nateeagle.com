@@ -1,5 +1,9 @@
 // grab stuff from https://github.com/davidrapson/scss-toolkit/blob/master/style/scss/common/_elements.scss
 
+strong {
+  font-weight: bold;
+}
+
 time {
   color: mix($color-headline, $color-background, 40%);
 }

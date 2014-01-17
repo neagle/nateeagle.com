@@ -1,0 +1,291 @@
+(;
+PW[Anonymous]
+WR[5 kyu]
+PB[Anonymous]
+BR[6 kyu]
+EV[Yuan Zhou Workshop]
+DT[2013-03-17]
+PC[Germantown, MD]
+TM[2700.0]
+RE[B+Resign]
+US[William Cobb]
+C[Kyu Cornucopia
+Workshop Game
+Germantown, MD
+White:  anonymous 5k
+Black:  anonymous 6k
+Commentary:  Yuan Zhou 7d
+Game editors:  Bill Cobb and Myron Souris
+Published in the May 7, 2013 edition of the American Go E-Journal
+
+In this kyu game Yuan Zhou, with his usual thoroughness, covers numerous topics:  the importance of move order in the opening, the use of dead stones, connection tactics, and a couple tsumego problems for good measure.
+
+Yuan Zhou 7 dan is one of the strongest players in the US.  He has won many titles.  Zhou is also a popular teacher, lecturer, and author.  He lives in Germantown, MD, and can be reached at yuan.zhou@zhouyuan.com .
+
+This is a reverse komi game (7.5 points).];
+B[pd];W[dd];B[qp];W[dp];B[fq]
+C[The opening moves are fine, just like professionals.]
+(;
+W[iq]
+C[This two space pincer was a standard move in ancient times.  The one space pincer is a more modern invention.  This two space pincer is playable, of course.  Because the good follow up move shown in the variation is not available to Black, Black would normally not make a one space jump up now.
+
+See the variation.];
+B[fo]
+LB[oq:A][cn:B]
+C[Black's move here is not a mistake, but Black A instead would be a little better.  Black could also make a double approach move at B, although that would become very complicated.  Black A is an easier alternative.];
+W[dn]
+C[The correct response.];
+B[kq]
+C[Right.  Because White made a two space pincer, Black must respond this way.];
+W[io]
+C[Fine.];
+B[fm]
+C[Also fine, a normal sequence.];
+W[lp]
+LB[ko:A]
+C[This move helps Black.  White A would be better.];
+B[kp]
+C[Pushing up first here is correct.];
+W[ko];B[lq]
+C[Black can change the order of the last two moves, but pushing up first in this situation is always a good move for Black.];
+W[mp];B[mq]
+C[Also correct.];
+W[jp]
+LB[np:A][oq:B]
+C[Another mistake.  White must extend at A.  Allowing Black to hane at A is an obvious loss.  After White A, Black should jump to B, and then White can come back to connect here.  The correct sequence makes a huge difference.];
+B[np]
+C[A good result for Black.];
+W[no];B[oo]
+C[However, this double hane is a mistake.];
+W[nq]
+C[White properly takes advantage of Black's mistake.];
+B[op];W[nr]
+LB[mr:A][lr:B]
+C[At first this looks like a capturing race that Black can win (each side has 4 liberties and it is Black's turn).  But if White turns at A and Black blocks at B, Black loses an extra liberty (White still has 4 and Black now has only 3).  So White wins the capturing race.];
+B[ir]
+C[Black correctly gets some benefit from the now dead stones by threatening to connect out.  This is good strategy once some stones have been lost.];
+W[jr]
+LB[hr:A]
+C[Correct.  White can't hane on the other side at A, because Black would be able to get too many liberties.];
+B[hr]
+LB[oq:A][or:B]
+C[A little early.  Without this move, Black A and B would be sente.  These two sente moves would make the corner solid Black territory.  It is too early for Black to be sure which strategy would be best, the game move here or A-B.  Actually, the corner is so big, Black A-B will almost certainly be better than the game move.];
+W[jq]
+C[White must connect, but the lower right corner is open.];
+B[mo]
+LB[nn:A][lo:B]
+C[Continuing to make use of the dead stones is a good idea, but Black should play at A, threatening a cut at B.  Black A would be forcing.  White would connect at B, and Black could then make a big move on the right side.  (Capturing the lone White stone would be too small.)];
+W[lo];B[nn]
+C[Capturing one stone is a mistake.  Black should play on the right side, which is the area to focus on.];
+W[er]
+LB[qj:A]
+C[White's move here is big, but a move on the right side at A would obviously be better.];
+B[fc]
+LB[qg:A]
+C[Because Black is behind now, making a moyo by playing at A is the right way to play.  Black wants White to invade so the Black thickness in the lower right can be used to attack.  Black A would prevent White from invading on the third line with enough room for a two space extension in both directions.  So White's invading stones would be weak.];
+W[qi]
+LB[cf:A][jd:B]
+C[A very big move, although White should respond once in the upper left at A, then after Black extends to B, White could play the game move on the right side.  That result would be better overall for White.];
+B[cf]
+C[This double approach is a natural move.];
+W[fd]
+C[White leans on the strong stone, which is the normal response.];
+B[gd];W[fe];B[ec];W[dc];B[jc]
+C[Up to here is a normal joseki and is fine.];
+W[ge]
+LB[gc:A][ed:B][hd:C]
+C[A bad move that helps Black protect the cutting point at A.  Once Black protects this cutting point, a Black push at B becomes very severe.  Also, without White's move here, in the future White would have the tesuji of C.];
+B[hd]
+C[Black is happy to defend.];
+W[gp]
+LB[ep:A]
+C[White's move here is sente, so its okay, although this exchange is better for Black than for White.  This move does little to strengthen White's already strong group in the bottom center, but when Black connects it will make White's group in the lower left corner less secure.  Better would be for White to peep at A.  The important principle here is to strengthen your weak groups, not your strong ones.];
+B[fp];W[gq]
+TR[hr]
+LB[fr:A]
+C[Weakening the lower left corner to capture the two marked stones is not worthwhile.  Instead, White A would be better, because that would help the corner.];
+B[fr]
+C[Black is happy to play here -- White's corner is now very uncomfortable.];
+W[el];B[cl]
+C[Because Black is behind, it is a good idea to not allow White to make a large territory here by Black's defending on the outside.];
+W[em]
+C[White's move here damages Black's outside, but the potential damage to White's corner makes it worth it for Black to play this way.]
+(;
+B[hn]
+LB[gl:A]
+C[Playing close to thickness here is not the best plan for Black.  White's bottom group is very strong.  The right direction for Black to run is at A, toward the open area.  "Play away from thickness."  But see the variation for Black's best plan.];
+W[fl]
+LB[hl:A]
+C[White correctly pushes Black toward White's thickness: however, this is a little slow for White.  White should play at A, which would be a very severe attack on Black's running group.];
+B[ho]
+C[Black's move here is useless, a very bad move.  This move is not sente -- Black is in great danger.];
+W[hq]
+LB[il:A]
+C[White has no reason to play here.  This play should be outside at A, after which Black's group is unlikely to escape.];
+B[il]
+LB[hl:A][im:B]
+C[The jump to A would be better.  This knight's move leaves a potential cutting point, e.g., White B now would be a problem for Black.];
+W[ce]
+C[A big play, and okay in this situation.];
+B[df]
+C[Naturally, Black stands up here.];
+W[ed]
+C[White has to protect against the push and cut.];
+B[dj]
+C[Black is getting back into the game, although White is still a little better overall.];
+W[qf]
+C[Another big move.];
+B[nd]
+C[A normal response.];
+W[ql]
+C[Also good.  Black's thickness in the lower right is rendered useless.  White maintains the lead in the game.  Black needs to do something.];
+B[cq]
+C[Yes, Black's move here is correct.];
+W[dq]
+(;
+B[co]
+C[A mistake.  See the variation.];
+W[cn]
+LB[do:A][cp:B]
+C[Another mistake.  Instead, White should connect at A, threatening the push at B.];
+B[cr]
+C[A key move.];
+W[dr]
+LB[fs:A]
+C[For safety, White should play at A instead.  But if White wants to try to kill Black's corner, the game play is correct.];
+B[do]
+C[Pushing through here to cut off White is a good move.];
+W[cp];B[bo]
+C[Black's descent here is very good:  giving up the corner and cutting off White.  This is a very important development.];
+W[bp];B[bn]
+C[If White's corner is alive, White must play outside next to help the five running stones.  But is it alive?];
+W[eo]
+C[Blocking here is not good, because when Black cuts, White's corner group will lose another liberty.];
+B[ep];W[en];B[bm]
+LB[cm:A][ao:B]
+C[Correct.  Black A instead leaves White the sente hane at B that would help White in the corner.
+
+Does White need to defend in the corner now?];
+W[gr];B[es];W[ds];B[fs]
+C[Now the question about the situation in the corner is critical.  Does White need to play in the corner?  If not, White can help the eyeless outside group.  This makes a big difference.];
+W[fn]
+C[Sente:  Black must connect.];
+B[go];W[br]
+C[The reading here is complicated.  I would not yell at a kyu player who played this move.  However, the best Black could do if White played elsewhere is a seki, which means White's corner does not die.  So White should help the outside group instead.  This is a major turning point in the game, as Black can now attack White's very weak outside group.];
+B[gm]
+LB[hm:A]
+C[Black's move here is necessary to prevent a cut at A.];
+W[dk]
+LB[fj:A]
+C[A typical bad move.  White should just run out at A.  This helps Black on the left side -- a thank-you move.];
+B[ck];W[ej]
+C[White is helping Black.];
+B[di];W[ei]
+C[White is trying to connect to the White group above.];
+B[dh];W[hi]
+C[The right idea:  jump out into the open area and also attack Black's unsettled group below.  White is still better overall in the game, because the early mistake by Black at the bottom was so big.  Because this is a reverse komi game, Black hasn't lost yet.];
+B[gg]
+C[Trying to cut off White's center group is the right idea.];
+W[he]
+LB[gc:A]
+C[White's move here is sente, because of the potential cut at A.];
+B[gj]
+C[However, Black is correct to continue attacking White's vulnerable group.];
+W[gl]
+C[Sente.];
+B[hl]
+C[Black must block here.];
+W[gi]
+C[White is fine at this moment.];
+B[ig]
+LB[fh:A]
+C[Black should make the peep at A instead.  This would be sente and assure Black's connection to the group on the left side.];
+W[fg]
+LB[ji:A]
+C[White is trying to connect, but White should jump out at A.  White A is sente, because of the very weak Black group below.  White's game move here is slow.];
+B[ie]
+LB[gc:A][id:B][qe:C]
+C[Black's move is not good, because it doesn't fix the cutting point at A.  Black B instead would also seal White in and be better.  Actually, the biggest move on the board for Black would have been at C.];
+W[id]
+C[White sees the cut possibility.];
+B[ic]
+LB[jd:A]
+C[Because Black has decided to give up the upper left corner, playing atari at A to develop the upper right area would be better.  After the game play, White can run out and reduce Black's potential here.];
+W[gc]
+C[White's move goes for the capture of two stones, but that is not big enough at this point.];
+B[hc]
+LB[jd:A]
+C[Black should remove the White stone by capturing at A instead.  That has a big impact on Black's prospects in the upper right center area.];
+W[gb]
+C[It is a little early for White to make this capture.  It is not big enough at this point because it is gote.];
+B[hb]
+C[Black should not continue here, as White may wake up to what is more important.];
+W[fb]
+C[But White cooperates.];
+B[og]
+C[The right idea, aiming for center territory.];
+W[ll]
+C[Sente, because Black's running center group is not alive.  The game is still difficult for Black.];
+B[lm];W[km];B[kl]
+C[Given the situation, it is a good idea for Black to create complications like this.];
+W[jm];B[jl];W[mm]
+C[White does a good job here and captures the Black cutting stone.];
+B[ji]
+C[Black must try to a big center territory.];
+W[pq]
+C[Attacking Black's corner is very big.];
+B[oq]
+C[Note the impact of the fact that, as noted early on, this descent is not sente.];
+W[or]
+C[Black's corner suffers a big loss.];
+B[qr];W[pr];B[qq];W[pp]
+C[Sente.];
+B[po];W[lk]
+LB[rn:A]
+C[A big move, but White should continue to attack the corner at A first, which would be very big and sente.  White is still ahead in the game.];
+B[li]
+C[Black continues to go for a big center territory.];
+W[kj]
+C[A good sente move:  there is a problem here for Black.];
+B[ii]
+LB[hj:A]
+C[White fails to appreciate that Black's move here threatens some problems for White in the center left.  If White next turns at A though, White will still be fine.];
+W[ki]
+C[White thinks the White stones in the left center are connected to the upper left corner group.];
+B[ff]
+C[Black sees a chance for a severe attack -- very good.];
+W[gf]
+LB[hj:A][fj:B]
+C[A severe mistake.  All White needed to do was play at A, which would be sente against Black's unsettled center group.  White A now would make White B later sente, which would have saved White.];
+B[fh]
+C[Black correctly sees what can be done.];
+W[hg]
+TR[gi]
+C[White does connect the two marked stones this way.];
+B[fi]
+C[But Black cuts off the main group.];
+W[fj]
+LB[hj:A]
+C[White A would be better, but it is too late to save the main White group.];
+B[hj];W[gh];B[eh]
+C[Black finishes the capture of 13 stones.  Game over.  Black wins.]
+)
+    (;
+    B[cr]
+    C[This way Black gets the corner for sure, and White's group is suddenly without eyes.];
+    W[dr];B[bo]
+    )
+)
+    (;
+    B[dq]
+    C[This tesuji is the result Black should aim at.  White's corner will be badly damaged.];
+    W[eq];B[ep]
+    )
+)
+    (;
+    W[hq]
+    C[This one space pincer joseki is a very common continuation.  White can avoid this thoroughly studied joseki by playing as in the game.];
+    B[fo];W[dn];B[ip]
+    )
+)
+

@@ -29,14 +29,18 @@ module.exports = function (grunt) {
         src: 'templates',
         dest: 'dev',
         permalink: 'pretty',
-        pygments: true
+        pygments: true,
+        tag_page_layout: 'tag_page',
+        tag_page_dir: 'tag'
       },
 
       prod: {
         src: 'templates',
         dest: 'prod',
         permalink: 'pretty',
-        pygments: true
+        pygments: true,
+        tag_page_layout: 'tag_page',
+        tag_page_dir: 'tag'
       }
 
     },

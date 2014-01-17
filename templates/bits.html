@@ -1,0 +1,38 @@
+---
+layout: default
+title: "NateEagle.com: A blog about life, web development, and go."
+excerpt: true
+---
+<section class="column col-2">
+  <section class="posts">
+      <h2>Archive: Bits</h2>
+      <p>Bits are very short posts. Some day I'll probably give up apologizing for these and just include them in the primary posts stream. Someday.</p>
+
+      <ul>
+      {% for post in site.posts %}
+        {% if post.layout == "bit" %}
+
+            <li class="post">
+              <h2><a class="title" href="{{ post.url }}">
+                {% assign titleWords = post.title | split:&nbsp; %}
+                {% for word in titleWords %}{% if forloop.last %}&nbsp;{% else %} {% endif %}{{ word }}{% endfor %}
+              </a></h2>
+              <p class="excerpt">
+                  {% if post.summary %}
+                      {{ post.summary }}
+                  {% else %}
+                      {{ post.content | strip_html | truncatewords: 50 }}
+                  {% endif %}
+                <!--<a href="{{ post.url }}" class="more">Read&nbsp;the&nbsp;full&nbsp;post&nbsp;&rarr;</a>-->
+              </p>
+
+              <time>{{ post.date | date: "%B %Y" }}</time>
+
+            </li>
+
+          {% endif %}
+
+      {% endfor %}
+      </ul>
+  </section>
+</section><!-- end .col-2 -->
