@@ -42,7 +42,8 @@ excerpt: true
       <h2>Bits</h2>
       <p>These are very tiny posts.</p>
       <ul>
-      {% for post in site.posts limit:10 %}
+
+      {% for post in site.posts limit:9999 %}
 
           {% if post.layout == "bit" %}
 

@@ -7,6 +7,4 @@ My teacher, "Yuan Zhou":http://zhouyuan.com, goes down to the "Triangle Go Club"
 
 I played someone I hadn't met, but my opponent was white and Shifu said it was a no-komi game, which means white should be about a stone stronger than me. And, indeed, it turned out to be a grueling, difficult game that lasted over four hours. The yose (end game) was extremely close, but I think I was a little bit behind. Fortunately, white missed a weakness at the very end and I was able to capture a group, prompting white's resignation. Still, I was frustrated because my judgment and counting turned out to be wrong. Earlier in the game, I thought black was in a better position than it actually was, and even at the end of the game, when I realized things were very close, I thought black had a slight lead.
 
-I'm going to go over the game in a future lesson (probably tomorrow), so I'll post another version of the game with comments from Shifu, for the curious.
-
 <div class="eidogo-player-auto" sgf="/sgf/2013-12-06-nate-vs-dave.sgf"></div>

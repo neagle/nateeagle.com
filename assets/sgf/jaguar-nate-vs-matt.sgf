@@ -1,0 +1,678 @@
+(;GM[1]FF[4]CA[UTF-8]AP[CGoban:3]ST[2]
+RU[AGA]SZ[19]KM[0.50]TM[1800]OT[5x30 byo-yomi]
+GN[2014-01-28b]PW[cloudbrows]PB[payton]WR[2k]BR[4k]DT[2014-01-28]PC[The KGS Go Server at http://www.gokgs.com/]C[This is a game I played recently against my younger brother, Matt. (All fellow students of my teacher, Yuan Zhou, are my siblings. Students who preceded me are "older" and students who came after me are "younger".)
+
+I met Matt at the 2011 Maryland Open (http://www.usgo.org/news/2011/06/ke-huang-7d-wins-2011-maryland-open/) - I was 10k and he was 11k. I ended up winning my division with a 4-1 record. Matt and I talked after our game and I told him about taking lessons; he became a student himself shortly afterward.
+
+I'm proud of the progress I've made since 2011, but Matt proved in this game that he's made dramatic progress, too. This was a no-komi game where I played white.
+
+Both Matt and I went over this game with Shifu (Yuan Zhou) in our individual lessons. These comments are my attempt to preserve some of the things that came out of my lesson.
+
+Every time there is a statement in quotation marks, I am quoting Shifu.]RE[W+Resign]
+(;B[pd]BL[2686.3]
+(;W[dd]WL[2695.7]
+;B[qp]BL[2680.7]
+(;W[op]WL[2684.9]LB[fq:B][oq:A]C[The idea of this play is to break black's opening, preventing him from playing the Hashimoto opening at A, or the approach at B that can set up the popular mini Chinese opening. (Or the micro-Chinese opening used by Lee Sedol in the first game of his Jubango with Gu Li.)
+
+The cost of it, of course, is that black can simply take the open corner, which is probably the most common response. But the advantage is that it pushes the game into unfamiliar territory, without established patterns to follow. For me, embracing that kind of uncertainty has been a part of getting stronger. I am not always accurate enough in my judgment and reading to win this way, but choosing to embrace this type of game feels like a positive, confident way to play. For me, this not only leads to better results, it represents a way of playing that is fun. And skill follows pleasure.]
+;B[oq]BL[2653.7]C[Attaching here might be less good than taking the open corner, but it's joseki, so it's hard to say it's a mistake. Also, if white plays the simplest joseki here white will end in gote, leaving black to take the corner anyway.]
+;W[nq]WL[2672.4]
+;B[pq]BL[2650.8]
+;W[dp]WL[2647.4]C[White can tenuki at this point, so I chose to take the open corner.]
+(;B[fc]BL[2591.2]C[This approach is fine, too. It's probably what I would have played, as black - white's weakness in the lower right isn't going away unless white spends a move to fix it.]
+;W[cf]WL[2637.4]
+;B[db]BL[2569.1]
+;W[cc]WL[2634.2]
+;B[ic]BL[2565.6]
+;W[np]WL[2632.7]
+;B[qn]BL[2557.1]
+;W[jp]WL[2629.7]C[This is a good opening for both players.]
+;B[cn]BL[2312.5]LB[jp:A]C[This is the right direction for black.]
+(;W[cl]WL[2601.6]C[This move is a mistake.]
+;B[cq]BL[2283.3]
+(;W[cp]WL[2599]LB[cf:B][cl:A][jp:C][np:D]C[This is the wrong direction for white. (Note: Ben (http://bengozen.com/) identified this as a problem when he first saw the record, and I argued against him. You were right, Ben.) The biggest reason is that white's stones on the left are low (A and B) while white's stones on the right (C and D) are high.]
+;B[dq]BL[2273.7]
+;W[ep]WL[2597.6]
+;B[bp]BL[2271.2]
+;W[bo]WL[2596.9]
+;B[bq]BL[2269.3]
+;W[co]WL[2596.1]
+;B[fq]BL[2267.3]LB[jp:D][np:B][op:A][nq:C]C[This is a good result for black - white's potential on the right has been ruined while black has taken a nice corner. White has potential on the left, but it's really white's *only* potential. White has all of his eggs in one basket.]
+;W[go]WL[2501.1]LB[fe:A][pf:B][dk:C]C[Given the circumstances, this is a good move - it connects up all of white's stones. And it's thick.
+
+We talked a lot about thickness in the lesson. My game has been changing steadily over the past year or two from an emphasis on territory to an emphasis on thickness. "Strong players prefer to play thick." A thick position is one without weaknesses.
+
+But thickness is interesting, because its value can be mysterious. It doesn't produce immediate and obvious territory. I commented to Shifu that though I feel like I've been getting better results as my style has changed, it's often for reasons I can't foresee or predict. So we talked at several places about how and where the value of thickness is evident in this game.
+
+I frequently think of thickness as taking care of my own weaknesses first and not helping my opponent fix his own weaknesses. Whenever you jump out fast into a thin position, you give your opponent the chance to get strong by attacking that weakness - wherever possible, I want to refuse my opponent that gift.]
+(;B[bn]BL[2173.2]C[Shifu talked at length about this move and why it's a huge mistake for black.
+
+It felt like a mistake to me, too, but probably the best way I could have explained that is just that black's making himself heavy inside a strong white position.
+
+Shifu said: this is a good example of how thickness can help you, especially against weaker players. Before this move, the opening is good for black - black is better. But it's not easy to see what black should do. Black has good potential, but white has good potential, too, so what's the right way to deal with that? Because of that confusion, it's easy to jump in and start touching things. But as soon as you start touching things, there are consequences.
+
+]
+;W[ao]WL[2490.1]LB[qd:C][fe:A][pf:B][an:2][bn:1]C[This gain essentially gives white back a komi. How? The way to analyze this is to compare the pictures of what black should have gotten without this move to what black will have with it. (This technique is something I find extremely challenging, though it seems like it should be simple.) The variations show the difference, which is eight points. And white got it for free, since the stone at 1 doesn't really help black.]
+(;B[qd]BL[2107.2]LB[fe:B][pf:A][dk:C][cl:D]C[This move has obvious value, but it's a slow move that shows a lack of global thinking. A and B are very natural moves in this position.
+
+C is an interesting move that Shifu pointed out to me - the shoulder hit is the fundamental weakness of the low stone at D. It's the most violent way to reduce white's potential, but it can involve some risk if white fights back strongly.]
+(;W[hd]WL[2433.6]C[This is a good way for white to expand his potential on the left.]
+;B[hc]BL[2094.2]
+;W[fd]WL[2430.2]
+;B[gd]BL[2088.4]
+;W[ge]WL[2428.6]
+;B[gc]BL[2086.3]LB[hc:C][fe:B][he:A]C[Shifu's analysis of this point surprised me. So let me put the question to you. White has obvious cuts at A and B. Which one should white fix?]
+(;W[fe]WL[2426.3]LB[hi:A]C[I chose to fix the cut at B. But the right answer is that white should fix *neither* of them. White should walk away and close the door to the center with a stone at A. Black is actually already cut off from coming into the center from the top, despite the cuts. And because black is connected and solid on the top, connecting doesn't have any attack value for white.]
+(;B[en]BL[1776.9]LB[fp:A]C[Black hopes to use the threat of the push and cut at A to pull out his group.]
+;W[fp]WL[2361.6]C[But he forgot that this move is sente for white.]
+(;B[gq]BL[1769.6]LB[cl:E][gm:D][en:B][fp:A][eq:C]C[So: black has made an obvious mistake. What's the best move for white?]
+(;W[gm]WL[2358.9]LB[dm:A][fm:B]C[Hint: this was not the best move. White should peep first at A, then seal the group in with B. This kind of peep is not a way of fighting that occurs to me naturally, yet. ]
+;B[cj]BL[1762.6]LB[cj:C][bl:A][bn:B]C[This is a very good move for black.]
+(;W[dk]WL[2332.3]LB[ck:A]C[This is a mistake. Not just a mistake, it's a dumb mistake, because it's easy to confirm that this doesn't prevent the connection underneath for black. What's more: I know the right way to prevent the connection because Shifu pointed it out in a previous lesson. White should bump black with A.]
+(;B[ck]BL[1711.7]C[But black rewards my mistake with a worse mistake. This is a vulgar move that induces white to fix his shape.]
+;W[bl]WL[2291.9]LB[ai:B][an:A]C[This is the key move for white, securing a connection at A and a monkey jump at B that removes black's eye space.]
+;B[dj]BL[1677]
+(;W[ej]WL[2197.7]LB[ek:A]C[The double hane felt like a strong move, but it actually helps black in this situation. White should just extend at A.]
+;B[ei]BL[1630.4]
+;W[ek]WL[2186.6]
+(;B[fi]BL[1587.8]LB[ei:B][ej:A]C[Here, we can see that the double hane helped black stick his head out a little farther. ]
+(;W[ch]WL[2168.1]C[This is a big mistake, even though it looks like an easy sente. I thought I'd remove any eye space in sente before cutting black off in the center. But it's not that simple.]
+;B[dh]BL[1545.7]LB[dh:A]C[Black fixes the cut; it may not be sente, but the stone at A is extremely useful for black.]
+;W[hi]WL[2153]C[White cuts black off, but...]
+;B[hh]BL[1433.9]LB[dh:B][gh:A]C[Now black can attach! White can't seal black in with the cut at A because of black's stone at B. You're welcome, black.]
+;W[gh]WL[2074.1]C[White can still cut, but...]
+;B[gi]BL[1427.6]LB[gg:A][dh:B]C[Now white has to save the stone at A.]
+;W[gg]WL[2067.3]
+;B[hj]BL[1390.1]C[And black gets to atari this direction.]
+;W[ii]WL[2062.3]
+;B[gk]BL[1362.3]LB[fl:A]C[When black fixes the cut, it's easy to feel that there's weakness at A. But once white fixes at A...]
+(;W[fl]WL[1930]LB[jk:A]C[...black can jump out at A and relieve the pressure on his group. "It's important to see that at this point, once black has A, white is losing."]
+(;B[ij]BL[1353]LB[jk:A]C[Black pushing here is not as good as just playing at A, but it's still fine - the game is becoming very good for black.]
+;W[ji]WL[1922.7]
+;B[jj]BL[1340.8]
+;W[ki]WL[1912.8]
+;B[lk]BL[1306.4]LB[lc:C][be:B][qj:D][dm:A]C[Black relieves the pressure on his group and is now in a winning position. White's only territory is at A and B, while black has three corners, a top, and potential at C and D.]
+;W[nk]WL[1786.2]LB[mj:A][lm:B]C[Given the situation, this is white's only option. White has to keep attacking the center group to make some chances. Shifu said that this is one way I've gotten stronger: if I'm losing, I'm getting better at seeing the right places to make trouble.
+
+Now black has to choose between A and B.]
+(;B[lm]BL[1178.1]LB[mj:A]C[This is a mistake - black should cut white in two and get out to the center with A.]
+;W[mi]WL[1716.3]C[When white seals black in and connects his stones, it becomes a game again.]
+;B[nm]BL[1093.8]LB[ml:A]C[Allowing the double peep at A is a mistake.]
+;W[ml]WL[1698.4]
+;B[mm]BL[1090.4]
+;W[ll]WL[1696]
+;B[kl]BL[1087.4]
+;W[km]WL[1693.4]
+;B[jm]BL[1082.4]
+;W[kn]WL[1691.9]
+;B[jn]BL[1076.5]
+(;W[jo]WL[1618.9]LB[ko:A]C[This is a devastating mistake - once black fixes his weakness, the cut at A results in a net that kills white's key stones. White should just extend at A. I simply didn't see the net.]
+(;B[jk]BL[897.6]LB[nj:A][ko:B]C[Now A and B are miai. The tesuji at A is easy for me to see, but I still didn't see B. It shows how uneven my sense of different shapes is.
+
+However, even if I had seen B, fixing on the outside is still more important.]
+;W[lj]WL[1374.8]LB[nj:A]C[This fixes the problem at A.]
+;B[ko]BL[873.6]C[Now I see the net. Black returns to a clearly winning position.]
+;W[kc]WL[1270.1]C[Again, given the situation, this is the right idea. White has to make something happen by attacking.]
+;B[mc]BL[749.6]
+(;W[cb]WL[1256.3]LB[kb:A]C[Black can just connect at A to make things simple. But I hoped to tempt him into waiting.]
+(;B[jd]BL[712]C[This is a big mistake for black.]
+;W[kd]WL[1242.9]
+;B[ke]BL[706.5]
+;W[md]WL[1241.7]
+(;B[nd]BL[669.5]LB[nc:A]C[This is a mistake - black should extend to A, which is still sente, to eliminate aji from the corner.]
+(;W[me]WL[1200.8]
+(;B[le]BL[483.9]
+;W[ld]WL[1195.9]
+;B[if]BL[436.4]
+;W[ie]WL[1143.4]
+;B[je]BL[389.4]
+;W[mf]WL[1017.3]C[This is all correct for white.]
+(;B[eb]BL[330.3]LB[jb:A]C[This is a big mistake - black needs to play the key move at A to secure life.]
+;W[jb]WL[1002.6]C[White gets there first. Now, black should die.]
+;B[hf]BL[241.3]
+;W[he]WL[998.8]
+;B[kg]BL[204.9]
+;W[jg]WL[950.3]C[White denies black an eye in the center.]
+;B[ib]BL[114.6]
+(;W[ga]WL[894.1]C[But white fails the life and death test.]
+;B[gb]BL[62.1]LB[gb:A]C[Black lives with the key move at A. Shifu tried to emphasize as gently as possible how important it is to get this right at my level. ]
+;W[ha]WL[818.2]
+;B[ia]BL[30]OB[4]
+(;W[qf]WL[763.1]C[Again, given the situation, this is the correct idea for white.
+
+It's worth noting that in the game I really didn't have an accurate idea of how far behind I was. I felt I was a bit behind, but just a good sequence or two from catching up. That is not accurate and shows that I'm being lazy about counting. This has been a consistent problem for me in recent games.]
+;B[qh]BL[30]OB[3]
+;W[pg]WL[737.1]
+(;B[pk]BL[30]OB[3]LB[qk:A]C[This is a mistake - black should play solidly at A.]
+;W[oc]WL[685.3]C[Yes - again, this is the right idea for white. Black should be able to deal with it, but black has to play correctly.
+
+And even though black is ahead, black is in byo-yomi, having used a lot of time during the fights for survival in the center and on the top. That's another way thickness shows its value, Shifu noted. It's easier to play when you're attacking, but the defender has to be very careful, so the defender will use up more time. And thickness also gives you the ability to try more aggressive tactics if necessary later in the game.]
+(;B[nc]BL[30]OB[2]LB[od:A]C[Black should just connect at A.]
+;W[ob]WL[652.8]
+(;B[nb]BL[30]OB[1]
+(;W[qb]WL[583.8]
+(;B[rc]BL[30]OB[1]C[Black has missed three chances to connect, but it's not easy - black has used up all his byo-yomi periods.]
+;W[od]WL[568]
+;B[oe]BL[30]OB[1]
+;W[ne]WL[565.5]LB[nd:A][od:B]C[And with that, white has turned the game around. The loss of the corner is very big.]
+;B[pf]BL[30]OB[1]
+;W[of]WL[508.3]
+(;B[qg]BL[30]OB[1]
+;W[pe]WL[499.8]
+;B[rf]BL[30]OB[1]
+(;W[kp]WL[463.9]C[White correctly perceives that he can push into the end game and try to fix any remaining problems.]
+;B[lo]BL[30]OB[1]
+;W[hq]WL[460.7]C[This is a good way to make points on the bottom.]
+;B[hr]BL[30]OB[1]
+;W[ir]WL[415.1]LB[eq:A]C[This works because of black's weakness at A.]
+;B[gr]BL[30]OB[1]
+;W[iq]WL[406.3]
+;B[lh]BL[30]OB[1]
+;W[mk]WL[372.3]C[What black doesn't realize is that inducing white to fix this weakness in the center creates vulnerabilities on the side.]
+(;B[kk]BL[30]OB[1]
+;W[pj]WL[264.9]
+;B[qj]BL[30]OB[1]
+;W[qk]WL[224.2]LB[pk:A][qk:B]C[This crosscut is the right way to take advantage of black's weakness. Note that the key point black should have played for solidity earlier was also at B, which brings us back to the proverb that the key point is often the same for both sides.]
+(;B[pl]BL[30]OB[1]C[This is a mistake.]
+;W[qi]WL[212.8]
+;B[rj]BL[30]OB[1]
+(;W[ri]WL[209.6]
+;B[pi]BL[30]OB[1]
+;W[ph]WL[207.6]
+;B[oj]BL[30]OB[1]
+;W[rg]WL[206.7]LB[gb:B][ch:A][nj:C][ko:D]C[With the loss of the upper right, black is in ruins.
+
+We didn't go over any more of the game in our lesson.
+
+Takeaways:
+
+* Correct judgment in the opening is very important, particularly when both players are playing calmly and waiting for the appropriate moment to begin fighting. Making a move that doesn't work well with your other stones can leave you at an immediate disadvantage. That's one reason some styles emphasize initiating fighting as soon as possible.
+
+* Sometimes my fighting is too lax, too patient. I had an opportunity early to cleanly kill black's stones with a peep and a seal, but I didn't look hard enough for it because I was content to play an obvious but slack move. If I'm going to play for thickness, I need to recognize that when I've got my chance, I have to attack as sharply as possible. "When it's time to shoot, shoot! Don't talk!"
+
+* Never help your opponent! My move at A gave black a key stone. Never assume a forcing move is free. If your opponent is going to win, make sure they win by taking things from you: no presents allowed.
+
+* Study life and death. Life and death isn't just an abstract pursuit: if I had handled the top correctly, it would have been game over. My L&D skills are lagging behind the rest of my game right now.
+
+* Tsumego study matters. Because of my tsumego study, I accurately and easily identified a weakness at C, but I failed to do the same at D. Those kinds of nets are maybe 12k level - continuing to do many relatively quick, easy problems will help me avoid mistakes like this. Because of this, I lost another opportunity to win the game.
+
+* Thickness has value! I made tons of mistakes in this game, but managed to win in the end because playing thick gave me so many opportunities.
+
+]
+;B[nj]BL[30]OB[1]
+;W[mj]WL[204.3]
+;B[qe]BL[30]OB[1]
+;W[rh]WL[199.8]
+;B[rb]BL[30]OB[1]
+;W[ra]WL[186]
+;B[qc]BL[30]OB[1]
+;W[pb]WL[175.6]
+;B[re]BL[30]OB[1]
+;W[sd]WL[171.8]
+;B[lp]BL[30]OB[1]
+;W[lq]WL[169.3]
+;B[dg]BL[30]OB[1]
+;W[cg]WL[163.4]
+;B[jf]BL[30]OB[1]
+;W[mh]WL[136.7]
+;B[gf]BL[30]OB[1]
+;W[ff]WL[129]
+;B[jh]BL[30]OB[1]
+;W[fg]WL[62.4]
+;B[df]BL[30]OB[1]
+;W[de]WL[54]
+;B[mp]BL[30]OB[1]
+;W[mq]WL[50.3]
+;B[bk]BL[30]OB[1]
+;W[sj]WL[43.9]
+;B[sk]BL[30]OB[1]
+;W[si]WL[40.3]
+;B[rk]BL[30]OB[1]
+;W[ap]WL[21.3]
+;B[dl]BL[30]OB[1]
+;W[dm]WL[30]OW[5]
+;B[al]BL[30]OB[1]
+;W[am]WL[30]OW[5]
+;B[bm]BL[30]OB[1]
+;W[ak]WL[30]OW[5]
+;B[aj]BL[30]OB[1]
+;W[al]WL[30]OW[5]
+;B[aq]BL[30]OB[1]
+;W[bi]WL[30]OW[5]
+;B[bj]BL[30]OB[1]
+;W[gp]WL[30]OW[5]
+;B[gl]BL[30]OB[1]
+;W[hm]WL[30]OW[5]
+;B[ba]BL[30]OB[1]
+;W[ca]WL[30]OW[5]
+;B[fa]BL[30]OB[1]
+;W[fj]WL[30]OW[5]
+;B[gj]BL[30]OB[1]
+;W[ci]WL[30]OW[5]
+;B[di]BL[30]OB[1]
+;W[il]WL[30]OW[5]
+;B[jl]BL[30]OB[1]
+;W[on]WL[30]OW[5]
+;B[om]BL[30]OB[1]
+;W[pn]WL[30]OW[5]
+;B[qm]BL[30]OB[1]
+;W[in]WL[30]OW[5]
+;B[ai]BL[30]OB[1]
+;W[ah]WL[30]OW[5]
+;B[ja]BL[30]OB[1]
+;W[ka]WL[30]OW[5]
+;B[im]BL[30]OB[1]
+;W[hl]WL[30]OW[5]
+;B[oo]BL[30]OB[1]
+;W[po]WL[30]OW[5]
+;B[pp]BL[30]OB[1]
+;W[no]WL[30]OW[5]
+;B[nr]BL[30]OB[1]
+;W[mr]WL[30]OW[5]
+;B[or]BL[30]OB[1]
+;W[qo]WL[30]OW[5]
+;B[ro]BL[30]OB[1]
+;W[ig]WL[30]OW[5]
+;B[hg]BL[30]OB[1]
+;W[ih]WL[30]OW[5]
+;B[pm]BL[30]OB[1]
+;W[hs]WL[30]OW[5]
+;B[fs]BL[30]OB[1]
+;W[oi]WL[30]OW[5]
+;B[pj]BL[30]OB[1]
+;W[ni]WL[30]OW[5]
+;B[ed]BL[30]OB[1]
+;W[ee]WL[30]OW[5]
+;B[ec]BL[30]OB[1]
+;W[da]WL[30]OW[5]
+;B[ea]BL[30]OB[1]
+;W[kh]WL[30]OW[5]
+;B[mg]BL[30]OB[1]
+;W[lf]WL[30]OW[5]
+;B[kf]BL[30]OB[1]
+;W[lg]WL[30]OW[5]
+;B[rl])
+(;W[pi]
+;B[ri]))
+(;B[pi]
+(;W[oj]
+;B[pl])
+(;W[pl]
+;B[oj]
+(;W[ok])
+(;W[ol])))
+(;B[rk]
+;W[qi]
+;B[rj]
+;W[ri]
+;B[pi]
+;W[ph]
+;B[oj]
+;W[rg]))
+(;B[ph]))
+(;W[re]
+;B[qe]
+;W[rg]))
+(;B[rf]
+;W[pe]
+;B[rg]))
+(;B[od]
+;W[rc]
+;B[rd]
+(;W[ra]
+;B[rf]
+;W[rg]
+;B[qg]
+;W[re]
+;B[pf])
+(;W[]
+;B[lb])))
+(;W[od]
+;B[oe]
+;W[ne]
+;B[pb]))
+(;B[od]))
+(;B[od]C[Connecting works for black.]
+;W[nc]
+;B[mb]LB[nc:A][oc:B]C[White's stones at A and B can't survive.]))
+(;B[qk]))
+(;W[fa]))
+(;W[gb]C[This is the key move.]
+;B[da]C[This is the strongest defense for black. Where should white move next? (Note: Shifu gave me time to figure this out in the lesson, and I failed again.)]
+(;W[ga]
+;B[fa]
+;W[ia]
+;B[ha]
+;W[hb]
+;B[fb])
+(;W[fa]
+;B[ha]
+(;W[fb]
+(;B[ga]
+;W[ec])
+(;B[ec]
+;W[ga]))
+(;W[ga]
+;B[fb]))
+(;W[ha]C[This is the correct move for white.]
+(;B[ia]
+;W[fa]C[Dead.]
+;B[fb]
+;W[ga]
+;B[]
+;W[hb]
+;B[ea]
+;W[ga])
+(;B[fa]
+;W[ia]
+;B[ga]
+;W[hb]))
+(;W[ia]
+;B[ha]
+;W[ga]
+;B[fa]
+;W[hb]
+;B[fb]))
+(;W[da]
+(;B[ea]
+;W[ia]
+;B[ha]
+;W[gb])
+(;B[gb]
+;W[ha]
+;B[ia]
+;W[fa]
+;B[ea]
+;W[ga]
+;B[ec])))
+(;B[jb]
+;W[kb]
+;B[ec]))
+(;B[nc]LB[ld:A]
+;W[le]
+(;B[jb]
+;W[kb]
+;B[ec])
+(;B[eb]
+;W[jb]))
+(;B[ld]
+;W[lc]
+;B[le]
+;W[nc]))
+(;W[le]))
+(;B[nc]LB[ld:A]
+;W[le]
+;B[jb]
+;W[kb]
+;B[ec]))
+(;B[kb]
+;W[jc]
+;B[jb]
+;W[id]
+;B[jd]))
+(;W[jb]))
+(;B[ko]
+;W[ln]
+;B[lo]
+;W[mn]
+;B[no]))
+(;W[ko]))
+(;B[mj]
+;W[lj]
+;B[mk]))
+(;B[jk]))
+(;W[jk]LB[ej:D][dk:C][ek:B][bl:F][cl:E][an:A][en:G]C[White needs to seal black in and deal with the consequences of any weakness he has left inside.]
+;B[fl]
+;W[dm]LB[an:A]C[Because, in fact, white can survive due to the connection at A. Normally it wouldn't be good to let black connect up all his stones, but here, we're talking about killing! If you're going to play a game that emphasizes thickness, you're going to play a game that emphasizes attack. And to do that effectively, you need to be very clear about the status of groups, not get suckered into getting or keeping little pockets of profit.]
+;B[dn]
+;W[an]
+;B[em]
+;W[im]))
+(;W[hi]LB[cf:B][bl:A]C[White should just cap - white's stones at A and B are already enough to prevent black from living.]
+;B[hh]
+;W[gh]
+;B[gi]
+;W[hj]))
+(;B[gi]
+;W[ii]
+;B[hh]))
+(;W[ek]C[White should just extend.]
+;B[fi]
+;W[hi]C[With this cap, things are very difficult for black.]))
+(;B[bl]LB[cj:A][bn:B]
+;W[bk]
+;B[ck]
+;W[bm]
+;B[dl]
+(;W[cm]
+;B[dm]
+;W[al]
+;B[ek]
+;W[dj]
+;B[fj]
+;W[di]
+;B[hj])
+(;W[al]
+;B[cm]
+(;W[el]
+;B[bl])
+(;W[bl]
+;B[el]))))
+(;W[ck]C[This looks like a vulgar move, but it's a common tesuji on the third line to cut off connections above or below it.]
+;B[dj]LB[dj:B][ck:A]
+;W[el]LB[cj:B][dj:A][bn:D][cn:C][en:E]C[Now C, D, and E are neatly captured and black has to take care of A and B.]))
+(;W[dm]
+;B[dn]
+;W[fm]LB[bn:B][en:A]C[Death for black. Nice and clean.])
+(;W[fm]C[Sealing first doesn't work.]
+;B[dl]C[Black can get out with this attachment.]))
+(;B[dk]))
+(;B[if])
+(;B[ij])
+(;B[he]
+;W[hf]
+;B[ie]
+;W[if])
+(;B[fp]
+;W[fo]
+;B[en]
+(;W[eo]
+;B[dk])
+(;W[dm]
+;B[dn]
+;W[eo])))
+(;W[hi]C[White should walk away and close the door to the center.]
+(;B[fe]
+;W[ff]
+;B[ed]
+;W[ee]
+;B[fd]
+;W[gf])
+(;B[he])
+(;B[ed]
+;W[ee]
+;B[fe]
+;W[ff])))
+(;W[]
+;B[nc])
+(;W[ge]
+(;B[gd]
+;W[hd]
+;B[hc]
+;W[fd]
+;B[gc]
+;W[hi])
+(;B[fe])))
+(;B[en])
+(;B[pf]
+(;W[qc]
+;B[pc]
+;W[rd]
+;B[rf]
+;W[pb]
+;B[ob]
+;W[rb]
+;B[pa]
+;W[qb]
+;B[fe])
+(;W[hd]
+;B[hc]
+;W[fd]
+;B[gd]
+;W[ge]
+;B[gc]
+;W[fe]
+;B[if]
+;W[hg]
+;B[ig]
+;W[hh]
+;B[ji]
+;W[ij]
+;B[jj]
+;W[ik]
+;B[jk]
+;W[il]
+;B[ln]
+;W[lp]
+;B[nn]))
+(;B[fe]
+;W[qf]
+;B[nd]
+;W[rd]
+;B[qc]
+;W[qi]LB[kd:A])
+(;B[]
+;W[ap]
+;B[aq]))
+(;B[pf]
+;W[]
+;B[oc])
+(;B[ao]
+;W[an]
+;B[ap]
+;W[bn]LB[an:2][bn:3][aq:1])
+(;B[dk]LB[cl:A]
+(;W[ck]
+;B[dj]
+;W[dl]
+;B[fk]
+;W[el]
+;B[gi])
+(;W[fk]
+;B[ck])))
+(;W[dq]C[This direction would be better.]
+;B[cp]
+;W[do]
+;B[bn]
+;W[em]))
+(;W[bo]LB[cf:A][cn:E][jp:B][np:C][fq:F][nq:D]C[This is the move that Shifu recommends - it's an older move, common in Ancient China. Its emphasis is on keeping the corner. Without white stones around B, it's not a good move according to modern go theory (though there were ancient games played that way) because there's an obvious weakness at F. But because of white's stones, if black follows up at F, black would be under attack.]
+(;B[ck]
+;W[en]LB[jp:A][np:B][op:C]C[This is the follow-up for white. By continuing to attack, white develops the bottom, where his high stones (A, B, C) are well positioned for expansion.])
+(;B[fq]C[If black tries to exploit white's weakness...]
+;W[eq]
+;B[fp]
+;W[en]LB[cn:D][fp:C][jp:A][fq:B]C[White splits apart black's stones, and black is going to suffer.])
+(;B[bn]
+;W[ck]
+(;B[cq]
+;W[cp])
+(;B[cp]
+(;W[co]
+;B[do])
+(;W[cq]
+;B[co]
+;W[bq]))))
+(;W[fp]
+;B[bp]
+;W[cq]
+;B[ck]LB[hq:B][lr:A]
+;W[]
+;B[lr]LB[lp:B][iq:C][nr:A]
+(;W[mr]
+;B[lp]
+;W[lo]
+;B[iq]
+;W[ip]
+;B[kp]
+;W[ko]
+;B[jq]
+;W[hq]
+;B[hr]
+;W[gq]
+;B[gr]
+;W[fr]
+;B[kr]
+;W[gs]
+;B[ir]LB[lq:B][js:A])
+(;W[kq]
+;B[nr])))
+(;B[np]LB[op:B][nq:A]C[Black can cut immediately.]
+(;W[mq]
+;B[no]
+;W[jq]
+;B[pj]
+;W[nc]
+;B[pf]
+;W[jd]C[This is an even result. White has played fast and covered a lot of ground, but black's position on the right is ideal. "There are games played this way."])
+(;W[oo]
+;B[mq])))
+(;W[dp]
+;B[oq]
+;W[jq]
+;B[pj]
+;W[op]
+;B[pq]
+;W[nq]
+;B[np]
+;W[mq]
+;B[no]LB[on:D][pn:C][op:A][pq:B]
+;W[nc]
+;B[pf]
+;W[jd]))
+(;W[nc]
+;B[qf]
+(;W[jd]
+;B[ld]
+;W[lc])
+(;W[jc]
+;B[lc]
+(;W[lb]
+;B[mb]
+;W[mc]
+;B[kb]
+;W[ld]
+;B[kc]
+;W[kd])
+(;W[]
+;B[kd]
+(;W[lb]
+;B[mb]
+(;W[mc]
+;B[kb]LB[kc:A][ld:B])
+(;W[kc]
+;B[ld]
+(;W[mc]
+;B[kb])
+(;W[nb]
+;B[pb]
+;W[mc])))
+(;W[nb]
+;B[pb]
+;W[lb]
+;B[kb]
+;W[kc]
+;B[mb]
+;W[ld])))))
+(;B[qd]
+;W[oc]
+;B[mc]
+;W[oe])
+(;B[]
+;W[dp]
+;B[cn]
+;W[bo]
+;B[fq]LB[eo:A]
+;W[eo]
+;B[dr]
+;W[cq]
+;B[iq]LB[cn:A][bo:B]))
