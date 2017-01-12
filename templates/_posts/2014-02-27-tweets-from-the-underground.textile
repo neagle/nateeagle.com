@@ -1,8 +1,0 @@
----
-layout: post
-title: "Tweets From the Underground"
-summary:
----
-That thing where you and a coworker each realize you're pronouncing a term differently, each think you're right, and really dig in. Sometimes you emphasize the word a little as you're saying it. Sometimes he does the same.
-
-#OH "Look, I appreciate the aesthetic of urban decay."

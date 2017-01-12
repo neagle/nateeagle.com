@@ -3,7 +3,7 @@
 
 # Config
 editor="vim"
-format="textile"
+format="md"
 
 # Get layout via getopts (-l)
 
@@ -35,7 +35,7 @@ done
 echo "---"
 echo "Creating a new ${layout} for" `date +%A", "%B" "%e", "%Y`"."
 echo ""
-read -p "Enter the title: " title 
+read -p "Enter the title: " title
 
 # Turn spaces into dashes
 # --
@@ -53,7 +53,7 @@ done
 
 dashedTitle="`echo ${dashedTitle} | tr '[A-Z]' '[a-z]'`"
 
-# Create a filename with the date, dashed title, and format 
+# Create a filename with the date, dashed title, and format
 filename="`date +%Y-%m-%d`${dashedTitle}.${format}"
 
 echo $filename

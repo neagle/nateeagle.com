@@ -1,0 +1,5 @@
+(;GM[1]FF[4]CA[UTF-8]SZ[19]AW[mb][nb][nc][oc][qc][rc]AB[lb][lc][md][nd][od][pd][qd][rd][rf][jb]C[Life and death problem for the June 22nd group go lesson at Yuan Zhou's.
+
+I got this mostly right, for once: I saw the correct moves for black, but failed to see the precise outcome of the best moves for both sides. Can you do better than I did?](;B[rb]C[This is the key move: black must not push first.];W[sb]C[This is the tesuji for white. Every other move results in death.
+
+I looked at this move when we were thinking about the problem, but I failed to get to the full solution. All I saw was that it wouldn't make it possible for white to save the group.];B[pc]C[NOW black pushes. White can't save his whole group, but...];W[qb];B[pb];W[ra]C[White can live with half.])(;B[pc]C[Pushing is a vulgar move in this position: after this, white will live.];W[pb];B[rb];W[qb];B[sc];W[oa]))

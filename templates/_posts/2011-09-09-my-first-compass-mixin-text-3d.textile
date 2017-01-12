@@ -6,7 +6,7 @@ So I started using "Compass":http://compass-style.org/ because "Chris Eppstein":
 
 I won't get too much into Compass itself - part of the idea of this blog is to keep things short and simple - but my favorite part of Compass is the mixins. These work like functions in JavaScript that let you pass in a minimal number of inputs and get out some more complex CSS as a result. This is great for simplifying CSS3, especially, which often requires outputing essentially the same information with the various vendor prefixes. Compass comes with a whole slew of them, but you can also define your own.
 
-While working on the design for this blog, I found myself using (as I often do) a small trick that uses multiple text shadows to create a 3d text effect. 
+While working on the design for this blog, I found myself using (as I often do) a small trick that uses multiple text shadows to create a 3d text effect.
 
 !/images/posts/desandro-made-this.png(David DeSandro Made This)!
 

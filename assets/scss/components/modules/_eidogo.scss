@@ -1,3 +1,14 @@
-.eidogo-player-auto + p {
-  @include margin-leader(1);
+.eidogo-player-auto,
+.eidogo-player-problem {
+	+ * {
+		@include margin-leader(1);
+	}
 }
+
+/*.eidogo-player-auto + p {*/
+	/*@include margin-leader(1);*/
+/*}*/
+
+/*eidogo-player-problem + p {*/
+	/*@include margin-leader(1);*/
+/*}*/

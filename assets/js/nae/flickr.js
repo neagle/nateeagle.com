@@ -26,7 +26,7 @@ define(['jquery', 'jquery.transit', 'jquery.imagesloaded', 'jquery.rhythm', 'jqu
     fetchFlickrPhotos = function (options) {
       var flickrUrl, defaults;
 
-      flickrUrl = 'http://www.flickr.com/services/rest/';
+      flickrUrl = 'https://www.flickr.com/services/rest/';
 
       defaults = {
         api_key: '90f4e9b590be1fded92ba07410e25856',
@@ -60,7 +60,7 @@ define(['jquery', 'jquery.transit', 'jquery.imagesloaded', 'jquery.rhythm', 'jqu
       var photoUrl;
 
       photoUrl = [
-        'http://farm', photo.farm,
+        'https://farm', photo.farm,
         '.static.flickr.com/',
         photo.server, '/',
         photo.id, '_',
@@ -97,7 +97,7 @@ define(['jquery', 'jquery.transit', 'jquery.imagesloaded', 'jquery.rhythm', 'jqu
           // Create a container for our Flickr photos
           $flickr = $('<section>', {
             'class': 'flickr',
-            html: '<h2><a href="http://www.flickr.com/photos/' + FLICKR_USERNAME + '/">Flickr</a></h2>'
+            html: '<h2><a href="https://www.flickr.com/photos/' + FLICKR_USERNAME + '/">Flickr</a></h2>'
           });
 
           photos = data.photos.photo;
@@ -108,7 +108,7 @@ define(['jquery', 'jquery.transit', 'jquery.imagesloaded', 'jquery.rhythm', 'jqu
             imageUrl = flickrFarmUrl(item, 'q');
 
             imageHtml = [
-              '<a href="http://www.flickr.com/photos/',
+              '<a href="https://www.flickr.com/photos/',
               FLICKR_USERNAME,
               '/',
               item.id,
@@ -219,7 +219,7 @@ define(['jquery', 'jquery.transit', 'jquery.imagesloaded', 'jquery.rhythm', 'jqu
         var $image, z1;
 
         $image = $(event.currentTarget);
-        z1 = $image.css('z-index');
+        z1 = parseInt($image.css('z-index'), 10);
 
         $image.transition({
           left: parseInt($image.css('left'), 10) + 120,
@@ -231,7 +231,7 @@ define(['jquery', 'jquery.transit', 'jquery.imagesloaded', 'jquery.rhythm', 'jqu
             var $item, z2;
 
             $item = $(item);
-            z2 = $item.css('z-index');
+            z2 = parseInt($item.css('z-index'), 10);
 
             if (z2 > z1) {
               $item.css('z-index', z2 - 1);

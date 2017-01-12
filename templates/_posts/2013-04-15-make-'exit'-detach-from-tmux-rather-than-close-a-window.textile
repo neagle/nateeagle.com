@@ -7,7 +7,7 @@ I use tmux (formerly screen - goodbye, old friend) to keep multiple workflows op
 I decided to stop suffering this morning and wrote an exit function (placedin my .zshrc) that will either detatch if inside a tmux session, or exit like normal if not.
 
 
-{% highlight bash %}
+{% highlight js %}
 exit() {
     if [[ -z $TMUX ]]; then
         builtin exit
