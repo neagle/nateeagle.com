@@ -10,12 +10,17 @@
   "engines": {
     "node": ">= 0.6.0"
   },
+  "scripts": {
+    "start": "npm run build:dev",
+    "build:dev": "./scripts/build-dev.sh",
+    "build:prod": "./scripts/build-prod.sh"
+  },
   "devDependencies": {
     "connect": "~2.6.1",
-    "grunt": "~0.3.15",
-    "grunt-contrib": "~0.3.0",
-    "grunt-jekyll": "~0.2.1",
+    "grunt": "^1.0.1",
     "grunt-compass": "~0.3.6",
-    "grunt-contrib-mincss": "^0.3.2"
+    "grunt-contrib": "~0.3.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-jekyll": "^0.4.4"
   }
 }

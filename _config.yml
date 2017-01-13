@@ -1,0 +1,7 @@
+source: templates
+destination: dev
+layouts_dir: _layouts
+includes_dir: _includes
+pluins_dir: _plugins
+encoding: utf-8
+

@@ -29,7 +29,7 @@ module.exports = function (grunt) {
         src: 'templates',
         dest: 'dev',
         permalink: 'pretty',
-        pygments: true,
+        highlighter: true,
         tag_page_layout: 'tag_page',
         tag_page_dir: 'tag'
       },
@@ -234,6 +234,6 @@ module.exports = function (grunt) {
   // Default task.
   // NB: Jekyll must come before other file generation tasks.
   //grunt.registerTask('default', 'lint jekyll copy compass concat min');
-  grunt.registerTask('default', 'lint jekyll:dev copy:dev compass:dev');
-  grunt.registerTask('prod', 'lint jekyll:prod copy:prod compass:prod');
+  grunt.registerTask('default', ['jekyll:dev', 'copy:dev', 'compass:dev']);
+  grunt.registerTask('prod', ['jekyll:prod', 'copy:prod', 'compass:prod']);
 };
